@@ -1,129 +1,122 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+# macOS-related files
+.DS_Store
+.AppleDouble
+.LSOverride
 
-# C extensions
-*.so
+# Windows-related files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+# Python related files.
+*.pyc
+*.pyo
+*.pyi
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+# Editor files.
+*~
+*.bak
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+# Compiled Ren'Py files.
+*.rpyc
+*.rpyb
+*.rpymc
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
+# Ren'Py log files.
+log.txt
+errors.txt
+traceback.txt
+lint.txt
 
-# Translations
-*.mo
-*.pot
+# Created directories.
+saves/
+tmp/
+cache/
 
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
+# Executables.
+/renpy.exe
+/renpy2.exe
+/renpy3.exe
+/renpy-32.exe
 
-# Flask stuff:
-instance/
-.webassets-cache
+/renpy.sh
+/renpy2.sh
+/renpy3.sh
 
-# Scrapy stuff:
-.scrapy
+/renpy.app
+/renpy2.app
+/renpy3.app
 
-# Sphinx documentation
-docs/_build/
+/7z.sfx
 
-# PyBuilder
-target/
+# Libraries.
+/lib
 
-# Jupyter Notebook
-.ipynb_checkpoints
+# Platforms.
+/rapt
+/rapt2
+/rapt3
 
-# IPython
-profile_default/
-ipython_config.py
+/renios
+/renios2
+/renios3
 
-# pyenv
-.python-version
+/web
 
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
+# Docs.
+/sphinx/source/inc
+/sphinx/source/thequestion.rst
+/doc
+/doc-web
+/LICENSE.txt
 
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-__pypackages__/
+# Gui template.
+/gui/game/gui
 
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
+# Editors.
+/jedit
+/atom
+/vscode
 
-# SageMath parsed files
-*.sage.py
+# Generated source.
+/renpy/vc_version.py
+/module/gen/
+/module/gen3/
+/module/gen-static/
+/module/gen3-static/
+/tutorial/game/tutorial_director.rpy
 
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+# Module build.
+/module/build
+/module/dist
+/module/emscripten-static
 
-# Spyder project settings
-.spyderproject
-.spyproject
+# Download target.
+/dl
 
-# Rope project settings
-.ropeproject
+# Pygame_sdl2.
+/pygame_sdl2
 
-# mkdocs documentation
-/site
+# Steam.
+steam_appid.txt
+/steamapi.py
 
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
+# Type analysis.
+/typings
 
-# Pyre type checker
-.pyre/
+# Live2D
+cubism
+CubismSdkForNative-4-*.zip
+
+# Created files.
+/screenshot*
+.android.json
+
+# Old files.
+/0old
+
+# Works in progress, throwaway scripts, etc.
+/scratch
+/*-dists
