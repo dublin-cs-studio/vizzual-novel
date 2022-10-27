@@ -5,8 +5,11 @@
 
 define j = Character("Joe Joe")
 define s = Character("Sigma")
+define s2 = Character("Sigma", image="sigma")
 define temp = Character("Secretary")
 define mc = Character("[name]")
+
+image side sigma = "sigmaside.png"
 
 
 # The game starts here.
@@ -34,7 +37,7 @@ label start:
     mc "(So I’ll be working here from now on, huh. Aren’t I supposed to be fighting the diseases?)"
     mc "(No use backing out now; not like I really have a choice anyways.)"
 
-    scene bg room 
+    scene bg office 
     with fade 
 
     show sigma
@@ -59,7 +62,7 @@ label start:
 
     with fade 
 
-    "You approach the office desks with Sigma"
+    "You approach the office desks with Sigma."
 
     s "Here’s the H(uman but alien as well I guess)R Department, where all the complaints about your pay go to."
 
@@ -77,20 +80,77 @@ label start:
 
     "By the end of the tour, you've reached the water cooler, where you spot an insanely average looking man."
 
+    with fade 
+    
+    scene bg cooler
+
     hide sigma
 
     show joejoe
 
     j "Oh, hey there, guys! Welcome to my spot!"
 
-    hide joejoe 
+    s2 "Meet Joe Joe. That’s not his spot. He doesn’t work here."
+
+    menu:
+        "Hi, Joe Joe. I think your spot is great.":
+            j "Thanks :]"
+
+        "Pretty {i}cool{/i} water cooler you got there.":
+            j "Thanks :]"
+        "Uh. Okay.":
+            j "*Waves*"
     
-    show sigma
+    hide joejoe 
 
-    s "Meet Joe Joe. That’s not his spot. He doesn’t work here."
+    show sigma 
 
+    s "Feel free to spend some time exploring our break... corner."
 
+    s "I have customers to satisfy, KPIs to report, people to fire, souls to crush, tax fraud to commit..."
 
+    s "...Y'know, normal secretary stuff. See ya."
+
+    with move 
+    
+    show sigma at left 
+
+    with move 
+    
+    hide sigma 
+
+    s2 "{size=-10}Ugh, so much work. I don't get paid enough for all this.{/size}"
+
+    show joejoe 
+
+    j "... :)"
+
+    menu:
+        "...":
+            j "..."
+        "... Is that coffee?":
+            j "Yeah! This is my cup of Joe!"
+    
+    mc "So like... who are you, anyway?"
+
+    j "You already forgot, huh..."
+
+    j "But I'm Joe Joe! Like Secretary Sigma said, I don't even work here."
+
+    mc "Uh huh. So, what do you do then?"
+
+    j "I'm your water cooler buddy. Come around if you ever need a break."
+
+    mc "Okay." # in the future, change this to a menu w/ option for the joe joe hate path
+
+    jump fulfillment
+    
+label fulfillment:
+    with fade 
+
+    scene bg office
+
+    "You walk away from the break corner to start working, but run into a strange green woman."
 
 
 
