@@ -109,7 +109,7 @@ label tour:
     with fade 
     
 
-    "Goopita launches into a long story about how she started working at the company..."
+    "Goopitha launches into a long story about how she started working at the company..."
 
     
     scene bg office 
@@ -121,15 +121,21 @@ label tour:
 
     mc "(Her slime is pressing against my back… Oddly enough, it actually feels quite comfortable. But seriously, does she not realize how close she is? Childhood friend magic really is something, huh.)"
 
+    with fade 
+
     g "...and that's how I met Pelota! She's so cool! Rumor is that she's killed over a hundred different nefarious entities with just her baseball bat. and..."
 
     mc "(Is she subconsciously shaping herself into a back rest? I feel like this chair is becoming softer slowly. It might just be my body heat warming her up, though.)"
+
+    with fade 
 
     g "...and after that I... sorry, I usually head for the break corner afterwards..."
 
     mc "(What was that pause? Does she not like Joe Joe and his break corner?)"
 
     "You look upwards for the first time in a while and see that Goopitha has maneuvered her body around the chair and around you."
+
+    # insert color graphic here, showing goopitha wrapped around the chair and MC 
 
     mc "(Jeez, she’s close! I can’t even begin to try to hide my blushing. Does she do this to everyone who sits down in her chair?)" 
     
@@ -147,11 +153,186 @@ label tour:
 
     g "I-I-I'm sorry. I didn't realize I was that close."
 
-    scene black 
+    menu:
+        "It's alright. (Hiding the fact that your face has become one with the tomatoes)":
+            "Goopitha smiles, her blush clearing up."
+            g "We should hang out and grab some coffee together-"
+        "(Continue to blush like a maniac)":
+            g "I-I'll be going-"
+    
+    hide goopita
+    "Strange Voice" "*dophin noises* YOUR DEBTS…THEY ARE DUE!"
+
+    mc "(Huh?)"
+
+    "Strange Voice" "*more dolphin noises* YOU ARE $30,000 IN DEBT AND IT WAS DUE YESTERDAY!"
+
+    mc "(Is there a dolphin in the office? More importantly, why can the dolphin talk?)"
+
+    "Suddenly, the door crashes down, and someone barges into the office." 
+    
+    with vthump 
+
+    "Strange Voice" "*dolphin noises* I HAVE COME TO COLLECT YOUR DEBT!"
+
+    "Goopitha turns towards the commotion, looking crossed."
+
+    show goopita
+
+    g "Again?"
+
+    hide goopita
+
+    "You try to look at the newcomer, but your view is blocked by the cubicle walls."
+
+    with move 
+
+    show sigma at left 
+
+    with move 
+    
+    show sigma at center
+
+    s "I'll grab Pelota real quick." # add emotion here -sigma frowning
+
+    with move 
+
+    show sigma at left 
+
+    with move 
+
+    hide sigma
+
+    "Strange Voice" "Are you ignoring me? I know you haven’t bothered to reply to my emails, but you could at least pretend to care about me."
+
+    "The voice comes from your left. As you try to recover from your embarrassment someone grabs your shoulder and forces you to face them."
+
+    mc "(Woah there, calm down. I nearly fell over. What’s all this about a debt collection?)"
+
+    mc "(What kind of person thinks it’s a good idea to push someone without their consent?)"
+
+    "As you look up at your strange assailant, you are blinded by sparkling bright lights."
+
+    # show loan loan dolphin here
+
+    "Strange Dolphin Man" "*Clapping his hands on every syllable* Listen here, kiddo." 
+    
+    "Strange Dolphin Man" "I have better things to be doing than lecturing a college dropout on paying their debts. Either you hand over $30,000, or your paycheck will be cut accordingly."
+
+    mc "What."
+
+    mc "The."
+
+    mc "Hell?!"
+
+    "Strange Dolphin Man" "*Scoffs* What’s wrong? Did you forget about me as well?"
+
+    mc "(Who the hell is this dolphin man? He's absolutely terrifying!)"
+
+    "Strange Dolphin Man" "*Sighs and lets out a dramatic clucking noise* “I should’ve known better from someone who hasn’t bothered to pay his loans in over ." 
+    # insert however long the MC was unconscious for 
+
+
+    # insert color graphic of loan loan dolphin straightening his shirt and combing his bald head here
+    l "The name’s Lone Loan Dolphin, a college student’s worst nightmare. I come to collect debt whenever someone forgets to pay off their student loans or any other types of loans."
+
+    # hide lld here
+
+    show goopita
+
+    "Goopitha leans over to you and whispers in your ear."
+
+    g "By the way, debt collectors aren’t legally allowed to use physical force to collect money. According to the FDCPA, they can only email or call you to remind you of your debt."
+
+    l "While I can’t {i}legally{/i} use physical force, it’d be easier to find a dolphin’s ears than to actually contact law enforcement here. *cracks knuckles while maniacally chittering*"
+
+    hide goopita 
+
+    with move 
+
+    show sigma at left 
+
+    with move 
+    
+    show sigma at center
+
+    # with move 
+
+    # show pelota at left 
+
+    "Cool woman with a baseball bat" "That one? *She points the bat at you.*"
+
+    s "No, the dolphin head. That’s the fourth time he came here this month."
+
     with fade 
+
+    hide sigma 
+
+    # cutscene or CG of pelota beating up LLD
+
+    # show pelota here
+
+    "Cool Woman" " *Dusting herself off* Fourth time? Didn’t know dolphins liked their debt collection so much."
+
+    "She glances up at you while picking up her bat."
+
+    "Cool Woman" "You new? Never seen your face before."
+
+    p "Name's Pelota. I'll see you around, I guess."
+
+    # with move
+
+    # hide pelota 
+
+    mc "(Isn't Pelota Spanish for-)"
+
+    show sigma 
+
+    s "Wait, come back. Can you show them the basics of being a Charitable Urgency Manager?"
+
+    p "Seriously? I thought they were just the local paper carrier. I haven’t seen someone more unfit for such a job than them."
+
+    "Sigma whispers something into Pelota’s ear, causing her to freeze up."
+
+    s "Just deal with it. I trust that you will handle this properly."
+
+    with move 
+    
+    show sigma at left 
+
+    with move 
+    
+    hide sigma 
+
+    "She walks away, leaving you alone with Pelota."
+
+    p "{size=-10}I'll kill her.{/size}"
+
+    p "*sighs* Follow me."
+
+    with fade 
+
+    "You follow her to a room lined with cushioning, with one floor-to-ceiling mirror on the opposite side of the door."
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 
-    "{b}To be Continued...{/b}"
+
+
+
+
+
 
 
     # This shows a character sprite. A placeholder is used, but you can

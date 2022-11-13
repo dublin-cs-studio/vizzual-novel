@@ -9,6 +9,8 @@ define s2 = Character("Sigma", image="sigma")
 define temp = Character("Secretary")
 define mc = Character("[name]")
 define g = Character("Goopitha")
+define l = Character("Loan Loan Dolphin")
+define p = Character("Pelota")
 
 image side sigma = "sigmaside.png"
 
@@ -43,7 +45,8 @@ label start:
 
     show sigma
 
-    mc "(A pretty alien woman as a secretary, huh. The secretary is the face of a company, after all.)"
+    mc "(A pretty alien woman as a secretary, huh. The secretary is the face of a company, after all.)" 
+    # color graphic here, showing sigma being hot at the front desk (must be hot)
 
     mc 'Is this the Diseases Eradication Unit office? I got hired as a Charitable Urgency Manager recently.'
 
@@ -79,11 +82,12 @@ label start:
 
     "Sigma speeds past the departments, clearly bothered by the tour."
 
-    "By the end of the tour, you've reached the water cooler, where you spot an insanely average looking man."
+    "By the end of the tour, you've reached the water cooler, where you spot an insanely average looking man." 
+    # insert color graphic here on Joe Joe, but focusing on the water cooler, with Joe Joe in the background and out of focus
 
-    with fade 
-    
     scene bg cooler
+    
+    with fade 
 
     hide sigma
 
