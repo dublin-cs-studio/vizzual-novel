@@ -161,9 +161,14 @@ label tour:
             g "I-I'll be going-"
     
     hide goopita
+
+    with vpunch 
+
     "Strange Voice" "*dophin noises* YOUR DEBTS…THEY ARE DUE!"
 
     mc "(Huh?)"
+
+    with hpunch
 
     "Strange Voice" "*more dolphin noises* YOU ARE $30,000 IN DEBT AND IT WAS DUE YESTERDAY!"
 
@@ -171,7 +176,11 @@ label tour:
 
     "Suddenly, the door crashes down, and someone barges into the office." 
     
-    with vthump 
+    with vpunch
+
+    with vpunch
+
+    with hpunch
 
     "Strange Voice" "*dolphin noises* I HAVE COME TO COLLECT YOUR DEBT!"
 
@@ -184,24 +193,16 @@ label tour:
     hide goopita
 
     "You try to look at the newcomer, but your view is blocked by the cubicle walls."
-
-    with move 
-
-    show sigma at left 
-
-    with move 
     
     show sigma at center
 
+    with moveinleft
+
     s "I'll grab Pelota real quick." # add emotion here -sigma frowning
 
-    with move 
-
-    show sigma at left 
-
-    with move 
-
     hide sigma
+
+    with moveoutleft
 
     "Strange Voice" "Are you ignoring me? I know you haven’t bothered to reply to my emails, but you could at least pretend to care about me."
 
@@ -244,17 +245,19 @@ label tour:
 
     g "By the way, debt collectors aren’t legally allowed to use physical force to collect money. According to the FDCPA, they can only email or call you to remind you of your debt."
 
-    l "While I can’t {i}legally{/i} use physical force, it’d be easier to find a dolphin’s ears than to actually contact law enforcement here. *cracks knuckles while maniacally chittering*"
-
     hide goopita 
 
-    with move 
+    l "While I can’t {i}legally{/i} use physical force, it’d be easier to find a dolphin’s ears than to actually contact law enforcement here. *cracks knuckles while maniacally chittering*"
 
-    show sigma at left 
+    #with move
+    
+    #show sigma at left 
 
-    with move 
+    #with move 
     
     show sigma at center
+    
+    with moveinleft
 
     # with move 
 
@@ -264,9 +267,11 @@ label tour:
 
     s "No, the dolphin head. That’s the fourth time he came here this month."
 
+    hide sigma 
+
     with fade 
 
-    hide sigma 
+    
 
     # cutscene or CG of pelota beating up LLD
 
