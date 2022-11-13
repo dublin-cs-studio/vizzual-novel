@@ -319,23 +319,43 @@ label tour:
 
     "You follow her to a room lined with cushioning, with one floor-to-ceiling mirror on the opposite side of the door."
 
+    p "Aight, I'll show you how to properly box. *She tosses her bat to the side*"
 
+    # insert combat minigame or other minigame here
 
+    with fade  
 
+    # in the future, add diverging labels based on if you did good or bad in the game 
 
+    p "Not bad. You'd make for a good boxer. I think. I don't really fight with my fists that often. *She hands you a bottle of water*"
 
+    mc "(That was the worst experience of my life. I can’t believe I’m still alive after all that. My body is soaked in sweat, I should probably take a shower after this.)"
 
+    mc "(Damn, that water is good though. Not even Joe Joe’s water cooler can beat this.)"
 
+    "You stumble up from the floor and leave the training room."
 
+    mc "(Even the best water in the world can’t fix the fact that I’m covered in sweat, huh. I should probably take off my jacket.)"
 
+    mc "(Work is still happening, isn’t it. I should probably do something before someone starts looking at me like I’ve been rammed by a bus and have a caffeine problem.)"
 
+    menu:
+        "(I should go spend time with…)"
 
+        "Sigma":
+            jump sigmaday1 
 
-    
+        "Goopitha":
+            jump goopithaday1
 
+        "Joe Joe":
+            jump joejoeday1
 
-
-
+        "Pelota":
+            jump pelotaday1
+        
+        "Do some paperwork":
+            jump paperwork
 
 
 
@@ -350,4 +370,4 @@ label tour:
 
     # This ends the game.
 
-    return
+    
