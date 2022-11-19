@@ -9,7 +9,7 @@ define s2 = Character("Sigma", image="sigma")
 define temp = Character("Secretary")
 define mc = Character("[name]")
 define g = Character("Goopitha")
-define l = Character("Loan Loan Dolphin")
+define l = Character("Lone Loan Dolphin")
 define p = Character("Pelota")
 
 image side sigma = "sigmaside.png"
@@ -28,7 +28,16 @@ label start:
         name = name.strip()
         if not name:
             name = "Toni"
-    
+        if name == "Andrew Zhou":
+            renpy.call_in_new_context("easter1") 
+        else:
+            renpy.call_in_new_context("day1")
+label easter1:
+    "omg!!! its andrew zhou (real)!"
+    jump day1 
+
+
+label day1:  
     scene black
     with fade  
 
@@ -124,7 +133,7 @@ label start:
     
     hide sigma 
 
-    s2 "{size=-10}Ugh, so much work. I don't get paid enough for all this.{/size}"
+    s "{size=-10}Ugh, so much work. I don't get paid enough for all this.{/size}"
 
     show joejoe 
 
