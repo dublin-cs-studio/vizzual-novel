@@ -213,8 +213,8 @@ label tour:
     mc "(What kind of person thinks it’s a good idea to push someone without their consent?)"
 
     "As you look up at your strange assailant, you are blinded by sparkling bright lights."
-
-    # show loan loan dolphin here
+    
+    show lld
 
     "Strange Dolphin Man" "*Clapping his hands on every syllable* Listen here, kiddo." 
     
@@ -237,7 +237,7 @@ label tour:
     # insert color graphic of loan loan dolphin straightening his shirt and combing his bald head here
     l "The name’s Lone Loan Dolphin, a college student’s worst nightmare. I come to collect debt whenever someone forgets to pay off their student loans or any other types of loans."
 
-    # hide lld here
+    hide lld 
 
     show goopita
 
@@ -247,8 +247,12 @@ label tour:
 
     hide goopita 
 
+    show lld
+
     l "While I can’t {i}legally{/i} use physical force, it’d be easier to find a dolphin’s ears than to actually contact law enforcement here. *cracks knuckles while maniacally chittering*"
 
+    hide lld
+    
     #with move
     
     #show sigma at left 

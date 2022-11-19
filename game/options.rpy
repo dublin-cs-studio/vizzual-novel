@@ -37,7 +37,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "visualnovelreal"
+define build.name = "fivenightsatdeezcorp"
 
 
 ## Sounds and music ############################################################
@@ -120,7 +120,7 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 55
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0
@@ -143,7 +143,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "testrenpy-1662702640"
+define config.save_directory = "fivenightsatdeezcorp-1662702640"
 
 
 ## Icon ########################################################################
