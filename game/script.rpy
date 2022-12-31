@@ -4,17 +4,30 @@
 # name of the character.
 
 define j = Character("Joe Joe")
-define s = Character("Sigma")
+define s = Character("Sigma") # , callback = name_callback, cb_name = "Sigma"
 define s2 = Character("Sigma", image="sigma")
 define temp = Character("Secretary")
-define mc = Character("[name]")
+define mc = Character("[name]") # , callback = name_callback, cb_name = "[name]"
 define g = Character("Goopitha")
 define l = Character("Lone Loan Dolphin")
 define p = Character("Pelota")
 
 image side sigma = "sigmaside.png"
 
-
+transform jumper: #adjust the yoffset as necessary to your preference
+    ease .06 yoffset 24 
+    ease .06 yoffset -24 
+    ease .05 yoffset 20 
+    ease .05 yoffset -20 
+    ease .04 yoffset 16 
+    ease .04 yoffset -16 
+    ease .03 yoffset 12 
+    ease .03 yoffset -12 
+    ease .02 yoffset 8 
+    ease .02 yoffset -8 
+    ease .01 yoffset 4 
+    ease .01 yoffset -4 
+    ease .01 yoffset 0
 # The game starts here.
 
 label start:
@@ -22,6 +35,7 @@ label start:
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
+    stop music fadeout 1.0
 
     python:
         name = renpy.input("What is your name?", length=32)
@@ -52,7 +66,7 @@ label day1:
     scene bg office 
     with fade 
 
-    show sigma
+    show sigma 
 
     mc "(A pretty alien woman as a secretary, huh. The secretary is the face of a company, after all.)" 
     # color graphic here, showing sigma being hot at the front desk (must be hot)
@@ -100,7 +114,7 @@ label day1:
 
     hide sigma
 
-    show joejoe
+    show joejoe emotionaldamage
 
     j "Oh, hey there, guys! Welcome to my spot!"
 
@@ -115,7 +129,7 @@ label day1:
         "Uh. Okay.":
             j "*Waves*"
     
-    hide joejoe 
+    hide joejoe emotionaldamage
 
     show sigma 
 
@@ -135,7 +149,7 @@ label day1:
 
     s "{size=-10}Ugh, so much work. I don't get paid enough for all this.{/size}"
 
-    show joejoe 
+    show joejoe happy
 
     j "... :)"
 
