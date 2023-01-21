@@ -4,7 +4,7 @@
 # name of the character.
 
 define j = Character("Joe Joe")
-define s = Character("Sigma") # , callback = name_callback, cb_name = "Sigma"
+define s = Character("Sigma", callback = name_callback, cb_name = "Sigma") # 
 define s2 = Character("Sigma", image="sigma")
 define temp = Character("Secretary")
 define mc = Character("[name]") # , callback = name_callback, cb_name = "[name]"
@@ -45,10 +45,10 @@ label start:
         if name == "Andrew Zhou":
             renpy.call_in_new_context("easter1") 
         else:
-            renpy.call_in_new_context("day1")
+            renpy.call_in_new_context("intro")
 label easter1:
     "omg!!! its andrew zhou (real)!"
-    jump day1 
+    jump intro 
 
 
 label day1:  
