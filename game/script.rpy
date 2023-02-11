@@ -12,6 +12,8 @@ define g = Character("Goopitha")
 define l = Character("Lone Loan Dolphin")
 define p = Character("Pelota")
 
+default smallpizza = True # used for choosing small or large pizzas when getting pizza with joejoe
+
 image side sigma = "sigmaside.png"
 
 image sigma = At('sigma.png', sprite_highlight("sigma.png"))
@@ -47,7 +49,7 @@ label start:
         if name == "Andrew Zhou":
             renpy.call_in_new_context("easter1") 
         else:
-            renpy.call_in_new_context("day1")
+            renpy.call_in_new_context("intro")
 label easter1:
     "omg!!! its andrew zhou (real)!"
     jump intro 
