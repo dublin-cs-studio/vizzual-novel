@@ -25,6 +25,8 @@ label intro:
     mc "(I speed up my walking to not get involved.)"
     mc "(There are a lot of dangerous people here. I don't think I should come here again, at least not at night.)"
     "Drunk Guy" "Watch this."
+    with vpunch
+    with vpunch 
     scene black 
     with fade 
 
@@ -84,6 +86,11 @@ label intro:
     "*knock knock*"
     mc "(The nurse is here for his mid-day visit…)"
     "The door opens..."
+    with move 
+    show nurse at right 
+    with move 
+    show nurse at center 
+    with move 
     "Nurse" "Good afternoon!"
     mc "Hello."
     "Nurse" "How are you feeling today?"
@@ -107,8 +114,12 @@ label intro:
     mc "(I don't think I'll be able to thank him properly, but if all he wants is a talk then I'll gladly respond.)"
     mc "I'll talk to him. Where do I meet him?"
     "Nurse" "Oh, he'll come in here shortly. In the meanwhile, you should probably prepare to leave soon."
-    mc "(Prepare to leave? Didn't she say I don't have a home to go back to?)"
-    mc "(But before I can ask, the nurse closes the door behind her and I'm once again left alone in the room. It doesn't help with the fact that hospital walls are so depressing.)"
+    mc "(Prepare to leave? Didn't he say I don't have a home to go back to?)"
+    mc "(But before I can ask, the nurse closes the door behind him and I'm once again left alone in the room. It doesn't help with the fact that hospital walls are so depressing.)"
+    with move 
+    show nurse at right 
+    with move 
+    hide nurse
     mc "(As I gather my thoughts, I look around the room for anything I'd like to take with me.)"
     mc "(Again, hospitals like to save money due to the expensive equipment. None of it is anything I can keep. I did borrow a few books from the library they have here, but only patients have the right to borrow them.)"
     mc "(Maybe I could ask for some of the coloring materials they give the children? They get used up every few weeks, so it's not like they're completely permanent. I don't need half-used crayons and colored pencils though, so I'd rather not do that.)"
@@ -117,6 +128,10 @@ label intro:
     mc "(When I turn my head towards the door to try to greet my unknown savior, a powerful blast of cologne smacks into my face in the same manner as their door etiquette.)"
     mc "(This guy...)"
     mc "(As I recover from my involuntary trip down the Men's Beauty aisle, the loud clicking of dress shoes calmly approaches.)"
+    with move 
+    show ceo neutral at right 
+    with move 
+    show ceo neutral
     mc "(A tall man steps through the door. He's dressed formally, with a matching black suit and pants, a pure white dress shirt, and a charcoal-colored tie that makes up the look of business formal.)"
     mc "(While some may call it professional, to me it just looks plain.)"
     mc "(That opinion doesn't apply when I get a good look at his face, however.)"
