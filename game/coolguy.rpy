@@ -3,6 +3,7 @@ label coolguyyes:
     mc "I'll join."
     "Cool Man" "Excellent, just as I expected. Pack your things, I'll see you around shortly."
     mc "(He stands up and steps out of the room, his dress shoes clicking with every step.)"
+    hide ceo neutral 
     mc "(As I get up from the bed, I feel slightly uncomfortable.)"
     mc "(I haven't gotten up in a while.)"
     mc "(I'm probably out of shape too.)"

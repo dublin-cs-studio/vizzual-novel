@@ -18,6 +18,7 @@ label day1work:
     mc "(Wow, she's even prettier close up. Her eyes are nice. At least a 10, maybe even an 11.)"
     mc "(After a few more seconds, she stops typing and leans back to look at me.)"
     show sigma
+    with fade
     "Woman" "How may I help you?"
     mc "I recently got hired to work here. "
     "Woman" "Mhm."
@@ -219,13 +220,3 @@ label day1work:
             s "Thanks."
             mc "(I wave her goodbye and head out the door. The sky is slowly but surely beginning to darken. I need to hurry home to escape the night.)"
             jump day2
-
-
-
-
-
-
-
-
- 
-
