@@ -3,7 +3,10 @@ label coolguyyes:
     mc "I'll join."
     "Cool Man" "Excellent, just as I expected. Pack your things, I'll see you around shortly."
     mc "(He stands up and steps out of the room, his dress shoes clicking with every step.)"
+    show ceo neutral at right 
+    with move 
     hide ceo neutral 
+    with move
     mc "(As I get up from the bed, I feel slightly uncomfortable.)"
     mc "(I haven't gotten up in a while.)"
     mc "(I'm probably out of shape too.)"
@@ -17,7 +20,15 @@ label coolguyyes:
     mc "(I slowly open my eyes. The room I'm in is foreign, but it looks somewhat homely. The ceiling is such a light brown color that I feel like it's white and my eyes are tricking me.)"
     mc "(I blink a couple of times to try to wet my eyes before giving up as it seems to have no effect.)"
     mc "(I get out of my resting position and look around the room. I'm wearing a light set of pajamas. There's a cup of water on the nightstand, with a small note next to it.)"
+    show nurse at right 
+    with move 
+    show nurse at center 
+    with move 
     "Nurse" "Good morning, [name], I hope you had a good rest. Your work clothes are in the closet, enjoy your new home."
+    show nurse at right 
+    with move 
+    hide nurse
+    with move 
     mc "…"
     mc "(I get out of bed and walk over to the closet. It's not the largest closet, but it has a mirror next to it so I can check my hair.)"
     mc "(These pajamas are pretty cute, aren't they.)"
@@ -64,6 +75,10 @@ label coolguyno:
     mc "I said I didn't want to join."
     "Cool Guy" "Not like you have a choice, do you? I don't think a broke amnesiac will survive long on their own without a place to call home. Plus, the major players at the DEU want to see their money well spent."
     "Cool Guy" "Room 308. I left a few furnishings so you don't have to sleep on the ground."
+    show ceo neutral at right 
+    with move 
+    hide ceo neutral 
+    with move
     mc "(He places the key on top of the map and leaves. The clicks of his dress shoes echo down the hallway as he leaves the door open.)"
     mc "(I slide out of bed and stack my spare clothes with the map and keys. It's not much, but it's better than only having one set.)"
     mc "(I place them all into a small plastic grocery bag and slide the keys into my pockets.)"

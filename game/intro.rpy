@@ -7,11 +7,8 @@ label intro:
     "Cashier" "Thank you for shopping with us."
     scene bg nightalley
     with fade
-    mc "(As I step outside, a cool, yet gentle breeze brushes by my face.)"
+    mc "(As I step outside, a cool and gentle breeze brushes by my face.)"
     mc "Another cold night, huh."
-    mc "(The breeze that wisped by me carries my sight upwards, into the star-lit sky.)"
-    mc "(The glitters of millions of stars inconceivably far away fill my eyes. The beautiful streaks of purple and orange slice through the monotonous, grey backdrop of the darkened atmosphere.)"
-    mc "(It hasn't been so dark yet so early in a while. I'll need to start carrying my winter clothes with me now.)"
     mc "(Suddenly, the rumbling of a car's engine knocks me out of my trance.)"
     mc "(I should head home now.)"
     mc "(A small, but brightly colored bar interrupts my calm walk home. Its neon colors flash throughout the street, making me feel nostalgic.)"
@@ -86,7 +83,6 @@ label intro:
     "*knock knock*"
     mc "(The nurse is here for his mid-day visit…)"
     "The door opens..."
-    with move 
     show nurse at right 
     with move 
     show nurse at center 
@@ -116,10 +112,10 @@ label intro:
     "Nurse" "Oh, he'll come in here shortly. In the meanwhile, you should probably prepare to leave soon."
     mc "(Prepare to leave? Didn't he say I don't have a home to go back to?)"
     mc "(But before I can ask, the nurse closes the door behind him and I'm once again left alone in the room. It doesn't help with the fact that hospital walls are so depressing.)"
-    with move 
     show nurse at right 
     with move 
     hide nurse
+    with move 
     mc "(As I gather my thoughts, I look around the room for anything I'd like to take with me.)"
     mc "(Again, hospitals like to save money due to the expensive equipment. None of it is anything I can keep. I did borrow a few books from the library they have here, but only patients have the right to borrow them.)"
     mc "(Maybe I could ask for some of the coloring materials they give the children? They get used up every few weeks, so it's not like they're completely permanent. I don't need half-used crayons and colored pencils though, so I'd rather not do that.)"
@@ -128,10 +124,10 @@ label intro:
     mc "(When I turn my head towards the door to try to greet my unknown savior, a powerful blast of cologne smacks into my face in the same manner as their door etiquette.)"
     mc "(This guy...)"
     mc "(As I recover from my involuntary trip down the Men's Beauty aisle, the loud clicking of dress shoes calmly approaches.)"
-    with move 
     show ceo neutral at right 
     with move 
-    show ceo neutral
+    show ceo neutral at center 
+    with move
     mc "(A tall man steps through the door. He's dressed formally, with a matching black suit and pants, a pure white dress shirt, and a charcoal-colored tie that makes up the look of business formal.)"
     mc "(While some may call it professional, to me it just looks plain.)"
     mc "(That opinion doesn't apply when I get a good look at his face, however.)"
