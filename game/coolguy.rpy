@@ -6,29 +6,22 @@ label coolguyyes:
     show ceo neutral at right 
     with move 
     hide ceo neutral 
-    with move
+    with moveoutright
     mc "(As I get up from the bed, I feel slightly uncomfortable.)"
     mc "(I haven't gotten up in a while.)"
     mc "(I'm probably out of shape too.)"
     mc "(I sigh as I gather my clothes in one place.)"
     mc "(But before I can put them into my bag, I feel my vision begin to fade.)"
     mc "(Not again…)"
-    with fade
+    scene bg bedroom
+    with pixellate 
     mc "(My eyelids feel uncomfortably heavy.)"
     mc "(My body feels compressed as if I've shrunk by multiple inches. But I can that I'm on a bed of some sort.)"
     mc "(My eyes feel dry, despite having been covered for as long as I have slept.)"
     mc "(I slowly open my eyes. The room I'm in is foreign, but it looks somewhat homely. The ceiling is such a light brown color that I feel like it's white and my eyes are tricking me.)"
     mc "(I blink a couple of times to try to wet my eyes before giving up as it seems to have no effect.)"
     mc "(I get out of my resting position and look around the room. I'm wearing a light set of pajamas. There's a cup of water on the nightstand, with a small note next to it.)"
-    show nurse at right 
-    with move 
-    show nurse at center 
-    with move 
-    "Nurse" "Good morning, [name], I hope you had a good rest. Your work clothes are in the closet, enjoy your new home."
-    show nurse at right 
-    with move 
-    hide nurse
-    with move 
+    "Nurse's Note" "Good morning, [name], I hope you had a good rest. Your work clothes are in the closet, enjoy your new home."
     mc "…"
     mc "(I get out of bed and walk over to the closet. It's not the largest closet, but it has a mirror next to it so I can check my hair.)"
     mc "(These pajamas are pretty cute, aren't they.)"
@@ -45,7 +38,7 @@ label coolguyyes:
     mc "(My expectations were low, but I still feel like I've been scammed.)"
     mc "(I sigh and shut the fridge door, hoping that my past self magically remembers how to make breakfast.)"
     mc "(But before I accidentally start a fire in my brand new home, I spot a plate of eggs and a glass of milk. And another note.)"
-    mc "Eat up! (There's also an image of a thumbs-up.)"
+    "Note" "Eat up! (There's also an image of a thumbs-up.)"
     mc "(I'm sorry for ever doubting you, cool guy.)"
     mc "(I quickly eat up the eggs and down the milk. It doesn't taste that bad. Who am I kidding, it's the best meal I can remember. Anything beats IV drip.)"
     mc "(I head for the door before I realize that I don't know where work is.)"
@@ -58,6 +51,8 @@ label coolguyyes:
     mc "(I head down the stairs so I can reach the ground level. It's only 2 sets of stairs. I pity those who live on the upper floors, but at least they'll never skip leg day.)"
     mc "(I look at the apartment keys as I'm descending. 308. Not a bad number. It's an even number, at least.)"
     mc "(The workplace isn't that far from the apartment, so I'll just walk there. I should get some exercise, anyway.)"
+    scene bg dayalley
+    with pixellate 
     mc "(I haven't been outside in a while. The hospital staff never let me leave the premises since I wasn't fully recovered, but I got to walk around the hallways and look out the windows.)"
     mc "(The only thing I could see was trees, though. Large rectangles of green, occasionally intersected by buildings. They got boring after a while.)"
     mc "(They look much more different up close though.)"
@@ -103,6 +98,8 @@ label coolguyno:
     mc "(It's time to move forward.)"
     mc "(I walk towards the elevators, clutching my bag of clothes tightly against my chest.)"
     mc "(It's all I have, after all.)"
+    scene bg dayalley
+    with pixellate 
     mc "(When I step out of the hospital, a golden ray of sunlight hits me in the eye.)"
     mc "(Damn, that's bright.)"
     mc "(I'm not used to the sunlight. The nurses always kept the curtains shut because it could bother the patients.)"
@@ -113,16 +110,18 @@ label coolguyno:
     mc "(The outside world is quite incredible. The trees, the air, the sky. All of it feels refreshing compared to the insides of the hospital.)"
     mc "(Did the previous me get to experience this all the time? Lucky…)"
     mc "(The sounds of cars rushing by me are also quite refreshing. All different makes and models, with a few of them nearly identical save for the color. They make a nice sound, speeding by at such speeds that they appear as a blur to me.)"
-    with fade
+    with dissolve
     mc "(By the time the building comes into view, the sky has already become a melancholy mix of pink and gold.)"
     mc "(The apartment complex looks pretty simple. A medium-sized parking lot right in front of a tall, 5-story building of apartment after apartment.)"
     mc "(As I'm about to walk up the stairs, a young man rushes down the stairs, bumping into my shoulder.)"
-    show joejoe
+    show joejoe surprised at left 
     "Young Man" "My bad."
     mc "Sorry."
-    hide joejoe
+    hide joejoe surprised 
     mc "(He rushes off before I can get a good look at his face.)"
     mc "(That guy seems like he's in a hurry. I wonder what he's up to.)"
+    scene bg bedroom 
+    with pixellate
     mc "(I climb up the rest of the stairs with no interruptions and reach the third floor.)"
     mc "(Room 308, room 308.)"
     mc "(Right here.)"
@@ -159,5 +158,5 @@ label coolguyno:
     mc "(It tastes pretty good. I'd be fine eating this every day, but it'd probably get boring soon enough. I finish the plate in just a few minutes. It's time to head to work now.)"
     mc "(I head out the door and lock it behind me, before going down the stairs to the ground level.)"
     mc "(As I look at the map again, it doesn't seem that far. I should be able to just walk there.)"
-    with fade
+    with dissolve
     jump day1work

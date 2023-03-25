@@ -1,4 +1,6 @@
 label day1work:
+    scene bg outside
+    with squares
     mc "(The building is in sight now. That only took around 20 minutes, I think.)"
     "The MC is outside of the DEEZ Corp building."
     mc "(What a tall building. It's the tallest one on the block.)"
@@ -7,7 +9,10 @@ label day1work:
     mc "(I should be more confident. No one would walk into an office building if they don't work there, right? I'm one of the few people who has the right to go in.)"
     mc "(I adjust my already correctly adjusted tie and step through the automatic doors.)"
     mc "(My face is hit by a light sweep of air conditioning. It's a comfortable feeling for an office building, but it's already cold outside.)"
+    scene bg dayfrontdesk 
+    with dissolve 
     mc "(Right in front of the entrance is a medium-sized desk. There's a woman sitting at the desk, typing on her computer.)"
+    show sigma glasses at center 
     mc "(Even though she's looking down, I can tell that she's beautiful. Both her clothes and her hair are very finely kept.)"
     mc "(I adjust my tie again and walk up to the front desk.)"
     mc "H-Hello."
@@ -17,8 +22,6 @@ label day1work:
     mc "(She finally looks up at me, but she looks back to her screen.)"
     mc "(Wow, she's even prettier close up. Her eyes are nice. At least a 10, maybe even an 11.)"
     mc "(After a few more seconds, she stops typing and leans back to look at me.)"
-    show sigma
-    with fade
     "Woman" "How may I help you?"
     mc "I recently got hired to work here. "
     "Woman" "Mhm."
@@ -27,47 +30,63 @@ label day1work:
     mc "(Her antennae twitch before she finally breaks the silence.)"
     "Woman" "Welcome to the company. I'm Sigma."
     s "I'll give you a tour."
+    show sigma glasses at right 
+    with move
     mc "(She gets up from her chair and walks around the desk area.)"
     s "Follow me."
+    hide sigma glasses 
+    with moveoutright
     mc "(She turns around on her heels and walks away at a rapid pace.)"
     mc "(I have to run to catch up with her.)"
-    with fade
+    scene bg office 
+    show sigma glasses at center 
+    with dissolve 
     s "If you're the same [name] as the files tell me, you're working as a Charitable Urgency Manager. If there's a disease that someone needs handling, it's your job to suit their needs and help them."
     s "Work starts at 9 am sharp every weekday, but sometimes you might get called in on the weekends."
     s "You don't need to follow the dress code every day, by the way. I would like it if you wore a suit every day, but the quality managers only check once a month."
-    with fade
+    scene bg cubicle1
+    show sigma glasses at center 
+    with dissolve 
     mc "(Finally, Sigma pauses in front of a department layered with cubicles.)"
     s "Charitable Urgency Managers are grouped in with the Disease Management section. Most of these guys deal with the paperwork though. You should probably make as many friends with them as possible."
     mc "(She walks around the lines of cubicles until she finds one without a name labeled on the chair.)"
     s "This one will be yours. You can put your personal belongings underneath your desk, but be careful not to let them move outside of your designated area."
     mc "(Sigma starts to walk away before she suddenly stops.)" # do some transition stuff here? either fade her out for a sec or have her move out and move back
+    show sigma glasses at left 
+    with ease 
+    show sigma glasses at center 
+    with move 
     s "Oh, I forgot to mention. You'll get an hour break at 12 for lunch and other stuff, but you can also take a 5-minute break whenever you want. You only get two per workday, though. Don't waste them."
     mc "(Sigma gestures for me to follow her before she walks toward the back of the department.)"
     scene bg cooler
-    with fade
+    with dissolve
+    show sigma glasses at center 
 
     s "Here is the broken corner."
-    hide sigma
+    hide sigma glasses 
     mc "(There's a small coffee machine on the desk and a water cooler right next to it.)"
     mc "(I reach for a paper cup, but I suddenly bump into another person doing the same thing.)"
-    show joejoe
+    show joejoe surprised at center
+    with zoomin
     mc "Oh, sorry."
     "Other guy" "Sorry."
-    hide joejoe
+    show joejoe neutral at center 
     mc "(I let him take the cup first since he was there first.)"
     mc "(But he does the same thing, for some reason. I'll accept his act of kindness.)"
     mc "(I reach for the cup again, but he does the same. Our hands bump into each other.)"
     mc "(I look up at this strange man who mirrors my every action.)"
-    show joejoe
     mc "(Have I seen this guy before?)"
     mc "(Wasn't he one of the people I passed on the way here? Or was he the guy back at the cubicle?)"
     "Incredibly average man" "I'll go ahead."
     mc "(He grabs a paper cup while I'm trying to remember who he is, and fills it up silently.)"
-    show sigma at left
+    show sigma glasses at left
+    with moveinleft
     s "That's Joe Joe, one of your co-workers. I honestly can't remember when he got here, or what he does, but he frequents the water cooler every break."
     mc "(Joe Joe downs his water cup in a single gulp. He looks satisfied with his amount of water, even though I could probably hold more in my bare hands.)"
     j "Nice to meet you."
     j "Sorry about those water cooler shenanigans. I'm not the best at interacting with other people."
+    hide sigma glasses 
+    with easeoutleft
     mc "(Sigma walks away without a sound, leaving me to deal with someone I've just met.)"
     mc "(He sips the cup again, only taking in the few remaining droplets.)"
     j "I see you've already met Sigma. She's a hard worker, that woman."
@@ -77,10 +96,13 @@ label day1work:
     j "Nice to meet you too. If you're confused about something, you can just ask me about it."
     menu: 
         "What do you do here?":
+            show joejoe surprised at center 
             mc "(His face shows a hint of surprise before he smiles again.)"
-            j "Oh, this will sound kinda bad, but..."
+            j "Oh, this will sound kinda bad, but..." 
+            show joejoe embarrassed at center
             j "I'm not sure."
             mc "Huh?"
+            show joejoe talking 1 at center
             j "No, I mean, like, I come here every day, right?"
             j "And every day Sigma allows me in without a hitch."
             j "But I don’t do anything for the company. I just wander around for the entire day. Sometimes I help someone with paperwork or run errands for them, but I’m not paid to do that."
@@ -91,6 +113,7 @@ label day1work:
         "What do I do here?":
             j "I don't know. Did Sigma tell you your position or anything?"
             mc "Yeah, she said I was a Cherishable Undergraduate Major or something like that."
+            show joejoe talking 2 at center 
             mc "(His face lights up like a candle once I say that.)"
             j "Ah, yes, the Charitable Urgency Managers. I always loved that title."
             j "I believe you're the ones who handle the diseases. Like, fighting them and whatnot."
@@ -98,14 +121,22 @@ label day1work:
             mc "That sounds like a pain."
             j "Yeah, it does."
         "I'm good.":
+            show joejoe sad 2 at center
             j "Glad I could... help?"
             mc "(He looks a bit crestfallen that I didn't ask anything. I feel bad for him now."
+    show joejoe neutral         
     j "Anyways, welcome to the company. I look forward to working with you. I’ll be your water cooler buddy too, I guess."
     menu:
         "Sure.":
+            show joejoe happy 1
             mc "(He nods and waves at me as he walks away.)"
+            hide joejoe 
+            with easeoutright
         "No thanks.":
+            show joejoe happy 2
             mc "(He gives me a thumbs up and walks away.)"
+            hide joejoe 
+            with easeoutright
     mc "(Now I'm alone at the water cooler.)"
     mc "(I should probably do work now.)"
     with fade 
