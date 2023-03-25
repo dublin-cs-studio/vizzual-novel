@@ -6,7 +6,7 @@ label intro:
     mc "(I walk to the cashier and check out my items. Nothing besides my cup of ramen and a few pieces of bright, colorful candy.)"
     "Cashier" "Thank you for shopping with us."
     scene bg nightalley
-    with fade
+    with dissolve
     mc "(As I step outside, a cool and gentle breeze brushes by my face.)"
     mc "Another cold night, huh."
     mc "(Suddenly, the rumbling of a car's engine knocks me out of my trance.)"
@@ -86,7 +86,7 @@ label intro:
     show nurse at right 
     with move 
     show nurse at center 
-    with move 
+    with move
     "Nurse" "Good afternoon!"
     mc "Hello."
     "Nurse" "How are you feeling today?"
