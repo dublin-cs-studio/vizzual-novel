@@ -49,10 +49,10 @@ label start:
         if name == "Andrew Zhou":
             renpy.call_in_new_context("easter1") 
         else:
-            renpy.call_in_new_context("intro")
+            renpy.call_in_new_context("intro1")
 label easter1:
     "omg!!! its andrew zhou (real)!"
-    jump intro 
+    jump intro1 
 
 
 label day1:  
