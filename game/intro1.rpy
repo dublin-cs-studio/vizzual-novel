@@ -37,7 +37,7 @@ label intro1:
     "Other Drunk Guy" "Hey, watch where you\'re going."
     "Drunk Guy" "Yeah, you drunk or something?"
 
-    mc "(They all laugh in unison, like a trio of parrots. It pisses me off, but I honestly can\'t be bothered to do much more than get annoyed.)"
+    mc "(They all laugh in unison, like a trio of pigeons. It pisses me off, but I honestly can\'t be bothered to do much more than get annoyed.)"
     mc "(I turn away and start walking again, trying to distance myself from the three. They start heading the same way I am, albeit quite a bit slower.)"
 
     "Drunk Girl" "Watch this."
