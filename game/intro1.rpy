@@ -41,10 +41,13 @@ label intro1:
     mc "(I turn away and start walking again, trying to distance myself from the three. They start heading the same way I am, albeit quite a bit slower.)"
 
     "Drunk Girl" "Watch this."
+    with vpunch
+    with vpunch
 
     mc "(My arm twitches.)"
 
     scene black
+    with pixellate
 
     mc "(...)"
 
@@ -85,7 +88,9 @@ label intro1:
     (Hm? Wait...)
     """
     scene bg hospital
-    with fade
+    with dissolve
+    
+    show nurse at center
         
     "Nurse" "Good morning!"
 
@@ -93,15 +98,27 @@ label intro1:
     (The nurse comes in with enough force to break the door down. It\'s always exactly at 10 am, too.)
 
     (He carries over a tray of breakfast and sets it on the table next to me, and quietly leaves the room.)
+    """
+    
+    show nurse at right 	
+    with move 	
+    hide nurse	
+    with easeoutright 
 
+    mc """
     (I don\'t feel like eating today, but I can\'t just leave my body to die. It wouldn\'t be fair to the previous me, who had spent so many years staying alive.)
 
     (I will live on, for the me of the past. Plus, the longer I live, the more of a chance I\'ll get my memories back, right?)
 
     (As I pick up the spoon, the nurse suddenly slams the door open again.)
     """
+    show nurse at center 
+    with moveinright
 
     "Nurse" "Oh, I forgot, but the doctor\'s gonna check up on you today. And there\'s something else too, but I\'ll let him tell you that."
+    
+    hide nurse
+    with easeoutright
 
     mc """
     (A check up or two is nothing out of the ordinary. I\'m a recovering patient after all.)
@@ -227,6 +244,8 @@ label intro1:
     mc "(That's probably him.)"
 
     mc "Come in."
+    
+    with vpunch
 
     mc "(As soon as I utter that phrase, the door slams open in an instant.)"
 
