@@ -35,7 +35,7 @@ label introyes:
     mc "(But it's not like I can complain.)"
     mc "(There isn't much to see, so I head over to the kitchen. I didn't realize until now, but I'm pretty hungry.)"
     show bg kitchen
-    with slideleft
+    with dissolve
     mc "(I open the fridge and look around.)"
     mc "(Nothing.)"
     mc "(My expectations were low, but I still feel like I've been scammed.)"
@@ -172,7 +172,7 @@ label introno:
     mc "(Finally, I exhale deeply and open up my closet to get dressed.)"
     mc "(I put on my business clothes and head to the kitchen for breakfast. There's a plate of scrambled eggs and a glass of milk on the counter. I guess the cool guy made it for me.)"
     mc "(It tastes pretty good. I'd be fine eating this every day, but it'd probably get boring soon enough. I finish the plate in just a few minutes. It's time to head to work now.)"
-    show bg outside
+    show bg apartment outside
     with fade
     mc "(I lock the door behind me before going down the stairs to the ground level.)"
     mc "(I pull out the map from yesterday. Tt doesn't seem that far. I should be able to just walk there.)"

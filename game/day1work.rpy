@@ -13,6 +13,7 @@ label day1work:
     with dissolve 
     mc "(Right in front of the entrance is a medium-sized desk. There's a woman sitting at the desk, typing on her computer.)"
     show sigma glasses at center 
+    with dissolve
     mc "(Even though she's looking down, I can tell that she's beautiful. Both her clothes and her hair are very finely kept.)"
     mc "(I adjust my tie again and walk up to the front desk.)"
     mc "H-Hello."
@@ -20,6 +21,8 @@ label day1work:
     mc "(Did she hear me?)"
     mc "(I sit in silence while the woman types on her computer for a few more seconds.)"
     mc "(She finally looks up at me, but she looks back to her screen.)"
+    show cg sigma desk
+    with Dissolve(1.0)
     mc "(Wow, she's even prettier close up. Her eyes are nice. At least a 10, maybe even an 11.)"
     mc "(After a few more seconds, she stops typing and leans back to look at me.)"
     "Woman" "How may I help you?"
@@ -30,6 +33,8 @@ label day1work:
     mc "(Her antennae twitch before she finally breaks the silence.)"
     "Woman" "Welcome to the company. I'm Sigma."
     s "I'll give you a tour."
+    hide cg sigma desk
+    with Dissolve(1.0)
     show sigma glasses at right 
     with move
     mc "(She gets up from her chair and walks around the desk area.)"
@@ -62,7 +67,7 @@ label day1work:
     with dissolve
     show sigma glasses at center 
 
-    s "Here is the broken corner."
+    s "Here is the break corner."
     hide sigma glasses 
     mc "(There's a small coffee machine on the desk and a water cooler right next to it.)"
     mc "(I reach for a paper cup, but I suddenly bump into another person doing the same thing.)"

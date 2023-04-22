@@ -43,9 +43,6 @@ label intro1:
     "Drunk Girl" "Watch this."
     with vpunch
     with vpunch
-
-    mc "(My arm twitches.)"
-
     scene black
     with pixellate
 
@@ -100,10 +97,10 @@ label intro1:
     (He carries over a tray of breakfast and sets it on the table next to me, and quietly leaves the room.)
     """
     
-    show nurse at right 	
-    with move 	
-    hide nurse	
-    with easeoutright 
+    show nurse at right
+    with move
+    hide nurse
+    with easeoutright
 
     mc """
     (I don\'t feel like eating today, but I can\'t just leave my body to die. It wouldn\'t be fair to the previous me, who had spent so many years staying alive.)
