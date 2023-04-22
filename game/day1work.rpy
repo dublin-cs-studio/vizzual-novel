@@ -56,17 +56,15 @@ label day1work:
     s "Charitable Urgency Managers are grouped in with the Disease Management section. Most of these guys deal with the paperwork though. You should probably make as many friends with them as possible."
     mc "(She walks around the lines of cubicles until she finds one without a name labeled on the chair.)"
     s "This one will be yours. You can put your personal belongings underneath your desk, but be careful not to let them move outside of your designated area."
+    show sigma glasses at left
+    with ease
     mc "(Sigma starts to walk away before she suddenly stops.)" # do some transition stuff here? either fade her out for a sec or have her move out and move back
-    show sigma glasses at left 
-    with ease 
     show sigma glasses at center 
     with move 
     s "Oh, I forgot to mention. You'll get an hour break at 12 for lunch and other stuff, but you can also take a 5-minute break whenever you want. You only get two per workday, though. Don't waste them."
     mc "(Sigma gestures for me to follow her before she walks toward the back of the department.)"
     scene bg cooler
-    with dissolve
-    show sigma glasses at center 
-
+    with dissolve 
     s "Here is the break corner."
     hide sigma glasses 
     mc "(There's a small coffee machine on the desk and a water cooler right next to it.)"

@@ -180,7 +180,7 @@ label burger:
     mc "(I take a bite out of it. It's pretty good. I don't know if it's worth ten dollars of Sigma's paycheck, but it's decent.)"
     mc "(The entire meal can be described as \"decent\". The fries taste about as good as fries can, and the soft drink feels watered down from all the ice. But overall, it's not that bad, at least in my opinion.)"
     mc "(Sigma seems to be enjoying it more than I am. She seems more energetic than usual, and her antennae are lightly swaying to match her mood.)"
-    mc "(She looks very pretty whenever she smiles. Not that she doesn't look good all the time, but she especially looks nice like this. Plus, it makes me feel better that I sort of helped her feel happy. Her face is quite beautiful, though. Her elegance puts Aphrodite to shame. I would eat burgers every day if I get to see Sigma like this. That's not particularly healthy for my body though, so it's more of a dream scenario.)"
+    mc "(She looks very pretty whenever she smiles. Not that she doesn't look good all the time, but she especially looks nice like this. I wouldn't mind eating burgers every day if it meant she would be this happy every day.)"
     mc "(Her happiness has spread to me. I hope I'm not smiling like a maniac, but I can't help it when I see something so amazing.)"
     show sigma excited at right
     show joejoe talking 1 at left
@@ -197,6 +197,8 @@ label burger:
     j "Not bad."
     mc "(We finish our food and head back to the office to work again.)"
     show bg cubicle2
+    hide joejoe happy 1
+    hide sigma excited
     with fade
     mc "(Time to get back to work. It's more paperwork. Lucky me…)"
     mc "(At least I know how to properly fill it out. Can't say the same for me of yesterday.)"
@@ -240,8 +242,8 @@ label burger:
     jump day3
 label pizza:
     mc "Joe Joe's right. Let's have some pizza."
-    j "Yes! I knew you were on my side."
     show joejoe talking 1
+    j "Yes! I knew you were on my side."
     mc "(Joe Joe pumps his fist and starts gloating.)"
     j "Take that, Sigma. You should've known that I was right from the beginning."
     show sigma pain
@@ -258,7 +260,7 @@ label pizza:
     mc "Is there any difference between them?"
     show joejoe happy 1
     j "The smaller pizzas are more food per person, but each slice is smaller. Unless you want to consider the entire pizza one slice, I guess."
-    J "The large pizza would be cheaper and each slice would be larger. They should be around the same price if we're only ordering for 3 people."
+    j "The large pizza would be cheaper and each slice would be larger. They should be around the same price if we're only ordering for 3 people."
     menu:
         "Let's get..."
         "The small pizzas":
@@ -270,6 +272,8 @@ label pizza:
     s "I'll wait for you guys at a table. Just get me whatever."
     hide sigma pain 
     with dissolve
+    show joejoe happy 2 at center
+    with ease
     mc "(She sits down at a table right next to the window and pulls out her phone.)"
     j "You can sit down too if you want. What do you want?"
     mc "No, I'll wait with you. I'd feel bad if you had to wait here all alone."
@@ -289,6 +293,7 @@ label pizza:
     mc "(It takes some time, but we place the order and get our food.)"
     mc "(Now, it's time to eat.)"
     show bg table
+    hide joejoe happy 1
     show sigma glasses
     with dissolve
     mc "(The pizza tastes pretty good. It's quite hot since it just got out of the oven, but it's fine if I just blow on it.)"
@@ -325,14 +330,15 @@ label pizza:
     show bg cubicle
     with dissolve
     mc "(It's now the end of my shift and I still haven't seen Joe Joe again. I'll just ask him tomorrow.)"
-    show duskalley
+    show bg duskalley
     with fade
     mc "(Just like yesterday I leave the building, waving Sigma goodbye. I still need groceries though.)"
     mc "(Right before I head home, I spot something in the bushes outside the building. It's…)"
     mc "(A folded $50 bill, caught on the leaves.)"
     mc "(It looks like it's my lucky day and someone else's unlucky day. I wonder who could've lost this?)"
     mc "(I look around, trying to spot anyone who could be the owner of this bill. No one's around.)"
-    mc "(It's in such an odd position too. I doubt anyone could unintentionally leave a $50 bill on the bushes unless they got tackled into them. Yeah, someone probably felt generous today and left some money for a stranger. My heart goes out to the kind individual who did such a selfless act.)"
+    mc "(It's in such an odd position too. I doubt anyone could unintentionally leave a $50 bill on the bushes unless they got tackled into them.)"
+    mc "(Yeah, someone probably felt generous today and left some money for a stranger. My heart goes out to the kind individual who did such a selfless act.)"
     mc "(I snatch the bill away from the branches and put it into my pocket. I should be able to buy food now.)"
     mc "(The sky is darkening quickly, so I have to hurry. The closest store should be… that way.)"
     show bg konbini

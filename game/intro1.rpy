@@ -1,7 +1,7 @@
 label intro1:
     scene bg konbini
     with fade
-
+    
     mc """
     (Hm...)
 
