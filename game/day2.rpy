@@ -4,7 +4,7 @@ label day2:
     mc "(Man, I'm tired. I swear these stairs were shorter this morning.)"
     mc "(I walk over to apartment 308 and unlock the door.)"
     "*creak*"
-    show bg livingroom
+    scene bg livingroom
     with dissolve
     mc "(I'm home again. It certainly feels different coming back here then coming back to my hospital room. I feel like I own something now. Plus, it just feels better that I'm not bleeding money into the healthcare system.)"
     mc "(Do I need to wash these clothes? I'm pretty sure Sigma said that technically I didn't need to wear business formal every day.)"
@@ -24,10 +24,10 @@ label day2:
     mc "(The next day, a problem came up.)"
     mc "(I didn't have anything to eat. The fridge was empty and there was no magical plate of eggs that appeared on my counter. I suppose that's a good thing, though. It means that no one sneaked into my apartment while I was asleep.)"
     mc "(I changed into my casual clothes and set out for work immediately. It was early in the morning, so I wasn't feeling the pain of hunger yet.)"
-    show bg outside
+    scene bg outside
     with dissolve
     mc "(I think I'm early today. The sun doesn't seem as bright as it was yesterday.)"
-    show bg dayfrontdesk
+    scene bg dayfrontdesk
     with fade
     mc "(As soon as I enter the office, I see Sigma lying down on the desk. It seems that she was sleeping until I opened the door.)"
     mc "Good morning."
@@ -40,7 +40,7 @@ label day2:
     show sigma tired
     mc "(I leave Sigma to do her work and walk through the main department of the office to the Disease Management department.)"
     hide sigma tired
-    show bg cubicle1
+    scene bg cubicle1
     with dissolve
     mc "(Now comes the task of filling out the records. I'm pretty sure I know what I'm doing.)"
     mc "(I write down the ID numbers, grab the correct files, and all I need to do is fill out the forms.)"
@@ -49,7 +49,7 @@ label day2:
     mc "(I guess I'll go with Joe Joe. I bet he knows where the good restaurants are.)"
     mc "(I stand up to get his attention, but he's not at the cubicle he was in yesterday. I guess that wasn't his cubicle or something.)"
     mc "(If he's not here, then he should probably be at the water cooler. That guy likes his water.)"
-    show bg cooler
+    scene bg cooler
     with dissolve
     show joejoe happy 1
     with dissolve
@@ -63,20 +63,21 @@ label day2:
     show joejoe happy 2
     j "Alright, let's go."
     mc "(We begin walking towards the entrance together.)"
-    show bg office
+    scene bg office
     with dissolve
     show joejoe talking 2
     with dissolve
     j "You're new, right? I'll show you all the good places to eat around here. What do you want to eat today?"
     mc "I don't know. We can just go wherever you want."
     j "Okay. Prepare for the greatest eating experience you've ever had!"
-    hide joejoe talking 2
-    show bg dayfrontdesk
-    with fade
-    show joejoe happy 1 at left
-    show sigma glasses at right
-    with dissolve
+    
+    scene bg dayfrontdesk 
+    with dissolve 
+    show joejoe talking 1 at centerleft 
+    show sigma glasses at centerright 
+    with dissolve 
     mc "(After a few more bits of small talk, we reach the main lobby. Sigma is still working, even though it's lunch break.)"
+
     mc "(Joe Joe seems to notice her. A slight smile appears on his face.)"
     show joejoe talking 1
     j "Sigma!"
@@ -136,7 +137,7 @@ label burger:
     mc "(Sigma starts walking towards the burger joint at a brisk pace, forcing us to follow behind her.)"
     mc "(Her antennae are moving around swiftly and have turned a bright green color. I assume that means she's happy. It's pretty cute.)"
     show sigma excited at right
-    show bg burger
+    scene bg burger
     with fade
     mc "(It doesn't seem like Joe Joe has ever been here, but Sigma certainly looks like she has. She immediately heads for the back of the line. She probably already knows what she wants.)"
     mc "(It doesn't matter though. There are only a few people in the store, giving us enough time to think about our order without forcing us to wait too long.)"
@@ -182,8 +183,8 @@ label burger:
     mc "(Sigma seems to be enjoying it more than I am. She seems more energetic than usual, and her antennae are lightly swaying to match her mood.)"
     mc "(She looks very pretty whenever she smiles. Not that she doesn't look good all the time, but she especially looks nice like this. I wouldn't mind eating burgers every day if it meant she would be this happy every day.)"
     mc "(Her happiness has spread to me. I hope I'm not smiling like a maniac, but I can't help it when I see something so amazing.)"
-    show sigma excited at right
-    show joejoe talking 1 at left
+    show sigma excited at centerright
+    show joejoe talking 1 at centerleft
     with ease
     j "Hey guys, I finally got my food!"
     mc "(Joe Joe comes barging in, interrupting my Sigma watching. I quickly look away, hoping that he didn't see me staring at her.)"
@@ -316,7 +317,7 @@ label pizza:
     s "That was a joke. And besides, I don't like pizza, but it's not like it's bad. I'm fine with eating it, I just like other foods more."
     mc "(She wrapped the pizza in multiple layers of napkins, but even so there's still some oil on her fingers. She has to wipe it off on yet another napkin before touching anything.)"
     mc "(Once we finish our food, it's time to head back to work. On the way back, Joe Joe still is excited, but as the office building comes into sight his enthusiasm begins to die down.)"
-    show bg cubicle2
+    scene bg cubicle2
     hide sigma pain
     hide joejoe talking
     with fade
@@ -327,10 +328,10 @@ label pizza:
     mc "(That leaves Joe Joe. He's probably at the water cooler, now that I think about it. He hasn't consistently appeared anywhere else.)"
     mc "(I head over to the water cooler for the second time today. Strangely, Joe Joe is nowhere to be found. The break corner feels desolate without him.)"
     mc "(Throughout the remainder of the day, I keep looking over at the break corner to try to find Joe Joe. I know he's probably fine, but I can't help but feel anxious about his disappearance.)"
-    show bg cubicle
+    scene bg cubicle
     with dissolve
     mc "(It's now the end of my shift and I still haven't seen Joe Joe again. I'll just ask him tomorrow.)"
-    show bg duskalley
+    scene bg duskalley
     with fade
     mc "(Just like yesterday I leave the building, waving Sigma goodbye. I still need groceries though.)"
     mc "(Right before I head home, I spot something in the bushes outside the building. It's…)"

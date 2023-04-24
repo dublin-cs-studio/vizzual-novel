@@ -91,8 +91,7 @@ label intro1:
         
     "Nurse" "Good morning!"
 
-    mc """
-    (The nurse comes in with enough force to break the door down. It\'s always exactly at 10 am, too.)
+    mc """(The nurse comes in with enough force to break the door down. It\'s always exactly at 10 am, too.)
 
     (He carries over a tray of breakfast and sets it on the table next to me, and quietly leaves the room.)
     """

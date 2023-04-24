@@ -33,7 +33,11 @@ transform jumper: #adjust the yoffset as necessary to your preference
     ease .01 yoffset -4 
     ease .01 yoffset 0
 # The game starts here.
+transform centerleft:
+    xpos 0.33 xanchor 0.33 ypos 1.0 yanchor 1.0
 
+transform centerright:
+    xpos 0.66 xanchor 0.66 ypos 1.0 yanchor 1.0
 label start:
 
     # Show a background. This uses a placeholder by default, but you can
