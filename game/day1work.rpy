@@ -199,6 +199,7 @@ label day1work:
             mc "(I leave the building and head home.)"
             jump day2
         "Ask Sigma":
+            $ sigmaPoints += 1
             mc "(I get up from my desk and start heading for the front desk. The office building is quite large, but there are markings on the ground leading toward the main lobby.)"
             mc "(As I walk to the front desk, I take a glance at the other departments on the way. They all look identical, except for a few extra storage rooms in some of them.)"
             scene bg dayfrontdesk

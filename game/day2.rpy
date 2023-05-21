@@ -121,8 +121,10 @@ label day2:
     s "Mine's the correct answer. Make the right choice, [name]."
     menu:
         "Sigma's right.":
+            $ sigmaPoints += 1
             jump burger
         "Joe Joe's right.":
+            $ sigmaPoints += 1
             jump pizza
 label burger:
     mc "Sigma's right. Let's go to the burger place."
@@ -324,13 +326,15 @@ label pizza:
     mc "(Everyone returns to their work mindset. Sigma returns to the front desk and Joe Joe heads off to who-knows-where to do some sort of work.)"
     mc "(I sit back down at my cubicle and begin filling out the records again.)"
     mc "(Now that I think about it, I should've asked Sigma or Joe Joe for money. I won't be having breakfast or dinner until I get paid. I don't want to act like a leech, but I kinda need food to survive.)"
-    mc "(Sigma's at the front desk, but I don't want to ask her. I probably annoyed her since we didn't get burgers today.)"
+    mc "(Sigma's at the front desk, but I don't want to bother her. I probably annoyed her since we didn't get burgers today.)"
     mc "(That leaves Joe Joe. He's probably at the water cooler, now that I think about it. He hasn't consistently appeared anywhere else.)"
-    mc "(I head over to the water cooler for the second time today. Strangely, Joe Joe is nowhere to be found. The break corner feels desolate without him.)"
+    scene bg cooler
+    with dissolve
+    mc "(For some reason, Joe Joe is nowhere to be found. The break corner feels desolate without him.)"
     mc "(Throughout the remainder of the day, I keep looking over at the break corner to try to find Joe Joe. I know he's probably fine, but I can't help but feel anxious about his disappearance.)"
     scene bg cubicle
     with dissolve
-    mc "(It's now the end of my shift and I still haven't seen Joe Joe again. I'll just ask him tomorrow.)"
+    mc "(It's now the end of my shift and I still haven't seen Joe Joe again. I'll just ask him tomorrow, I guess.)"
     scene bg duskalley
     with fade
     mc "(Just like yesterday I leave the building, waving Sigma goodbye. I still need groceries though.)"
@@ -342,7 +346,7 @@ label pizza:
     mc "(Yeah, someone probably felt generous today and left some money for a stranger. My heart goes out to the kind individual who did such a selfless act.)"
     mc "(I snatch the bill away from the branches and put it into my pocket. I should be able to buy food now.)"
     mc "(The sky is darkening quickly, so I have to hurry. The closest store should be… that way.)"
-    show bg konbini
+    scene bg konbini
     with fade
     mc "(The automatic doors slide open gently, ringing an electronic doorbell throughout the store. The young cashier welcomes me without a hint of life in his voice. I feel bad for him, but he probably only does this part-time.)"
     mc "(I grab a couple of ramen cups and some frozen pizza. It should be enough to last me this week. I'll get some candy as well.)"

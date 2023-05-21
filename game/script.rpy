@@ -12,6 +12,14 @@ define g = Character("Goopitha")
 define l = Character("Lone Loan Dolphin")
 define p = Character("Pelota")
 
+#Character point variables
+default goopithaPoints = 0
+default sigmaPoints = 0
+default jjPoints = 0
+default lldPoints = 0
+default pelotaPoints = 0
+default tvheadPoints = 0
+
 default smallpizza = True # used for choosing small or large pizzas when getting pizza with joejoe
 
 image side sigma = "sigmaside.png"
