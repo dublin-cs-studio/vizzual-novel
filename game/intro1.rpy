@@ -1,7 +1,7 @@
 label intro1:
     scene bg konbini
     with fade
-    
+ 
     mc """
     (Hm...)
 
@@ -310,7 +310,5 @@ label intro1:
         "Yes":
             jump introyes
         "No":
+            $ jjPoints += 1
             jump introno
-
-
-            
