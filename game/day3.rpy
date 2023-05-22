@@ -1,5 +1,5 @@
 label day3:
-    scene bg nightalley
+    scene bg alley night
     with fade
     mc "(Wow, it got dark fast. The streetlights are turning on, lighting up the sidewalk.)"
     mc "(It's not a long walk home, but I have to carry my food with me. The plastic bags are slowly pressing into my hands.)"
@@ -13,14 +13,14 @@ label day3:
     with fade
     mc "(Yet another day of life. I can't say I'm excited to go to work, but at least it gives me something to do.)"
     mc "(I get out of bed and get ready for the day. I probably shouldn't eat ramen for breakfast, but I'm an adult and I can make decisions for myself.)"
-    scene bg dayfrontdesk
+    scene bg frontdesk day
     with fade
     mc "(I arrive at the office building, ready to fill out more paperwork.)"
     show sigma glasses
     with dissolve
     mc "Morning, Sigma."
     s "Good morning."
-    scene bg cubicle1
+    scene bg cubicle early
     with dissolve
     mc "(It's not even lunch break yet but I'm already bored of working. My focus begins to waver from the identical looking papers and soon enough I'm fully distracted.)" 
     mc "(I can't make any mistakes in the documentation, but I also can't be bothered to do something this boring for hours upon hours. It's probably time for me to take a break.)"
@@ -106,7 +106,7 @@ label touralready:
     g "Oh, you won’t believe what’s happened lately. So, y'know how the company made some policy changes a while ago?"
     mc "Mhm."
     g "There was this lady..."
-    show bg cubicle2
+    show bg cubicle day
     with fade
     mc "(It looks like I was right on the money. She's not even close to done talking.)"
     mc "(She doesn’t really notice that I’m not really responding to her. A few \"mhm\"s and nods are enough to satisfy her.)"
@@ -242,12 +242,12 @@ label touralready:
     p "It was fine."
     mc "Mhm."
     mc "(I decide to get back to work. Pelota’s still at my desk, but the cubicles near us are empty. I move my papers over and start to fill out the forms.)"
-    scene bg cubicle
+    scene bg cubicle dusk
     with fade
     mc "(Finally, the clock hits 5PM. I get up and stretch my arms out.)"
     mc "(Looks like Pelota never came back from lunch break. Well, she didn't seem like she wanted to stay.)"
     mc "(I gather up my things, head to the lobby, and wave goodbye to Sigma.)"
-    scene bg duskalley
+    scene bg alley dusk
     with slideawayleft
     mc "(What should I eat tonight?)"
     mc "(As I step outside, a voice comes from behind me.)"
@@ -266,7 +266,7 @@ label goopithatour:
     show goopitha happy 2
     g "Perfect! Just follow me."
     mc "(She grabs my hand and pulls me towards the main lobby.)"
-    scene bg dayfrontdesk
+    scene bg frontdesk day
     with fade
     show goopitha happy 1 at left
     show sigma glasses at right
@@ -278,7 +278,7 @@ label goopithatour:
     mc "(I wave at Sigma too and smile as she silently stares at me.)"
     g "This way!"
     mc "(Goopitha pulls me with her. We reach the junction where I would normally turn left, but Goopitha drags me to the right. After a few more twists and turns, she finally stops at a department I don’t recognize.)"
-    scene bg cubicle1
+    scene bg cubicle early
     with fade
     show goopitha happy 1
     with dissolve
@@ -327,7 +327,7 @@ label goopithatour:
     g "What’s wrong, [name]? Did you-"
     mc "(Goopitha looks down at me. I freeze in fear, hoping she wouldn’t find what happened weird. I mean, she did this herself, right? Surely I’m not at fault, right?)"
     g "Ah."
-    scene bg cubicle1
+    scene bg cubicle early
     show goopitha embarrassed
     with dissolve
     mc "(Her face instantly turns a bright red. She covers her face with her hands.)"
@@ -344,7 +344,7 @@ label goopithatour:
     mc "(Goopitha exits the awkward situation, leaving me alone, blushing like crazy.)"
     mc "(I continue to stay seated for a few minutes, contemplating what just happened.)"
     mc "(I sigh for a fifth time in a minute before I finally decide to get up and get back to work. I’m still covered in slime.)"
-    scene bg cubicle1
+    scene bg cubicle early
     with fade
     mc "(I try my best to speed walk through the office, hoping that no one questions my slime-stained outfit. It’s dried somewhat, but my shirt is ever so slightly green in some spots)"
     mc "(I finally reach the department, ready to spend the rest of my work day filling out paperwork.)"
@@ -408,12 +408,12 @@ label goopithatour:
     mc "(Now she’s just awkwardly staring at me. Her eyes aren’t as penetrating as they were a few minutes ago, but they’re still quite intimidating. Eventually, I’m back in shape and ready to move about.)"
     mc "(I guess I’ll just do my work now. The papers I grabbed earlier are scattered across the desk, so I’ll have to sort them first.)"
     mc "(What a day. And it’s not even lunch break yet.)"
-    scene bg cubicle
+    scene bg cubicle dusk
     with fade
     mc "(Finally, the clock hits 5PM. I get up and stretch my arms out.)"
     mc "(Looks like Pelota never came back from lunch break. Well, she didn't seem like she wanted to stay.)"
     mc "(I gather up my things, head to the lobby, and wave goodbye to Sigma.)"
-    scene bg duskalley
+    scene bg alley dusk
     with dissolve
     mc "(What should I eat tonight?)"
     mc "(As I step outside, a voice comes from behind me.)"

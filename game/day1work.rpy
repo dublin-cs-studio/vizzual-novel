@@ -9,7 +9,7 @@ label day1work:
     mc "(I should be more confident. No one would walk into an office building if they don't work there, right? I'm one of the few people who has the right to go in.)"
     mc "(I adjust my already correctly adjusted tie and step through the automatic doors.)"
     mc "(My face is hit by a light sweep of air conditioning. It's a comfortable feeling for an office building, but it's already cold outside.)"
-    scene bg dayfrontdesk 
+    scene bg frontdesk day
     with dissolve 
     mc "(Right in front of the entrance is a medium-sized desk. There's a woman sitting at the desk, typing on her computer.)"
     show sigma glasses at center 
@@ -49,7 +49,7 @@ label day1work:
     s "If you're the same [name] as the files tell me, you're working as a Charitable Urgency Manager. If there's a disease that someone needs handling, it's your job to suit their needs and help them."
     s "Work starts at 9 am sharp every weekday, but sometimes you might get called in on the weekends."
     s "You don't need to follow the dress code every day, by the way. I would like it if you wore a suit every day, but the quality managers only check once a month."
-    scene bg cubicle1
+    scene bg cubicle early
     show sigma glasses at center 
     with dissolve 
     mc "(Finally, Sigma pauses in front of a department layered with cubicles.)"
@@ -142,7 +142,7 @@ label day1work:
             with easeoutright
     mc "(Now I'm alone at the water cooler.)"
     mc "(I should probably do work now.)"
-    scene bg cubicle2
+    scene bg cubicle day
     with fade 
     mc "(I depart from the break corner and head towards the cubicle that Sigma assigned to me.)"
     mc "(Everybody in this cubicle group is working on something. I sit down as quietly as I can to not bother them.)"
@@ -180,7 +180,7 @@ label day1work:
             mc "(After that, I head towards the archive room to grab some files.)"
             mc "(All of the people I need to document have ID numbers in the 10000s. I don't think I'll get through all of them though, so I only take the first 10 I need.)"
             mc "(I head back to my cubicle and begin filling out the forms for each and every person.)"
-            scene bg cubicle
+            scene bg cubicle dusk
             with fade
             mc "(It takes a lot longer than I expected. I didn't know just how much information we had to record on these people.)"
             mc "(And to think that there are at least 10,000 different files…)"
@@ -188,7 +188,7 @@ label day1work:
             mc "(I yawn as I get up from my desk. This job isn't difficult, but it sure is a lot of work.)"
             mc "(I need to return these files to the archive room, and then I can leave.)"
             mc "(After I do that, I head for the main lobby.)"
-            scene bg duskfrontdesk
+            scene bg frontdesk dusk
             with dissolve 
             mc "(When I pass the front desk, I can see that Sigma is still working hard. I guess she ends her shift later, or maybe she just likes working.)"
             show sigma pain
@@ -202,7 +202,7 @@ label day1work:
             $ sigmaPoints += 1
             mc "(I get up from my desk and start heading for the front desk. The office building is quite large, but there are markings on the ground leading toward the main lobby.)"
             mc "(As I walk to the front desk, I take a glance at the other departments on the way. They all look identical, except for a few extra storage rooms in some of them.)"
-            scene bg dayfrontdesk
+            scene bg frontdesk day
             with dissolve 
             mc "(I finally reach the front desk.)"
             mc "(Am I even allowed to go behind the front desk? I know I'm technically an employee but it still feels wrong to be there. Sigma might think I'm weird if I do that. But she also might think I'm weird if I talk to her across the desk like a guest.)"
@@ -260,7 +260,7 @@ label day1work:
             mc "(Every once in a while, I come across something that I don't understand.)" 
             mc "(Sigma is always ready to help, but the sarcastic way she explains it makes me feel uncomfortable whenever I need to ask her something often.)"
             mc "(I can tell that she means no harm when she acts like that, but it still makes me nervous about taking too much.)"
-            scene bg duskfrontdesk 
+            scene bg frontdesk dusk 
             with fade
             mc "(I finally finish the papers. The massive floor-to-ceiling windows of the main lobby shine a golden-red light onto the ground, forming a carpet-like shape onto the floor of the lobby.)"
             mc "(The hues make me feel nostalgic for a memory I don't have, but it's a good indicator of when my shift ends.)"

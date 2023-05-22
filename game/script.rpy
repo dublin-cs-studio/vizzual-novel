@@ -14,6 +14,9 @@ define p = Character("Pelota")
 define t = Character("TV Head")
 define f = Character("Fernsehkopf")
 
+#Colors
+image white = "#ffff"
+
 #Character point variables
 default goopithaPoints = 0
 default sigmaPoints = 0
