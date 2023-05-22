@@ -51,7 +51,7 @@ label introyes:
     mc "(There isn't one though. He only left the house keys and a map with a small red circle on a building.)"
     mc "(I guess he ran out of time...)"
     mc "(I step out of the door and lock it behind me.)"
-    show bg dayalley
+    show bg alley day
     with fade
     #We might need another bg of outside the MC's house but we can just change the info so it matches
     mc "(Now that I'm out of my house, I suddenly don't feel like working anymore.)"
@@ -107,17 +107,14 @@ label introno:
     mc "(It's time to move forward.)"
     mc "(I walk towards the elevators, clutching my bag of clothes tightly against my chest.)"
     mc "(It's all I have, after all.)"
-    show bg hospitallobby
+    scene bg alley dusk
     with fade
-    #Another bg that isn't really necessary, remove it if you want
     mc "(When I step out of the hospital, a golden ray of sunlight hits me in the eye.)"
     mc "(Damn, that's bright.)"
     mc "(I'm not used to the sunlight. I haven't been outside in a long time.)"
     mc "(I pull the map out of my pocket and unfold it so I can tell where I should be heading.)"
     mc "(It's quite the walk away. At least my legs will get some well-needed exercise.)"
     mc "(I study the map closely before I fold it back up and put it into my pocket.)"
-    show bg duskalley
-    with fade
     mc "(The outside world is quite incredible. The trees, the air, the sky. All of it feels refreshing compared to the insides of the hospital.)"
     mc "(Did the previous me get to experience this all the time? Lucky...)"
     with fade
