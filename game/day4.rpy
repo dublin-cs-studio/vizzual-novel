@@ -327,4 +327,4 @@ label day4:
     mc "(What a day. I guess I can check \"meeting a dolphin man\" off my bucket list now.)"
     mc "(Oh wait, today's Friday. I'll have the weekend off.)"
     mc "(I think about what I want to do tomorrow and slowly drift into sleep.)"
-
+    jump day5

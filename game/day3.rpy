@@ -510,6 +510,7 @@ label goopithaCook:
             mc "Let’s see."
             mc "(I turn on the TV and surf through the channels with Goopitha. I don’t think there’s anything terribly interesting, but every once in a while Goopitha stops me when she sees something she likes.)"
         "Talk":
+            $ tvheadPoints += 1
             mc "Let’s talk."
             mc "So, how was your day today?"
             g "Pretty good actually. You met Pelota today, right? I heard her talk about you. Nothing bad, don’t worry. But the story of how I met her was actually really cool. Back when I first started work…"
