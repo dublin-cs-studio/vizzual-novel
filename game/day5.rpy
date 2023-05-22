@@ -265,3 +265,6 @@ label museum:
     t "I mean, sorry about this. I’ll quiet them down."
     jump day5part2
 label day5part2:
+    # filler 
+    scene black 
+    "To be continued..."

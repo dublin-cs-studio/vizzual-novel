@@ -12,7 +12,7 @@ label intro1:
     (I put the other cup of ramen back on the shelf and check out my items.)
     """
 
-    scene bg nightalley
+    scene bg alley night
     with fade
 
     mc """

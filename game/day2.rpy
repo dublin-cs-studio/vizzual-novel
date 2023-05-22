@@ -254,7 +254,7 @@ label pizza:
     s "Ugh, fine. Let's go, I guess."
     mc "(Joe Joe is doing much better. His brightness is kicked to the max and he begins pulling out his wallet to pay for the food.)"
     mc "(The pizzeria is farther than the burger place, but not by much. We have plenty of time, anyways.)"
-    show bg pizzaria 
+    show bg pizzeria 
     show joejoe talking 2
     with fade
     mc "(Joe Joe's excitement for pizza increases by the second. His child-like joy about pizza makes me excited as well.)"
@@ -295,8 +295,7 @@ label pizza:
     j "Perfect."
     mc "(It takes some time, but we place the order and get our food.)"
     mc "(Now, it's time to eat.)"
-    show bg table
-    hide joejoe happy 1
+    scene bg table
     show sigma glasses
     with dissolve
     mc "(The pizza tastes pretty good. It's quite hot since it just got out of the oven, but it's fine if I just blow on it.)"
@@ -320,8 +319,6 @@ label pizza:
     mc "(She wrapped the pizza in multiple layers of napkins, but even so there's still some oil on her fingers. She has to wipe it off on yet another napkin before touching anything.)"
     mc "(Once we finish our food, it's time to head back to work. On the way back, Joe Joe still is excited, but as the office building comes into sight his enthusiasm begins to die down.)"
     scene bg cubicle day
-    hide sigma pain
-    hide joejoe talking
     with fade
     mc "(Everyone returns to their work mindset. Sigma returns to the front desk and Joe Joe heads off to who-knows-where to do some sort of work.)"
     mc "(I sit back down at my cubicle and begin filling out the records again.)"
