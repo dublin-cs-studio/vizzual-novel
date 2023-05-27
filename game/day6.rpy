@@ -57,4 +57,140 @@ label goopithaSlime:
     mc "(Wow, this is pretty fun. I think I can go higher.)"
     mc "(...)"
     mc "Hah!"
-    
+    mc "(I jump off the swing at the peak of its height, catapulting myself towards the seesaw.)"
+    "Voice" "Woah there."
+    show goopitha neutral
+    with dissolve
+    #This section is kinda wack
+    g "That's dangerous."
+    mc "Hello, Goopitha. Funny seeing you here."
+    g "I could say the same. I've never seen you here before."
+    mc "Oh yeah, I just found this place. It's pretty cool."
+    g "Isn't this the most popular park in the city though?"
+    mc "(Oh crap.)"
+    mc "Oh, is it? Hahah, I've never been here. I really need to know the city more."
+    g "Haven't you been living here most of your life though?"
+    mc "(Fuck.)"
+    mc "I, uh, I. I don't really go outside that much."
+    mc "(My reputation can tank this, I just can't let her find out.)"
+    g "Hmmmm. If you say so."
+    show goopitha happy 2
+    g "Oh well. It's quite nice here, isn't it."
+    g "It's calm and quiet. No one's around to bother us."
+    g "Don't you think it's great?"
+    mc "Yep, uh-huh."
+    mc "(I think she bought it.)"
+    show goopitha happy 1
+    g "At times like this, I'm glad I met you."
+    g "Do you still remember? The first time we met?"
+    g "It was a long, long time ago."
+    g "Come walk with me."
+    mc "(I don't think I'm out of the woods yet.)"
+    with fade
+    g "Do you remember the swings?"
+    g "You were on the blue one, the one with the rope."
+    g "You had been there for an hour at least. I was there too."
+    g "I was much more shy back then. I didn't approach you. I only watched."
+    g "But I was looking at you. You got so excited when you found out you could jump off. You were doing it over and over and over."
+    g "You went so high into the air, it was like you could fly."
+    g "It didn't look safe. Not one bit. But none of the adults were watching."
+    g "They were too busy talking to each other to watch their kids."
+    g "What bad parents. But I supposed I can't fault them too much."
+    g "After all, they let me meet you for the first time."
+    g "It was the fifth time you jumped off the swings. You landed perfectly, and climbed back on for another jump."
+    g "But this time, it wasn't the same. Maybe you had gotten tired from jumping so much, maybe your hands got blistered from the ropes."
+    g "This time, when you tried to jump off, it didn't go so well."
+    g "You didn't land on the ground, but instead onto a young girl."
+    g "She was so surprised, with you landing onto her out of nowhere."
+    pause(1.5)
+    g "Do you remember?"
+    mc "I-"
+    g "Sorry, I got nostalgic for a second, seeing this place again."
+    g "But that girl, she caught you back then."
+    g "And now, she caught you again."
+    if goopithaPoints > lldPoints and goopithaPoints > pelotaPoints and goopithaPoints > jjPoints and goopithaPoints > sigmaPoints and goopithaPoints > tvheadPoints:
+        jump goopNormal
+    else:
+        jump goopYandere
+label goopNormal:
+    mc "(She grabs onto me and squeezes around my chest.)"
+    show goopitha sad at center:
+        ease 0.25 zoom 1.0 xoffset 0 yoffset 300
+    g "I've missed you so much!!!"
+    g "It's been so long since I've seen you!!"
+    g "And- *sniff* and when you left for college, I-"
+    g "I cried so much!!!!"
+    mc "(She rubs her face against me and cries into my shirt.)"
+    mc "(I gently pat her head as she cries her sorrows out.)"
+    g "*sniff*"
+    g "Hah,"
+    g "..."
+    g "Thank you."
+
+
+label goopYandere:
+    g "You seem different now, [name]."
+    g "You got taller. You look different now. Your voice changed."
+    show goopitha yandere 1
+    g "But I didn't think your scent would have changed too."
+    g "I marked you back then, [name], so you wouldn't get away."
+    g "You should smell the same now, [name]."
+    g "It was a mark made with love. It shouldn't go away."
+    show goopitha yandere 3
+    g "So why do you smell different now, [name]?"
+    g "Do you love someone else, [name]?"
+    mc "..."
+    menu:
+        "Tell her":
+            $ goopKnows = True
+            jump goopKnows
+        "Don't tell her":
+            $ goopKnows = False
+            jump goopNoKnow
+
+label goopKnows:
+    show goopitha neutral
+    g "I figured that was the case."
+    mc "No, that- that's not what I meant."
+    mc "I've..."
+    mc "(No going back.)"
+    mc "I've lost my memories."
+    mc "I got into an accident and got permanent amnesia."
+    mc "I've only recovered a week ago."
+    g "... I see."
+    g "So, do you remember me?"
+    mc "I don't."
+    show goopitha sad
+    g "..."
+    mc "(She looks like she's about to cry.)"
+    g "I..."
+    hide goopitha sad
+    with dissolve
+    mc "(She leaves without another word.)"
+    mc "(Mission successful, I guess?)"
+    mc "(I don't really know how to feel about that.)"
+    mc "(I spend a few more minutes at the park before heading home to sleep.)"
+    jump day7
+label goopNoKnow:
+    show goopitha neutral
+    g "I figured that was the case."
+    show goopitha yandere 3
+    g "Why, why do you love someone else?!!?"
+    g "I love you, I've always loved you, from the bottom of my heart!"
+    g "Ever since that day our fates crossed, my eyes have always been set on you!"
+    g "*hah*"
+    show goopitha yandere 4
+    g "Every single day, I would go back to that park, hoping that I would see you again."
+    g "Day, night, rain, hail. No matter what, I would go there, every day."
+    g "I've worked so hard, just for you. I've done some much for you."
+    show goopitha yandere 3
+    g "Why have you betrayed me?!?!"
+    g "I-I'll."
+    g "I..."
+    show goopitha sad
+    mc "(She looks like she's about to cry.)"
+    hide goopitha sad
+    with dissolve
+    mc "(Goopitha leaves without another word.)"
+    mc "(I spend a few more minutes at the park, thinking about what Goopitha said, before heading back home to sleep.)"
+    jump day7
