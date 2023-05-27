@@ -112,7 +112,9 @@ label goopithaSlime:
         jump goopNormal
     else:
         jump goopYandere
+
 label goopNormal:
+    $ goopKnows = False
     mc "(She grabs onto me and squeezes around my chest.)"
     show goopitha sad at center:
         ease 0.25 zoom 1.0 xoffset 0 yoffset 300
@@ -125,8 +127,28 @@ label goopNormal:
     g "*sniff*"
     g "Hah,"
     g "..."
+    show goopitha neutral
     g "Thank you."
-
+    show goopitha neutral:
+        ease 1.5 zoom 1.0 xoffset 0 yoffset -300
+    g "*sniff*"
+    show goopitha surprised
+    g "Ah!"
+    g "Sorry, sorry, sorry, sorry, sorry!"
+    hide goopitah surprised
+    with dissolve
+    g "Uuuuuuuuuuuuuuuuuuuuuuuuuu."
+    #It's fauning time
+    g "{size=-10}I shouldn't have done that...{/size}"
+    show goopitha embarrassed at right
+    with dissolve
+    g "Please don't mention this to anyone."
+    g "I'll... get going."
+    hide goopitha
+    with dissolve
+    mc "(...huh.)"
+    mc "(I think about Goopitha for a while before I head home to sleep.)"
+    jump day7
 
 label goopYandere:
     g "You seem different now, [name]."
@@ -194,3 +216,5 @@ label goopNoKnow:
     mc "(Goopitha leaves without another word.)"
     mc "(I spend a few more minutes at the park, thinking about what Goopitha said, before heading back home to sleep.)"
     jump day7
+
+label lldWalk:
