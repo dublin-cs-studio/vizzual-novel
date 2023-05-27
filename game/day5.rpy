@@ -265,6 +265,35 @@ label museum:
     t "I mean, sorry about this. I’ll quiet them down."
     jump day5part2
 label day5part2:
-    # filler 
-    scene black 
-    "To be continued..."
+    show bg apartment outside
+    with fade
+    mc "(That was certainly a day.)"
+    mc "(Out of everything that could have happened today, seeing two chuunibyous fight in public was not something I expected.)"
+    mc "(Oh well. Not like I could have done anything better with my time.)"
+    mc "..."
+    mc "(What's this?)"
+    mc "(A strange letter is placed right outside of my apartment.)"
+    mc "(I look at the other doors, but they don't have one. It seems like something only I'm dealing with.)"
+    mc "(I'll take it inside I guess.)"
+    show bg livingroom
+    with dissolve
+    "Notice from IRS"
+    "Your taxes are overdue. You will be charged for late fees."
+    mc "(Not this again...)"
+    menu:
+        "Rip up the letter":
+            mc "(I tear the paper in half and ball up the remains.)"
+            mc "(I don't have the money to spare on taxes.)"
+            mc "(I toss the ball into the trash can.)"
+        "Leave it be":
+            mc "(I'm gonna keep this just in case, but I don't have the money to spare on taxes.)"
+            mc "(As I look at the paper again, I notice a drawing on the back.)"
+            mc "(It's a pencil sketch of a dolphin, surrounded by a heart.)"
+            mc "(Did that dolphin dude draw this?)"
+            mc "(Wait, does that mean he has my address?)"
+            mc "(The thought of that scares me.)"
+            mc "(Y'know what, I'm just not gonna think about it.)"
+    mc "*yawn*"
+    mc "(Is it dark already?)"
+    mc "(Sleep time, I guess.)"
+    jump day6
