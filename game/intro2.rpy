@@ -2,16 +2,16 @@ label introyes:
     mc "(I'd rather not do this, but I want to thank him for covering my bills. Plus, I need a home to return to if I want to live well.)"
     mc "I'll join."
     "Cool Man" "Excellent, just as I expected. Pack your things, I'll see you around shortly."
-    mc "(He gets up and walks out of the room, his dress shoes clicking with every step.)"
     hide ceo happy
     with dissolve
+    mc "(His dress shoes click with every step he takes, echoing down the hall.)"
     mc "(My back cracks and pops as I get up from the bed.)"
     mc "(I haven't gotten up in a while.)"
     mc "(I'm probably out of shape too.)"
     mc "(I sigh as I gather my clothes in one place.)"
     mc "(But before I can put them into a bag, I feel my vision begin to fade.)"
-    mc "(Not again...)"
     hide bg hospital
+    with fade
     mc "(My eyelids feel uncomfortably heavy.)"
     mc "(I can that I'm on a bed of some sort.)"
     mc "(I slowly open my eyes.)"
@@ -47,24 +47,23 @@ label introyes:
     mc "(I quickly eat up the eggs and down the milk. It tastes incredible. I think it's the first meal I've had that has been cooked with love.)"
     mc "(I sit down and relax for a while before remembering that I have to go to work.)"
     mc "(I put on the formal outfit and head for the door before realizing that I don't know where my work is.)"
-    mc "(I look around the entrace area for a note.)"
+    mc "(I look around the entrance area for a note.)"
     mc "(There isn't one though. He only left the house keys and a map with a small red circle on a building.)"
     mc "(I guess he ran out of time...)"
-    mc "(I step out of the door and lock it behind me.)"
-    show bg alley day
+    show bg apartment outside
     with fade
-    #We might need another bg of outside the MC's house but we can just change the info so it matches
-    mc "(Now that I'm out of my house, I suddenly don't feel like working anymore.)"
-    mc "(I don't want to back out now. Not after I've gotten a free home and breakfast.)"
+    mc "(I lock the door behind me, and for some reason I don't feel like working anymore.)"
+    mc "(But I don't want to back out now. Not after I've gotten a free home and breakfast.)"
     mc "(I head down the stairs so I can reach the ground level. It must suck to live on the upper floors, but at least you'll never skip leg day.)"
     mc "(I look at the apartment keys as I'm descending. 308. Not a bad number. It's an even number, at least.)"
+    show bg alley day
+    with dissolve
     mc "(The workplace isn't that far from the apartment, so I'll just walk there. I should get some exercise, anyway.)"
     mc "(I haven't been outside in a while. The hospital staff never let me leave the premises since I wasn't fully recovered, but I got to walk around the hallways and look out the windows.)"
     mc "(The only thing I could see was trees, though. Large rectangles of green, occasionally intersected by buildings. They got boring after a while.)"
     mc "(They look much more different up close though.)"
     mc "(They're much bigger than I thought. I guess only seeing something from 10 floors up messes with your perception.)"
     mc "(Who would've guessed that life is much more fun when you're not stuck in a hospital room.)"
-    #This section can potentially be removed if necessary
     jump day1work
 
 label introno:
