@@ -33,14 +33,15 @@ label goopithaSlime:
     mc "(This is pretty fun.)"
     with fade
     mc "(Wow, is it evening already?)"
-    mc "(The sun is just beginning to set. The sky is a )"
+    mc "(The sun is just beginning to set. The sky is slowly becoming a beautiful mosaic of light and clouds.)"
     mc "(Have I really been playing with this slime for that long?)"
     mc "(I should probably do something else.)"
     mc "(I look longingly at the slime before turning away.)"
     mc "(Sorry, but I need to touch some grass.)"
     mc "(I'll just leave it here. I won't be out for long.)"
-    show bg alley dusk
+    scene bg alley dusk
     with fade
+    mc "(It's pretty quiet at this time of the evening. It gives me time to think about life.)"
     mc "(It's been almost a week since my life has changed, hasn't it.)"
     mc "(So much has happened that I can't really believe that. Was my life this chaotic before I lost my memories?)"
     mc "(So many new people and things have been thrown into my life. It's hard to keep track of it all.)"
@@ -136,7 +137,7 @@ label goopNormal:
     show goopitha surprised
     g "Ah!"
     g "Sorry, sorry, sorry, sorry, sorry!"
-    hide goopitah surprised
+    hide goopitha surprised
     with dissolve
     g "Uuuuuuuuuuuuuuuuuuuuuuuuuu."
     #It's fauning time
@@ -148,7 +149,7 @@ label goopNormal:
     hide goopitha
     with dissolve
     mc "(...huh.)"
-    jump day7
+    jump day6dream
 
 label goopYandere:
     g "You seem different now, [name]."
@@ -193,7 +194,7 @@ label goopKnows:
     mc "(Mission successful, I guess?)"
     mc "(I don't really know how to feel about that.)"
     mc "(...)"
-    jump day7
+    jump day6dream
 label goopNoKnow:
     show goopitha neutral
     g "I figured that was the case."
@@ -216,7 +217,7 @@ label goopNoKnow:
     with dissolve
     mc "(Goopitha leaves without another word.)"
     mc "(...)"
-    jump day7
+    jump day6dream
 
 label lldWalk:
     mc "(I'll give it to Goopitha tomorrow. It's not my responsibility.)"
@@ -259,7 +260,7 @@ label lldWalk:
     "Hold on, I'm not done talking."
     mc "(???)"
     show lld normal
-    with CropMove(0.2, mode="slideright")
+    with CropMove(0.5, mode="wiperight")
     "Dolphin Man" "This is just a reminder."
     "Dolphin Man" "What are you worried about?"
     mc "(... It's hopeless.)"
@@ -286,7 +287,7 @@ label lldWalk:
     "Dolphin Man" "Okay, I may have convoluted things by saying that, whoops."
     "Dolphin Man" "Alright, let's start from the beginning."
     "Dolphin Man" "I work for a tax collection company. You have not paid your taxes yet, and as a result we send an agent to collect it."
-    l "That agent is me, Lone Loan Dolphin."
+    l "That agent is me, the Lone Loan Dolphin."
     l "Nice to meet you."
     mc "Nice... to meet you."
     mc "(I cautiously shake the dolphin man's hand, wary of any signs of danger.)"
@@ -297,7 +298,7 @@ label lldWalk:
     show lld normal
     l "According to my records, your taxes are overdue by about..."
     l "2 years."
-    l "Now, normally, this is what we tax collectors call a \"bad move\"."
+    l "Now, normally, this is what we tax collectors call an \"uh-oh no good irresponsible moment\"."
     l "But, your case is kinda special."
     l "A few checks with other government agencies tells us that you haven't been doing anything for the past 2 years."
     l "You didn't spend money, didn't earn money, didn't pay back your student loans."
@@ -309,7 +310,7 @@ label lldWalk:
     mc "Do I have to go to th-"
     l "Aight, let's get moving."
     hide lld
-    with CropMove(0.2, mode="slideright")
+    with CropMove(0.5, mode="wiperight")
     mc "(...)"
     mc "(Would he notice if I just left?)"
     scene bg apartment outside
@@ -435,4 +436,4 @@ label lldWalk:
     mc "(That doesn't sound good.)"
     mc "(I don't think the IRS is gonna come after me anymore.)"
     mc "(Though I might have awakened a whole new beast.)"
-    jump day7
+    jump day6dream

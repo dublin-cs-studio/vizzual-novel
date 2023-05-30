@@ -4,7 +4,7 @@ label day5:
     mc "(...)"
     "*ding dong*"
     mc "(What time is it?)"
-    show bg bedroom
+    show bg livingroom
     with dissolve
     mc "(I drowsily look for my clock while the doorbell rings throughout my house.)"
     mc "(Who’s ringing my doorbell this early in the morning?)"
@@ -265,7 +265,7 @@ label museum:
     t "I mean, sorry about this. I’ll quiet them down."
     jump day5part2
 label day5part2:
-    show bg apartment outside
+    scene bg apartment outside
     with fade
     mc "(That was certainly a day.)"
     mc "(Out of everything that could have happened today, seeing two chuunibyous fight in public was not something I expected.)"

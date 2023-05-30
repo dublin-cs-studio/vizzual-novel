@@ -171,6 +171,7 @@ label day4:
     "Muffled Voice" "*cough*"
     mc "(...I won't ask.)"
     show bg cubicle day
+    with fade
     mc "*yawn*"
     mc "(A few more hours until I'm out of here.)"
     mc "(I'm having trouble staying awake with how monotonous this job is. I honestly can't even tell if I'm asleep or not.)"
@@ -229,7 +230,8 @@ label day4:
             p "Where are you grabbing?!"
             mc "(Finally, she spins around and throws me off of her.)"
             show pelota death
-            p "Jeez, do you not understand personal space? D-don't do that again."
+            p "The fuck are you doing? I know you're the new guy and all, but I've beat this dumbass before, and I'm trying to do it again."
+            p "Scram!"
             p "*ahem*"
             show pelota neutral
             p "I'm leaving."
