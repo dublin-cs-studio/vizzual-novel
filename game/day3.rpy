@@ -49,7 +49,7 @@ label day3:
     #This could also be a normal sprite
     with dissolve
     mc "(She’s... a slime.)"
-    mc "(Her body seems to be made of a gelatinous material. Some of it is on my clothes where she bumped into me. She looks quite pretty though.)"
+    mc "(Her body seems to be made of a gelatinous material. Some of it is stuck on my clothes where she bumped into me. She looks quite pretty though.)"
     mc "(She seems to have noticed that her slime got on me.)"
     scene bg cooler
     show goopitha happy 1
@@ -96,7 +96,7 @@ label touralready:
     show goopitha happy 1
     g "Oh, that’s fine. Hold on."
     mc "(She looks around to see if her coworker is still around. To her delight, he has already headed off to somewhere else.)"
-    show goopitha grin
+    show goopitha smug
     g "I’ll just take those papers later. No one has to know…"
     mc "(Her bright smile turns into a cheeky grin as she winks at me. There goes my plans of not talking about my amnesia.)"
     show goopitha happy 2
@@ -191,6 +191,7 @@ label touralready:
             show pelota smile
             p "Here. Drink up. You deserve it."
             mc "(She hands me a bottle of water. My hands can barely move though, so she opens the cap for me.)"
+            mc "Thanks."
         "Lose":
             mc "*pant* (That really hurt. I think she broke my shoulders or something. I can’t move my right arm.)"
             mc "(I collapse on the ground as my body aches and pulses. It's not a good feeling.)"
@@ -248,7 +249,7 @@ label touralready:
     mc "(Looks like Pelota never came back from lunch break. Well, she didn't seem like she wanted to stay.)"
     mc "(I gather up my things, head to the lobby, and wave goodbye to Sigma.)"
     scene bg alley dusk
-    with slideawayleft
+    with dissolve
     mc "(What should I eat tonight?)"
     mc "(As I step outside, a voice comes from behind me.)"
     g "Hey [name]!"
@@ -576,7 +577,7 @@ label noCook:
     g "Alright then. See you!"
     mc "Bye."
     mc "(We wave goodbye to each other and part ways. I head back to my home.)"
-    show bg kitchen
+    scene bg kitchen
     with fade
     mc "(What should I eat for dinner?)"
     mc "(I think I still have a frozen pizza in the freezer. I’ll just toss that in the oven.)"
