@@ -48,7 +48,7 @@ label day1work:
     with dissolve 
     s "If you're the same [name] as the files tell me, you're working as a Charitable Urgency Manager. If there's a disease that someone needs handling, it's your job to suit their needs and help them."
     s "Work starts at 9 am sharp every weekday, but sometimes you might get called in on the weekends."
-    s "You don't need to follow the dress code every day, by the way. I would like it if you wore a suit every day, but the quality managers only check once a month."
+    s "You don't need to follow the dress code every day, by the way. We would like it if you wore a suit every day, but the quality managers only check once a month."
     scene bg cubicle early
     show sigma glasses at center 
     with dissolve 
@@ -100,7 +100,6 @@ label day1work:
     menu: 
         "What do you do here?":
             show joejoe surprised at center 
-            mc "(His face shows a hint of surprise before he smiles again.)"
             j "Oh, this will sound kinda bad, but..." 
             show joejoe embarrassed at center
             j "I'm not sure."
@@ -112,7 +111,7 @@ label day1work:
             j "I work for the company, but I don't {i}work{/i} for the company. Y'know what I'm saying?"
             j "Oh, I do go get lunch with the crew every once in a while."
             mc "...I see."
-            mc "(Why is he even getting paid?"
+            mc "(Why is he even getting paid?)"
         "What do I do here?":
             j "I don't know. Did Sigma tell you your position or anything?"
             mc "Yeah, she said I was a Cherishable Undergraduate Major or something like that."

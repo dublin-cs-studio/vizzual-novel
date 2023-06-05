@@ -390,7 +390,7 @@ label lldWalk:
     l "\"DEEZ Corp\"?"
     show lld happy
     l "What, is this a prank?"
-    l "Haha, you've been gone for 2 years just for a de-"
+    l "Haha, you've been gone for 2 years just for a dee-"
     show lld bruh
     l "{size=-10}No, okay, it's the actual name of the company. Are you serious?{/size}"
     l "Oh, it's an abbreviation."
