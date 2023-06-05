@@ -375,6 +375,14 @@ label lldWalk:
     with fade
     l "Mmm. This is pretty good."
     mc "(He bites into the salmon burger, taking out triangle-shaped chunks as he goes.)"
+    l "I love this place. They have this thing called the Loan Lone Dolphin."
+    show lld at right
+    with dissolve
+    l "It's like this tiny little dolphin plush thing. Like the name implies, it's pretty lonely, so they loan it out to people that are lonely as well."
+    l "Heheheh. Y-you get the joke? Like, my name is Lone-"
+    l "Not funny?"
+    l "I always found it funny."
+    pause(1.5)
     l "So... what have you been up to these past 2 years?"
     mc "(Well I've been in a coma, so I don't really know.)"
     l "Like I said, no one's heard of you even a single bit for 2 years. The IRS has been sending out agents to try to find you, but no dice."
