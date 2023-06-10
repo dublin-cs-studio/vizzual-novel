@@ -19,16 +19,253 @@ label day6:
     menu:
         "Keep it":
             $ goopithaPoints += 1
-            jump goopithaSlime
+            mc "(I'll just keep it with me. It looks really cute.)"
+            mc "(Hehe, you're mine now, slime!)"
+            mc "(I poke it a couple of times, watching it jiggle.)"
+            mc "(I'm almost hypnotized by the slime when a ray of sunlight comes through the curtains.)"
+            mc "(It's such a nice day outside. It would be a shame to spend it indoors.)"
+            mc "(But at the same time, slime.)"
+            mc "(Hmmmmmmmm...)"
+            mc "(I'll go for a walk.)"
+            mc "Sorry slime, I'll come back later, I promise. It's just going to be a short walk."
+            mc "(Despite the fact that the slime has neither ears nor eyes, I still wave it goodbye.)"
         "Give it to Goopitha":
             $ lldPoints += 1
-            jump lldWalk
+            mc "(I'll give it to Goopitha tomorrow. It's not my responsibility.)"
+            mc "(In the meantime, I'll just go for a walk.)"
+            mc "(I don't think it'll go anywhere, so I'll just leave it in my room for now.)"
+    scene bg alley day
+    with fade
+    mc "(Where should I go today...)"
+    mc "(I'll just walk around for a bit.)"
+    mc "(I should probably familiarize myself with the city.)"
+    with fade
+    mc "(There's a park here. That's cool.)"
+    scene bg park day
+    with dissolve
+    mc "(Not that many people here though. I guess it is a Sunday morning.)"
+    mc "(Oh, there's a playground here.)"
+    mc "(I guess I'll play on the swings.)"
+    mc "(While my anxiety tells me that being an adult and playing on swings is bound to attract attention, I'm too bored to be embarrassed.)"
+    mc "(I just need to sit here, and kick off the ground, right.)"
+    pause(1.5)
+    mc "(This isn't that difficult. In fact, it's pretty fun, swinging around like I don't have weight.)"
+    mc "(I play on the swings for a few more minutes before stopping.)"
+    mc "(Let's see what else there is to play with...)"
+    "Voice" "Hold on, you dropped something."
+    mc "(Hm?)"
+    show lld normal
+    with dissolve
+    mc "What the-"
+    "Dolphin Man" "Your taxes."
+    "Dolphin Man" "They are due."
+    pause(1.5)
+    mc "(I quickly look around, hoping that Sigma or Pelota is somehow at the park to save me.)"
+    "Dolphin Man" "It's a Sunday morning, no one is around."
+    "Dolphin Man" "No one will be able to hear you scream."
+    scene bg alley day
+    with CropMove(0.1, mode="slideleft")
+    mc "(I am not sticking around.)"
+    mc "(What's the fastest way I can lose him...)"
+    mc "(To the left!)"
+    "Hold on, I'm not done talking."
+    mc "(???)"
+    show lld normal
+    with CropMove(0.5, mode="wiperight")
+    "Dolphin Man" "This is just a reminder."
+    "Dolphin Man" "What are you worried about?"
+    mc "(... It's hopeless.)"
+    mc "(My knell has been knolled.)"
+    mc "(All I can do is wait for my death.)"
+    scene black
+    with fade
+    "Dolphin Man" "Get up, young one."
+    "Dolphin Man" "Your time is not over yet."
+    scene bg alley day
+    show lld normal
+    with fade
+    "Dolphin Man" "Rejoice."
+    "Dolphin Man" "Salvation looks upon you and smiles. There is nothing to fear."
+    pause(1.5)
+    show lld happy
+    "Dolphin Man" "Pfffffff."
+    "Dolphin Man" "What is your face?"
+    "Dolphin Man" "What kind of reaction is that?"
+    mc "(Huh?)"
+    "Dolphin Man" "Hm?"
+    pause(1.5)
+    show lld normal
+    "Dolphin Man" "Okay, I may have convoluted things by saying that, whoops."
+    "Dolphin Man" "Alright, let's start from the beginning."
+    "Dolphin Man" "You remember me from a few days ago, right? Yeah, I work for a tax collection company. You have not paid your taxes yet, so we sent an agent to come collect them."
+    l "That agent is me, the Lone Loan Dolphin."
+    l "Nice to meet you."
+    mc "Nice... to meet you."
+    mc "(I cautiously shake the dolphin man's hand, wary of any signs of danger.)"
+    mc "(His grip is incredibly firm. )"
+    show lld happy
+    l "Anywho, about your taxes."
+    mc "(Not this again...)"
+    show lld normal
+    l "According to my records, your taxes are overdue by about..."
+    l "2 years."
+    l "Now, normally, this is what we tax collectors call an \"uh-oh no good irresponsible moment\"."
+    l "But, your case is kinda special."
+    l "A few checks with other government agencies tells us that you haven't been doing anything for the past 2 years."
+    l "You didn't spend money, didn't earn money, didn't pay back your student loans."
+    l "That's pretty weird. I don't believe you're an immortal who doesn't need to eat, so something must've happened in those 2 years."
+    l "I'm not sure what, though, so you're gonna have to come down to the IRS headquarters for some questioning."
+    l "Don't worry, it's not gonna be anything bad. Probably."
+    l "At the very least, you can get some pretzels for your time."
+    mc "(Free pretzels, great.)"
+    mc "Do I have to go to th-"
+    l "Aight, let's get moving."
+    hide lld
+    with CropMove(0.5, mode="wiperight")
+    mc "(...)"
+    mc "(Would he notice if I just left?)"
+    scene bg apartment outside
+    with dissolve
+    mc "(That was easier than I thought. Did he not even bother to check behind him?)"
+    mc "(Anyways, I don't think I'm safe here. He has my address, after all.)"
+    l "Hey, don't leave me behind like that."
+    mc "!!!"
+    show lld normal
+    with dissolve
+    l "You know how annoying it is to walk around in a suit all day?"
+    l "Hmph."
+    show lld comb
+    l "My hair was blown out of place. I spend most of my morning on this, y'know?"
+    mc "(Ignoring that he has no hair, the fact that he managed to follow me without make a single sound is terrifying.)"
+    mc "(I even looked behind my shoulder a dozen times to make sure he wasn't behind me. Either he's just that fast or just that elusive.)"
+    show lld sparkle
+    with dissolve
+    mc "(Did he get even brighter?)"
+    show lld normal
+    l "Alright, it should be fine now, I think."
+    l "Anyways, why did you not follow me?"
+    show lld happy
+    l "I promise, the IRS is not going to do anything bad to you."
+    l "We're just trying to find out what happened, okay?"
+    mc "(I don't trust that one bit.)"
+    show lld
+    l "Please?"
+    mc "(...)"
+    mc "Fine."
+    show lld happy
+    pause(1.5)
+    scene bg alley day
+    show lld normal
+    with fade
+    mc "(How far away is the IRS headquarters? We've been walking for like 20 minutes.)"
+    l "*growl*"
+    show lld flushed
+    pause(1.0)
+    show lld bruh
+    l "Shall we get something to eat?"
+    mc "Why not."
+    show lld normal
+    l "*ahem*"
+    l "There should be a good seafood restaurant near here."
+    mc "(Is he not a fish?)"
+    mc "You eat seafood?"
+    l "Well, yeah. I'm a dolphin. What else would I eat?"
+    mc "(Y'know what, that makes sense. In fact, it would be weird for him not to eat fish.)"
+    #Maybe replace this but it sort of fits well
+    scene bg burger
+    with fade
+    mc "(Isn't this just the burger place Sigma likes.)"
+    mc "(Well, they serve salmon burgers so technically it's a seafood restaurant.)"
+    mc "(I had \"sushi restaurant\" more in mind though when he talked about seafood.)"
+    show lld happy
+    with dissolve
+    l "Ready to order yet?"
+    mc "Yeah."
+    l "Aight."
+    show lld normal
+    with fade
+    l "Mmm. This is pretty good."
+    mc "(He bites into the salmon burger, taking out triangle-shaped chunks as he goes.)"
+    l "I love this place. They have this thing called the Loan Lone Dolphin."
+    show lld at right
+    with dissolve
+    l "It's like this tiny little dolphin plush thing. Like the name implies, it's pretty lonely, so they loan it out to people that are lonely as well."
+    show lld happy
+    l "Heheheh. Y-you get the joke? Like, my name is Lone Loan Dolphin, and this thing is cal-"
+    show lld normal
+    l "Not funny?"
+    l "I always found it funny."
+    pause(1.5)
+    l "So... what have you been up to these past 2 years?"
+    mc "(Well I've been in a coma, so I don't really know.)"
+    l "Like I said, no one's heard of you even a single bit for 2 years. The IRS has been sending out agents to try to find you, but no dice."
+    l "Not until we got notice that you got employed to work at..."
+    l "\"DEEZ Corp\"?"
+    show lld happy
+    l "What, is this a prank?"
+    l "Haha, you've been gone for 2 years just for a dee-"
+    show lld bruh
+    l "{size=-10}No, okay, it's the actual name of the company. Are you serious?{/size}"
+    l "Oh, it's an abbreviation."
+    show lld normal
+    l "Well, I learned something new today. What even is this company?"
+    mc "It's like a disease extermination group, I think?"
+    mc "I don't really know myself."
+    l "Well, what do you do at work?"
+    mc "I work as a Charitable Urgency Manager and fill out paperwork and stuff."
+    show lld happy
+    l "You work as a what?"
+    mc "As a CU-"
+    show lld normal
+    #This entire section is just an info dump, change later i guess
+    l "Y'know what, let's move on."
+    l "It's pretty weird that you've just started to work now."
+    l "I mean, you haven't spent a single cent during those 2 years, so why would you need to start working now?"
+    l "As a matter of fact, how did you even survive without spending any money? No way you just started living off the land or something. We live in an urban city."
+    mc "Well..."
+    mc "(Honestly, I don't think I could hide this from him. Plus, if I'm caught lying I might make it worse.)"
+    mc "(But then again, I've already evaded taxes for 2 years. It might not get worse than this.)"
+    mc "(...)"
+    mc "(Probably won't hurt to tell him this. It's not like he's a close friend of mine.)"
+    mc "So, those past 2 years."
+    mc "I was in a coma."
+    l "Uh-huh."
+    mc "Cause I got hit by a car."
+    l "Mhm."
+    mc "And I lost my memories and stuff."
+    l "I see."
+    mc "(He's doesn't seem to be a good listener.)"
+    l "How did you pay the medical bill though?"
+    mc "This random dude just paid it off for me."
+    l "Some random dude?"
+    mc "Yeah, he was wearing a suit and whatnot."
+    mc "Looked pretty important."
+    l "Do you know who he was? Like, at all?"
+    mc "No clue."
+    l "What'd he tell you?"
+    mc "Something about how I should work for DEEZ Corp or something."
+    l "Just like that?"
+    mc "He kinda forced it onto me."
+    mc "He even gave me an apartment and stuff. It was pretty generous."
+    l "That sounds..."
+    pause(1.0)
+    l "Hm. Something seems off."
+    l "Whatever. Anyways, I'm leaving. You don't need to go to the IRS headquarters anymore."
+    l "I'll deal with this."
+    hide lld
+    with dissolve
+    mc "(That doesn't sound good.)"
+    mc "(I don't think the IRS is gonna come after me anymore.)"
+    mc "(Though I might have awakened a whole new beast.)"
 
-label goopithaSlime:
-    mc "(I'll keep it with me.)"
-    mc "(It's way too cute to leave be.)"
-    mc "(I press my finger into it.)"
-    mc "(It's quite cold, but my finger passes through it with little resistance.)"
+    scene bg livingroom
+    show goopitha slime
+    with fade
+    mc "(The slime is still here, huh. I don't think it moved at all.)"
+    mc "(I gently prod the slime, thinking about what Lone Loan Dolphin said.)"
+    mc "(Oh, it's moving!)"
+    mc "(The slime starts squeezing around my fingers.)"
+    mc "(It's quite cold, but my hand passes through it with little resistance.)"
     mc "(I cup it with my hands and lift it into the air.)"
     mc "(This is pretty fun.)"
     with fade
@@ -199,6 +436,7 @@ label goopNoKnow:
     show goopitha neutral
     g "I figured that was the case."
     show goopitha yandere 3
+    with hpunch
     g "Why, why do you love someone else?!!?"
     g "I love you, I've always loved you, from the bottom of my heart!"
     g "Ever since that day our fates crossed, my eyes have always been set on you!"
@@ -209,239 +447,12 @@ label goopNoKnow:
     g "I've worked so hard, just for you. I've done some much for you."
     show goopitha yandere 3
     g "Why have you betrayed me?!?!"
-    g "I-I'll."
-    g "I..."
+    mc "..."
+    mc "(Nothing comes out of my mouth.)"
     show goopitha sad
     mc "(She looks like she's about to cry.)"
     hide goopitha sad
     with dissolve
     mc "(Goopitha leaves without another word.)"
     mc "(...)"
-    jump day6dream
-
-label lldWalk:
-    mc "(I'll give it to Goopitha tomorrow. It's not my responsibility.)"
-    mc "(In the meantime, I'll just go for a walk.)"
-    mc "(I don't think it'll go anywhere, so I'll just leave it in my room for now.)"
-    scene bg alley day
-    with fade
-    mc "(Where should I go today...)"
-    mc "(I'll just walk around for a bit.)"
-    mc "(I should probably familiarize myself with the city.)"
-    with fade
-    mc "(There's a park here. That's cool.)"
-    scene bg park day
-    with dissolve
-    mc "(Not that many people here though. I guess it is a Sunday morning.)"
-    mc "(Oh, there's a playground here.)"
-    mc "(I guess I'll play on the swings.)"
-    mc "(While my anxiety tells me that being an adult and playing on swings is bound to attract attention, I'm too bored to be embarrassed.)"
-    mc "(I just need to sit here, and kick off the ground, right.)"
-    pause(1.5)
-    mc "(This isn't that difficult. In fact, it's pretty fun, swinging around like I don't have weight.)"
-    mc "(I play on the swings for a few more minutes before stopping.)"
-    mc "(Let's see what else there is to play with...)"
-    "Voice" "Hold on, you dropped something."
-    mc "(Hm?)"
-    show lld normal
-    with dissolve
-    mc "What the-"
-    "Dolphin Man" "Your taxes."
-    "Dolphin Man" "They are due."
-    pause(1.5)
-    mc "(I quickly look around, hoping that Sigma or Pelota is somehow at the park to save me.)"
-    "Dolphin Man" "It's a Sunday morning, no one is around."
-    "Dolphin Man" "No one will be able to hear you scream."
-    scene bg alley day
-    with CropMove(0.1, mode="slideleft")
-    mc "(I am not sticking around.)"
-    mc "(What's the fastest way I can lose him...)"
-    mc "(To the left!)"
-    "Hold on, I'm not done talking."
-    mc "(???)"
-    show lld normal
-    with CropMove(0.5, mode="wiperight")
-    "Dolphin Man" "This is just a reminder."
-    "Dolphin Man" "What are you worried about?"
-    mc "(... It's hopeless.)"
-    mc "(My knell has been knolled.)"
-    mc "(All I can do is wait for my death.)"
-    scene black
-    with fade
-    "Dolphin Man" "Get up, young one."
-    "Dolphin Man" "Your time is not over yet."
-    scene bg alley day
-    show lld normal
-    with fade
-    "Dolphin Man" "Rejoice."
-    "Dolphin Man" "Salvation looks upon you and smiles. There is nothing to fear."
-    pause(1.5)
-    show lld happy
-    "Dolphin Man" "Pfffffff."
-    "Dolphin Man" "What is your face?"
-    "Dolphin Man" "What kind of reaction is that?"
-    mc "(Huh?)"
-    "Dolphin Man" "Hm?"
-    pause(1.5)
-    show lld normal
-    "Dolphin Man" "Okay, I may have convoluted things by saying that, whoops."
-    "Dolphin Man" "Alright, let's start from the beginning."
-    "Dolphin Man" "I work for a tax collection company. You have not paid your taxes yet, and as a result we send an agent to collect it."
-    l "That agent is me, the Lone Loan Dolphin."
-    l "Nice to meet you."
-    mc "Nice... to meet you."
-    mc "(I cautiously shake the dolphin man's hand, wary of any signs of danger.)"
-    mc "(His grip is incredibly firm. )"
-    show lld happy
-    l "Anywho, about your taxes."
-    mc "(Not this again...)"
-    show lld normal
-    l "According to my records, your taxes are overdue by about..."
-    l "2 years."
-    l "Now, normally, this is what we tax collectors call an \"uh-oh no good irresponsible moment\"."
-    l "But, your case is kinda special."
-    l "A few checks with other government agencies tells us that you haven't been doing anything for the past 2 years."
-    l "You didn't spend money, didn't earn money, didn't pay back your student loans."
-    l "That's pretty weird. I don't believe you're an immortal who doesn't need to eat, so something must've happened in those 2 years."
-    l "I'm not sure what, though, so you're gonna have to come down to the IRS headquarters for some questioning."
-    l "Don't worry, it's not gonna be anything bad. Probably."
-    l "At the very least, you can get some pretzels for your time."
-    mc "(Free pretzels, great.)"
-    mc "Do I have to go to th-"
-    l "Aight, let's get moving."
-    hide lld
-    with CropMove(0.5, mode="wiperight")
-    mc "(...)"
-    mc "(Would he notice if I just left?)"
-    scene bg apartment outside
-    with dissolve
-    mc "(That was easier than I thought. Did he not even bother to check behind him?)"
-    mc "(Anyways, I don't think I'm safe here. He has my address, after all.)"
-    l "Hey, don't leave me behind like that."
-    mc "!!!"
-    show lld normal
-    with dissolve
-    l "You know how annoying it is to walk around in a suit all day?"
-    l "Hmph."
-    show lld comb
-    l "My hair was blown out of place. I spend most of my morning on this, y'know?"
-    mc "(Ignoring that he has no hair, the fact that he managed to follow me without make a single sound is terrifying.)"
-    mc "(I even looked behind my shoulder a dozen times to make sure he wasn't behind me. Either he's just that fast or just that elusive.)"
-    show lld sparkle
-    with dissolve
-    mc "(Did he get even brighter?)"
-    show lld normal
-    l "Alright, it should be fine now, I think."
-    l "Anyways, why did you not follow me?"
-    show lld happy
-    l "I promise, the IRS is not going to do anything bad to you."
-    l "We're just trying to find out what happened, okay?"
-    mc "(I don't trust that one bit.)"
-    show lld
-    l "Please?"
-    mc "(...)"
-    mc "Fine."
-    show lld happy
-    pause(1.5)
-    scene bg alley day
-    show lld normal
-    with fade
-    mc "(How far away is the IRS headquarters? We've been walking for like 20 minutes.)"
-    l "*growl*"
-    show lld flushed
-    pause(1.0)
-    show lld bruh
-    l "Shall we get something to eat?"
-    mc "Why not."
-    show lld normal
-    l "*ahem*"
-    l "There should be a good seafood restaurant near here."
-    mc "(Is he not a fish?)"
-    mc "You eat seafood?"
-    l "Well, yeah. I'm a dolphin. What else would I eat?"
-    mc "(Y'know what, that makes sense. In fact, it would be weird for him not to eat fish.)"
-    #Maybe replace this but it sort of fits well
-    scene bg burger
-    with fade
-    mc "(Isn't this just the burger place Sigma likes.)"
-    mc "(Well, they serve salmon burgers so technically it's a seafood restaurant.)"
-    mc "(I had \"sushi restaurant\" more in mind though when he talked about seafood.)"
-    show lld happy
-    with dissolve
-    l "Ready to order yet?"
-    mc "Yeah."
-    l "Aight."
-    show lld normal
-    with fade
-    l "Mmm. This is pretty good."
-    mc "(He bites into the salmon burger, taking out triangle-shaped chunks as he goes.)"
-    l "I love this place. They have this thing called the Loan Lone Dolphin."
-    show lld at right
-    with dissolve
-    l "It's like this tiny little dolphin plush thing. Like the name implies, it's pretty lonely, so they loan it out to people that are lonely as well."
-    l "Heheheh. Y-you get the joke? Like, my name is Lone-"
-    l "Not funny?"
-    l "I always found it funny."
-    pause(1.5)
-    l "So... what have you been up to these past 2 years?"
-    mc "(Well I've been in a coma, so I don't really know.)"
-    l "Like I said, no one's heard of you even a single bit for 2 years. The IRS has been sending out agents to try to find you, but no dice."
-    l "Not until we got notice that you got employed to work at..."
-    l "\"DEEZ Corp\"?"
-    show lld happy
-    l "What, is this a prank?"
-    l "Haha, you've been gone for 2 years just for a dee-"
-    show lld bruh
-    l "{size=-10}No, okay, it's the actual name of the company. Are you serious?{/size}"
-    l "Oh, it's an abbreviation."
-    show lld normal
-    l "Well, I learned something new today. What even is this company?"
-    mc "It's like a disease extermination group, I think?"
-    mc "I don't really know myself."
-    l "Well, what do you do at work?"
-    mc "I work as a Charitable Urgency Manager and fill out paperwork and stuff."
-    show lld happy
-    l "You work as a what?"
-    mc "As a CU-"
-    show lld normal
-    #This entire section is just an info dump, change later i guess
-    l "Y'know what, let's move on."
-    l "It's pretty weird that you've just started to work now."
-    l "I mean, you haven't spent a single cent during those 2 years, so why would you need to start working now?"
-    l "As a matter of fact, how did you even survive without spending any money? No way you just started living off the land or something. We live in an urban city."
-    mc "Well..."
-    mc "(Honestly, I don't think I could hide this from him. Plus, if I'm caught lying I might make it worse.)"
-    mc "(But then again, I've already evaded taxes for 2 years. It might not get worse than this.)"
-    mc "(...)"
-    mc "(Probably won't hurt to tell him this. It's not like he's a close friend of mine.)"
-    mc "So, those past 2 years."
-    mc "I was in a coma."
-    l "Uh-huh."
-    mc "Cause I got hit by a car."
-    l "Mhm."
-    mc "And I lost my memories and stuff."
-    l "I see."
-    mc "(He's doesn't seem to be a good listener.)"
-    l "How did you pay the medical bill though?"
-    mc "This random dude just paid it off for me."
-    l "Some random dude?"
-    mc "Yeah, he was wearing a suit and whatnot."
-    mc "Looked pretty important."
-    l "Do you know who he was? Like, at all?"
-    mc "No clue."
-    l "What'd he tell you?"
-    mc "Something about how I should work for DEEZ Corp or something."
-    l "Just like that?"
-    mc "He kinda like forced it onto me."
-    mc "He even gave me an apartment and stuff. It was pretty generous."
-    l "That sounds..."
-    pause(1.0)
-    l "Hm. Something seems off."
-    l "Whatever. Anyways, I'm leaving. You don't need to go to the IRS headquarters anymore."
-    l "I'll deal with this."
-    hide lld
-    with dissolve
-    mc "(That doesn't sound good.)"
-    mc "(I don't think the IRS is gonna come after me anymore.)"
-    mc "(Though I might have awakened a whole new beast.)"
     jump day6dream
