@@ -297,7 +297,7 @@ label day4:
     show joejoe talking 1
     j "Oh! Isn't it gonna be the 80th anniversary of the DEU next week?"
     s "Yeah, I think."
-    j "[name], so every year the DEU guys try to hype up their anniversary by forcing us to hold this parade for them, but like, no one really cares about it. This year it's gonna be next Thursday."
+    j "[name], so every year the DEU guys try to hype up their anniversary by forcing us to hold this parade for them, but like, no one really cares about it. This year it's gonna be next Monday."
     show joejoe happy 1
     j "We don't really have to do much cause we're not really the important decision making people but Sigma does have a bunch on her plate. More than usual, anyways."
     show sigma pain

@@ -300,7 +300,7 @@ label day6:
     show goopitha neutral
     with dissolve
     #This section is kinda wack
-    g "That's dangerous."
+    g "You shouldn't be jumping off like that. You'll hurt yourself!"
     mc "Hello, Goopitha. Funny seeing you here."
     g "I could say the same. I've never seen you here before."
     mc "Oh yeah, I just found this place. It's pretty cool."
@@ -314,10 +314,10 @@ label day6:
     g "Hmmmm. If you say so."
     show goopitha happy 2
     g "Oh well. It's quite nice here, isn't it."
-    g "It's calm and quiet. No one's around to bother us."
+    g "It's calm and quiet. And that means… there's no one around to interrupt us."
     g "Don't you think it's great?"
     mc "Yep, uh-huh."
-    mc "(I think she bought it.)"
+    mc "(I think she bought it. That glint in her eyes is a little unsettling, though.)"
     show goopitha happy 1
     g "At times like this, I'm glad I met you."
     g "Do you still remember? The first time we met?"
@@ -386,7 +386,19 @@ label goopNormal:
     hide goopitha
     with dissolve
     mc "(...huh.)"
-    jump day6dream
+    scene bg alley night
+    with fade
+    mc "(I didn't know Goopitha saw me that way.)"
+    mc "(She really missed me that much?)"
+    mc "(But when she says that, all I can feel is guilt. The one she treasured is not the me right now, but the me of the past.)"
+    mc "(The [name] that will never come back. The one that I have left behind, in exchange for the life I have right now.)"
+    mc "(When I think about her face yesterday...)"
+    show goopitha sad
+    with dissolve
+    pause(1.0)
+    mc "(How would she feel if I told her? That the person she loves will never come back?)"
+    mc "(I can't tell her. Ever.)"
+    jump day7
 
 label goopYandere:
     g "You seem different now, [name]."
@@ -431,7 +443,15 @@ label goopKnows:
     mc "(Mission successful, I guess?)"
     mc "(I don't really know how to feel about that.)"
     mc "(...)"
-    jump day6dream
+    scene bg alley night
+    with fade
+    mc "(I didn't know she loved me that much.)"
+    mc "(So, by telling her that I've lost my memories...)"
+    mc "(That the [name] she loves has disappeared into nothingness, to be replaced by a [name] who barely even knows her...)"
+    mc "(Guilt.)"
+    mc "(So much so that it's crushing my very soul.)"
+    mc "(Ugh...)"
+    jump day7
 label goopNoKnow:
     show goopitha neutral
     g "I figured that was the case."
@@ -455,4 +475,12 @@ label goopNoKnow:
     with dissolve
     mc "(Goopitha leaves without another word.)"
     mc "(...)"
-    jump day6dream
+    scene bg alley night
+    with fade
+    mc "(I didn't know Goopitha saw me that way.)"
+    mc "(It's just like she said. I've betrayed her.)"
+    mc "(I've completely forgotten her. The [name] that she loves isn't me, but another version that I've left behind.)"
+    mc "(They've been replaced by someone who acts different, talks different...)"
+    mc "(...)"
+    mc "(I don't think I can face her tomorrow.)"
+    jump day7
