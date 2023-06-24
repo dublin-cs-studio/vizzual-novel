@@ -78,14 +78,19 @@ label day1work:
     mc "(But he does the same thing, for some reason. I'll accept his act of kindness.)"
     mc "(I reach for the cup again, but he does the same. Our hands bump into each other.)"
     mc "(I look up at this strange man who mirrors my every action.)"
+    scene cg joe cooler
+    with Dissolve(1.0)
     mc "(Have I seen this guy before?)"
     mc "(Wasn't he one of the people I passed on the way here? Or was he the guy back at the cubicle?)"
+    scene bg cooler
+    show joejoe neutral
+    with Dissolve(1.0)
     "Incredibly average man" "I'll go ahead."
     mc "(He grabs a paper cup while I'm trying to remember who he is, and fills it up silently.)"
     show sigma glasses at left
     with moveinleft
     s "That's Joe Joe, one of your co-workers. I honestly can't remember when he got here, or what he does, but he frequents the water cooler every break."
-    mc "(Joe Joe downs his water cup in a single gulp. He looks satisfied with his amount of water, even though I could probably hold more in my bare hands.)"
+    mc "(Joe Joe downs his water cup in a single gulp. Not like that's a difficult feat, given how small the cups are.)"
     j "Nice to meet you."
     j "Sorry about those water cooler shenanigans. I'm not the best at interacting with other people."
     hide sigma glasses 

@@ -392,7 +392,7 @@ label goopNormal:
     mc "(She really missed me that much?)"
     mc "(But when she says that, all I can feel is guilt. The one she treasured is not the me right now, but the me of the past.)"
     mc "(The [name] that will never come back. The one that I have left behind, in exchange for the life I have right now.)"
-    mc "(When I think about her face yesterday...)"
+    mc "(When I think about her face...)"
     show goopitha sad
     with dissolve
     pause(1.0)
