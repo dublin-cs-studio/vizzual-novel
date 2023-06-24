@@ -13,6 +13,7 @@ define l = Character("Lone Loan Dolphin")
 define p = Character("Pelota")
 define t = Character("TV Head")
 define f = Character("Fernsehkopf")
+define c = Character("CEO")
 
 #Colors
 image white = "#ffff"
