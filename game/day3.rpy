@@ -482,7 +482,7 @@ label goopithaCook:
     mc "(She grabs the knife and blazes through the carrots, potatoes, and onions. The previously round shapes become a pile of evenly sized vegetable chunks.)"
     g "Saute the onions until golden."
     mc "(She slides the onions into a pot with a squirt of oil. It takes a while, but the onions eventually turn a nice yellow color.)"
-    g "Mmmmm. Beautiful."
+    g "Mm. Beautiful."
     show goopitha happy 1
     g "Oh yeah, we need the rice."
     mc "(She gestures at the small packet of rice, vacuum-sealed into a hard brick.)"
@@ -496,7 +496,7 @@ label goopithaCook:
     show goopitha happy 2
     g "Perfect!"
     show goopitha cooking
-    g "Fill the pot with some water and just put it on the stove."
+    g "Fill the pot with some water and put it on the stove."
     mc "(I follow her instructions and after I set it down on the burner she turns the fire up.)"
     mc "(I peer into the pot with the onions. It looks like she’s added water and the rest of the vegetables.)"
     show goopitha happy 1

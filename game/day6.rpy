@@ -19,210 +19,21 @@ label day6:
     menu:
         "Keep it":
             $ goopithaPoints += 1
-            jump goopithaSlime
+            mc "(I'll just keep it with me. It looks really cute.)"
+            mc "(Hehe, you're mine now, slime!)"
+            mc "(I poke it a couple of times, watching it jiggle.)"
+            mc "(I'm almost hypnotized by the slime when a ray of sunlight comes through the curtains.)"
+            mc "(It's such a nice day outside. It would be a shame to spend it indoors.)"
+            mc "(But at the same time, slime.)"
+            mc "(Hmmmmmmmm...)"
+            mc "(I'll go for a walk.)"
+            mc "Sorry slime, I'll come back later, I promise. It's just going to be a short walk."
+            mc "(Despite the fact that the slime has neither ears nor eyes, I still wave it goodbye.)"
         "Give it to Goopitha":
             $ lldPoints += 1
-            jump lldWalk
-
-label goopithaSlime:
-    mc "(I'll keep it with me.)"
-    mc "(It's way too cute to leave be.)"
-    mc "(I press my finger into it.)"
-    mc "(It's quite cold, but my finger passes through it with little resistance.)"
-    mc "(I cup it with my hands and lift it into the air.)"
-    mc "(This is pretty fun.)"
-    with fade
-    mc "(Wow, is it evening already?)"
-    mc "(The sun is just beginning to set. The sky is slowly becoming a beautiful mosaic of light and clouds.)"
-    mc "(Have I really been playing with this slime for that long?)"
-    mc "(I should probably do something else.)"
-    mc "(I look longingly at the slime before turning away.)"
-    mc "(Sorry, but I need to touch some grass.)"
-    mc "(I'll just leave it here. I won't be out for long.)"
-    scene bg alley dusk
-    with fade
-    mc "(It's pretty quiet at this time of the evening. It gives me time to think about life.)"
-    mc "(It's been almost a week since my life has changed, hasn't it.)"
-    mc "(So much has happened that I can't really believe that. Was my life this chaotic before I lost my memories?)"
-    mc "(So many new people and things have been thrown into my life. It's hard to keep track of it all.)"
-    mc "(Without all of them around, it feels really quiet. But to be honest, that's what I need right now.)"
-    show bg park dusk
-    with dissolve
-    mc "(Didn't know there was a park here.)"
-    mc "(It's a Sunday evening, so not many people are here. I look around the park until I eventually sit down at a childrens' playground.)"
-    mc "(The air here is so nice. It feels like I'm breathing in the night itself.)"
-    mc "(I don't remember my childhood, but it shouldn't be too hard to use the playground structures. I mean, they're meant for a kid to use.)"
-    mc "(Let's start with the swings.)"
-    mc "(I need to kick myself off the ground...)"
-    mc "(...)"
-    mc "(Wow, this is pretty fun. I think I can go higher.)"
-    mc "(...)"
-    mc "Hah!"
-    mc "(I jump off the swing at the peak of its height, catapulting myself towards the seesaw.)"
-    "Voice" "Woah there."
-    show goopitha neutral
-    with dissolve
-    #This section is kinda wack
-    g "That's dangerous."
-    mc "Hello, Goopitha. Funny seeing you here."
-    g "I could say the same. I've never seen you here before."
-    mc "Oh yeah, I just found this place. It's pretty cool."
-    g "Isn't this the most popular park in the city though?"
-    mc "(Oh crap.)"
-    mc "Oh, is it? Hahah, I've never been here. I really need to know the city more."
-    g "Haven't you been living here most of your life though?"
-    mc "(Fuck.)"
-    mc "I, uh, I. I don't really go outside that much."
-    mc "(My reputation can tank this, I just can't let her find out.)"
-    g "Hmmmm. If you say so."
-    show goopitha happy 2
-    g "Oh well. It's quite nice here, isn't it."
-    g "It's calm and quiet. No one's around to bother us."
-    g "Don't you think it's great?"
-    mc "Yep, uh-huh."
-    mc "(I think she bought it.)"
-    show goopitha happy 1
-    g "At times like this, I'm glad I met you."
-    g "Do you still remember? The first time we met?"
-    g "It was a long, long time ago."
-    g "Come walk with me."
-    mc "(I don't think I'm out of the woods yet.)"
-    show goopitha yandere 1
-    with fade
-    g "Do you remember the swings?"
-    g "You were on the blue one, the one with the rope."
-    g "You had been there for an hour at least. I was there too."
-    g "I was much more shy back then. I didn't approach you. I only watched."
-    g "But I was looking at you. You got so excited when you found out you could jump off. You were doing it over and over and over."
-    g "You went so high into the air, it was like you could fly."
-    g "It didn't look safe. Not one bit. But none of the adults were watching."
-    g "They were too busy talking to each other to watch their kids."
-    g "What bad parents. But I supposed I can't fault them too much."
-    g "After all, they let me meet you for the first time."
-    g "It was the fifth time you jumped off the swings. You landed perfectly, and climbed back on for another jump."
-    g "But this time, it wasn't the same. Maybe you had gotten tired from jumping so much, maybe your hands got blistered from the ropes."
-    g "This time, when you tried to jump off, it didn't go so well."
-    g "You didn't land on the ground, but instead onto a young girl."
-    g "She was so surprised, with you landing onto her out of nowhere."
-    pause(1.5)
-    g "Do you remember? That girl?"
-    mc "I-"
-    g "Sorry, I got nostalgic for a second, seeing this place again."
-    g "But that girl, she caught you back then."
-    g "And now, she caught you again."
-    if goopithaPoints > lldPoints and goopithaPoints > pelotaPoints and goopithaPoints > jjPoints and goopithaPoints > sigmaPoints and goopithaPoints > tvheadPoints:
-        jump goopNormal
-    else:
-        jump goopYandere
-
-label goopNormal:
-    $ goopKnows = False
-    mc "(She grabs onto me and squeezes around my chest.)"
-    show goopitha sad at center:
-        ease 0.25 zoom 1.0 xoffset 0 yoffset 300
-    g "I've missed you so much!!!"
-    g "It's been so long since I've seen you!!"
-    g "And- *sniff* and when you left for college, I-"
-    g "I cried so much!!!!"
-    mc "(She rubs her face against me and cries into my shirt.)"
-    mc "(I gently pat her head as she cries her sorrows out.)"
-    g "*sniff*"
-    g "Hah,"
-    g "..."
-    show goopitha neutral
-    g "Thank you."
-    show goopitha neutral:
-        ease 1.5 zoom 1.0 xoffset 0 yoffset -300
-    g "*sniff*"
-    show goopitha surprised
-    g "Ah!"
-    g "Sorry, sorry, sorry, sorry, sorry!"
-    hide goopitha surprised
-    with dissolve
-    g "Uuuuuuuuuuuuuuuuuuuuuuuuuu."
-    #It's fauning time
-    g "{size=-10}I shouldn't have done that...{/size}"
-    show goopitha embarrassed at right
-    with dissolve
-    g "Please don't mention this to anyone."
-    g "I'll... get going."
-    hide goopitha
-    with dissolve
-    mc "(...huh.)"
-    jump day6dream
-
-label goopYandere:
-    g "You seem different now, [name]."
-    g "You got taller. You look different now. Your voice changed."
-    show goopitha yandere 1
-    g "But I didn't think your scent would have changed too."
-    g "I marked you back then, [name], so you wouldn't get away."
-    g "You should smell the same now, [name]."
-    g "It was a mark made with love. It shouldn't go away."
-    show goopitha yandere 3
-    g "So why do you smell different now, [name]?"
-    g "Do you love someone else, [name]?"
-    mc "..."
-    menu:
-        "Tell her":
-            $ goopKnows = True
-            jump goopKnows
-        "Don't tell her":
-            $ goopKnows = False
-            jump goopNoKnow
-
-label goopKnows:
-    show goopitha neutral
-    g "I figured that was the case."
-    mc "No, that- that's not what I meant."
-    mc "I've..."
-    mc "(No going back.)"
-    mc "I've lost my memories."
-    mc "I got into an accident and got permanent amnesia."
-    mc "I've only recovered a week ago."
-    g "... I see."
-    mc "I'm sor-"
-    g "So, do you remember me?"
-    mc "...I don't."
-    show goopitha sad
-    g "..."
-    mc "(She looks like she's about to cry.)"
-    g "I..."
-    hide goopitha sad
-    with dissolve
-    mc "(She leaves without another word.)"
-    mc "(Mission successful, I guess?)"
-    mc "(I don't really know how to feel about that.)"
-    mc "(...)"
-    jump day6dream
-label goopNoKnow:
-    show goopitha neutral
-    g "I figured that was the case."
-    show goopitha yandere 3
-    g "Why, why do you love someone else?!!?"
-    g "I love you, I've always loved you, from the bottom of my heart!"
-    g "Ever since that day our fates crossed, my eyes have always been set on you!"
-    g "*hah*"
-    show goopitha yandere 4
-    g "Every single day, I would go back to that park, hoping that I would see you again."
-    g "Day, night, rain, hail. No matter what, I would go there, every day."
-    g "I've worked so hard, just for you. I've done some much for you."
-    show goopitha yandere 3
-    g "Why have you betrayed me?!?!"
-    g "I-I'll."
-    g "I..."
-    show goopitha sad
-    mc "(She looks like she's about to cry.)"
-    hide goopitha sad
-    with dissolve
-    mc "(Goopitha leaves without another word.)"
-    mc "(...)"
-    jump day6dream
-
-label lldWalk:
-    mc "(I'll give it to Goopitha tomorrow. It's not my responsibility.)"
-    mc "(In the meantime, I'll just go for a walk.)"
-    mc "(I don't think it'll go anywhere, so I'll just leave it in my room for now.)"
+            mc "(I'll give it to Goopitha tomorrow. It's not my responsibility.)"
+            mc "(In the meantime, I'll just go for a walk.)"
+            mc "(I don't think it'll go anywhere, so I'll just leave it in my room for now.)"
     scene bg alley day
     with fade
     mc "(Where should I go today...)"
@@ -286,7 +97,7 @@ label lldWalk:
     show lld normal
     "Dolphin Man" "Okay, I may have convoluted things by saying that, whoops."
     "Dolphin Man" "Alright, let's start from the beginning."
-    "Dolphin Man" "I work for a tax collection company. You have not paid your taxes yet, and as a result we send an agent to collect it."
+    "Dolphin Man" "You remember me from a few days ago, right? Yeah, I work for a tax collection company. You have not paid your taxes yet, so we sent an agent to come collect them."
     l "That agent is me, the Lone Loan Dolphin."
     l "Nice to meet you."
     mc "Nice... to meet you."
@@ -375,6 +186,16 @@ label lldWalk:
     with fade
     l "Mmm. This is pretty good."
     mc "(He bites into the salmon burger, taking out triangle-shaped chunks as he goes.)"
+    l "I love this place. They have this thing called the Loan Lone Dolphin."
+    show lld at right
+    with dissolve
+    l "It's like this tiny little dolphin plush thing. Like the name implies, it's pretty lonely, so they loan it out to people that are lonely as well."
+    show lld happy
+    l "Heheheh. Y-you get the joke? Like, my name is Lone Loan Dolphin, and this thing is cal-"
+    show lld normal
+    l "Not funny?"
+    l "I always found it funny."
+    pause(1.5)
     l "So... what have you been up to these past 2 years?"
     mc "(Well I've been in a coma, so I don't really know.)"
     l "Like I said, no one's heard of you even a single bit for 2 years. The IRS has been sending out agents to try to find you, but no dice."
@@ -382,7 +203,7 @@ label lldWalk:
     l "\"DEEZ Corp\"?"
     show lld happy
     l "What, is this a prank?"
-    l "Haha, you've been gone for 2 years just for a de-"
+    l "Haha, you've been gone for 2 years just for a dee-"
     show lld bruh
     l "{size=-10}No, okay, it's the actual name of the company. Are you serious?{/size}"
     l "Oh, it's an abbreviation."
@@ -424,7 +245,7 @@ label lldWalk:
     l "What'd he tell you?"
     mc "Something about how I should work for DEEZ Corp or something."
     l "Just like that?"
-    mc "He kinda like forced it onto me."
+    mc "He kinda forced it onto me."
     mc "He even gave me an apartment and stuff. It was pretty generous."
     l "That sounds..."
     pause(1.0)
@@ -436,4 +257,230 @@ label lldWalk:
     mc "(That doesn't sound good.)"
     mc "(I don't think the IRS is gonna come after me anymore.)"
     mc "(Though I might have awakened a whole new beast.)"
-    jump day6dream
+
+    scene bg livingroom
+    show goopitha slime
+    with fade
+    mc "(The slime is still here, huh. I don't think it moved at all.)"
+    mc "(I gently prod the slime, thinking about what Lone Loan Dolphin said.)"
+    mc "(Oh, it's moving!)"
+    mc "(The slime starts squeezing around my fingers.)"
+    mc "(It's quite cold, but my hand passes through it with little resistance.)"
+    mc "(I cup it with my hands and lift it into the air.)"
+    mc "(This is pretty fun.)"
+    with fade
+    mc "(Wow, is it evening already?)"
+    mc "(The sun is just beginning to set. The sky is slowly becoming a beautiful mosaic of light and clouds.)"
+    mc "(Have I really been playing with this slime for that long?)"
+    mc "(I should probably do something else.)"
+    mc "(I look longingly at the slime before turning away.)"
+    mc "(Sorry, but I need to touch some grass.)"
+    mc "(I'll just leave it here. I won't be out for long.)"
+    scene bg alley dusk
+    with fade
+    mc "(It's pretty quiet at this time of the evening. It gives me time to think about life.)"
+    mc "(It's been almost a week since my life has changed, hasn't it.)"
+    mc "(So much has happened that I can't really believe that. Was my life this chaotic before I lost my memories?)"
+    mc "(So many new people and things have been thrown into my life. It's hard to keep track of it all.)"
+    mc "(Without all of them around, it feels really quiet. But to be honest, that's what I need right now.)"
+    show bg park dusk
+    with dissolve
+    mc "(Didn't know there was a park here.)"
+    mc "(It's a Sunday evening, so not many people are here. I look around the park until I eventually sit down at a childrens' playground.)"
+    mc "(The air here is so nice. It feels like I'm breathing in the night itself.)"
+    mc "(I don't remember my childhood, but it shouldn't be too hard to use the playground structures. I mean, they're meant for a kid to use.)"
+    mc "(Let's start with the swings.)"
+    mc "(I need to kick myself off the ground...)"
+    mc "(...)"
+    mc "(Wow, this is pretty fun. I think I can go higher.)"
+    mc "(...)"
+    mc "Hah!"
+    mc "(I jump off the swing at the peak of its height, catapulting myself towards the seesaw.)"
+    "Voice" "Woah there."
+    show goopitha neutral
+    with dissolve
+    #This section is kinda wack
+    g "You shouldn't be jumping off like that. You'll hurt yourself!"
+    mc "Hello, Goopitha. Funny seeing you here."
+    g "I could say the same. I've never seen you here before."
+    mc "Oh yeah, I just found this place. It's pretty cool."
+    g "Isn't this the most popular park in the city though?"
+    mc "(Oh crap.)"
+    mc "Oh, is it? Hahah, I've never been here. I really need to know the city more."
+    g "Haven't you been living here most of your life though?"
+    mc "(Fuck.)"
+    mc "I, uh, I. I don't really go outside that much."
+    mc "(My reputation can tank this, I just can't let her find out.)"
+    g "Hmmmm. If you say so."
+    show goopitha happy 2
+    g "Oh well. It's quite nice here, isn't it."
+    g "It's calm and quiet. And that means… there's no one around to interrupt us."
+    g "Don't you think it's great?"
+    mc "Yep, uh-huh."
+    mc "(I think she bought it. That glint in her eyes is a little unsettling, though.)"
+    show goopitha happy 1
+    g "At times like this, I'm glad I met you."
+    g "Do you still remember? The first time we met?"
+    g "It was a long, long time ago."
+    g "Come walk with me."
+    mc "(I don't think I'm out of the woods yet.)"
+    show goopitha yandere 1
+    with fade
+    g "Do you remember the swings?"
+    g "You were on the blue one, the one with the rope."
+    g "You had been there for an hour at least. I was there too."
+    g "I was much more shy back then. I didn't approach you. I only watched."
+    g "But I was looking at you. You got so excited when you found out you could jump off. You were doing it over and over and over."
+    g "You went so high into the air, it was like you could fly."
+    g "It didn't look safe. Not one bit. But none of the adults were watching."
+    g "They were too busy talking to each other to watch their kids."
+    g "What bad parents. But I supposed I can't fault them too much."
+    g "After all, they let me meet you for the first time."
+    g "It was the fifth time you jumped off the swings. You landed perfectly, and climbed back on for another jump."
+    g "But this time, it wasn't the same. Maybe you had gotten tired from jumping so much, maybe your hands got blistered from the ropes."
+    g "This time, when you tried to jump off, it didn't go so well."
+    g "You didn't land on the ground, but instead onto a young girl."
+    g "She was so surprised, with you landing onto her out of nowhere."
+    pause(1.5)
+    g "Do you remember? That girl?"
+    mc "I-"
+    g "Sorry, I got nostalgic for a second, seeing this place again."
+    g "But that girl, she caught you back then."
+    g "And now, she caught you again."
+    if goopithaPoints > lldPoints and goopithaPoints > pelotaPoints and goopithaPoints > jjPoints and goopithaPoints > sigmaPoints and goopithaPoints > tvheadPoints:
+        jump goopNormal
+    else:
+        jump goopYandere
+
+label goopNormal:
+    $ goopKnows = False
+    mc "(She grabs onto me and squeezes around my chest.)"
+    show goopitha sad at center:
+        ease 0.25 zoom 1.0 xoffset 0 yoffset 300
+    g "I've missed you so much!!!"
+    g "It's been so long since I've seen you!!"
+    g "And- *sniff* and when you left for college, I-"
+    g "I cried so much!!!!"
+    mc "(She rubs her face against me and cries into my shirt.)"
+    mc "(I gently pat her head as she cries her sorrows out.)"
+    g "*sniff*"
+    g "Hah,"
+    g "..."
+    show goopitha neutral
+    g "Thank you."
+    show goopitha neutral:
+        ease 1.5 zoom 1.0 xoffset 0 yoffset -300
+    g "*sniff*"
+    show goopitha surprised
+    g "Ah!"
+    g "Sorry, sorry, sorry, sorry, sorry!"
+    hide goopitha surprised
+    with dissolve
+    g "Uuuuuuuuuuuuuuuuuuuuuuuuuu."
+    #It's fauning time
+    g "{size=-10}I shouldn't have done that...{/size}"
+    show goopitha embarrassed at right
+    with dissolve
+    g "Please don't mention this to anyone."
+    g "I'll... get going."
+    hide goopitha
+    with dissolve
+    mc "(...huh.)"
+    scene bg alley night
+    with fade
+    mc "(I didn't know Goopitha saw me that way.)"
+    mc "(She really missed me that much?)"
+    mc "(But when she says that, all I can feel is guilt. The one she treasured is not the me right now, but the me of the past.)"
+    mc "(The [name] that will never come back. The one that I have left behind, in exchange for the life I have right now.)"
+    mc "(When I think about her face...)"
+    show goopitha sad
+    with dissolve
+    pause(1.0)
+    mc "(How would she feel if I told her? That the person she loves will never come back?)"
+    mc "(I can't tell her. Ever.)"
+    jump day7
+
+label goopYandere:
+    g "You seem different now, [name]."
+    g "You got taller. You look different now. Your voice changed."
+    show goopitha yandere 1
+    g "But I didn't think your scent would have changed too."
+    g "I marked you back then, [name], so you wouldn't get away."
+    g "You should smell the same now, [name]."
+    g "It was a mark made with love. It shouldn't go away."
+    show goopitha yandere 3
+    g "So why do you smell different now, [name]?"
+    g "Do you love someone else, [name]?"
+    mc "..."
+    menu:
+        "Tell her":
+            $ goopKnows = True
+            jump goopKnows
+        "Don't tell her":
+            $ goopKnows = False
+            jump goopNoKnow
+
+label goopKnows:
+    show goopitha neutral
+    g "I figured that was the case."
+    mc "No, that- that's not what I meant."
+    mc "I've..."
+    mc "(No going back.)"
+    mc "I've lost my memories."
+    mc "I got into an accident and got permanent amnesia."
+    mc "I've only recovered a week ago."
+    g "... I see."
+    mc "I'm sor-"
+    g "So, do you remember me?"
+    mc "...I don't."
+    show goopitha sad
+    g "..."
+    mc "(She looks like she's about to cry.)"
+    g "I..."
+    hide goopitha sad
+    with dissolve
+    mc "(She leaves without another word.)"
+    mc "(Mission successful, I guess?)"
+    mc "(I don't really know how to feel about that.)"
+    mc "(...)"
+    scene bg alley night
+    with fade
+    mc "(I didn't know she loved me that much.)"
+    mc "(So, by telling her that I've lost my memories...)"
+    mc "(That the [name] she loves has disappeared into nothingness, to be replaced by a [name] who barely even knows her...)"
+    mc "(Guilt.)"
+    mc "(So much so that it's crushing my very soul.)"
+    mc "(Ugh...)"
+    jump day7
+label goopNoKnow:
+    show goopitha neutral
+    g "I figured that was the case."
+    show goopitha yandere 3
+    with hpunch
+    g "Why, why do you love someone else?!!?"
+    g "I love you, I've always loved you, from the bottom of my heart!"
+    g "Ever since that day our fates crossed, my eyes have always been set on you!"
+    g "*hah*"
+    show goopitha yandere 4
+    g "Every single day, I would go back to that park, hoping that I would see you again."
+    g "Day, night, rain, hail. No matter what, I would go there, every day."
+    g "I've worked so hard, just for you. I've done some much for you."
+    show goopitha yandere 3
+    g "Why have you betrayed me?!?!"
+    mc "..."
+    mc "(Nothing comes out of my mouth.)"
+    show goopitha sad
+    mc "(She looks like she's about to cry.)"
+    hide goopitha sad
+    with dissolve
+    mc "(Goopitha leaves without another word.)"
+    mc "(...)"
+    scene bg alley night
+    with fade
+    mc "(I didn't know Goopitha saw me that way.)"
+    mc "(It's just like she said. I've betrayed her.)"
+    mc "(I've completely forgotten her. The [name] that she loves isn't me, but another version that I've left behind.)"
+    mc "(They've been replaced by someone who acts different, talks different...)"
+    mc "(...)"
+    mc "(I don't think I can face her tomorrow.)"
+    jump day7
