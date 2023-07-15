@@ -18,6 +18,9 @@ define c = Character("CEO")
 #Colors
 image white = "#ffff"
 
+#Transitions
+define fateslide = MultipleTransition([False, CropMove(0.5, "wipeleft"), "black", Pause(1.0), "black", CropMove(0.5, "wipeleft"), True])
+
 #Character point variables
 default goopithaPoints = 0
 default sigmaPoints = 0
