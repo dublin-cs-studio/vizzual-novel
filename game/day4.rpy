@@ -125,7 +125,6 @@ label day4:
     with ease
     f "The reign that time has on this world has weakened. The dark moon's power grows stronger. The past has been forsaken, and I shall rise again."
     f "Know your place, human. Heh. Heh heh. HahahaHAHAHAHAHA!"
-    show tvhead chuuni
     mc "(He covers the right half of his face with his hand and strikes a strange pose, like that of a video game character.)"
     show tvhead tired
     f "*cough*" 
@@ -273,11 +272,10 @@ label day4:
     s "Yeah, this happens every once in a while. The CEO never pays his taxes on time, which is kinda surprising."
     s "The cost of the glass, the security, the late fee for the taxes. He should just pay on time."
     s "Seems like they've come for you this time though. Quite unfortunate."
-    show joejoe surprised at left
+    show joejoe surprised 1 at left
     with dissolve
     j "What happened here?"
     show sigma glasses at right
-    show joejoe surprised at left
     with dissolve
     mc "(Joe Joe carefully steps over the broken glass, cup of coffee in hand, and takes a sip.)"
     s "It was the guy again."
@@ -310,11 +308,11 @@ label day4:
     hide sigma glasses
     with dissolve
     mc "(Sigma waves us goodbye and heads back to the front lobby.)"
-    show joejoe surprised
+    show joejoe surprised 1
     j "Oh wait, is this your desk I'm sitting on?"
     mc "(I had forgotten that I was working before that strange dolphin man arrived.)"
     mc "Yeah, I think."
-    show joejoe surprised at center
+    show joejoe surprised 1 at center
     with ease
     mc "(I set my chair upright and move it over to the desk.)"
     mc "(Joe Joe takes another sip of coffee before leaving.)"

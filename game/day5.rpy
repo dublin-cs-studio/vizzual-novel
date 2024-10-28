@@ -9,11 +9,11 @@ label day5:
     mc "(I drowsily look for my clock while the doorbell rings throughout my house.)"
     mc "(Who’s ringing my doorbell this early in the morning?)"
     mc "(I put on my clothes and open the door.)"
-    show bg apartment inside
+    show bg livingroom
     show tvhead normal
     with fade
     mc "(It’s TV Head. He looks around quickly before covering the right half of his face.)"
-    show tvhead chuuni
+    show tvhead excited
     f "The time for retribution has come, mortal. Your presence is needed. They’ve stepped up their security in the past week. Something’s not right."
     mc "(It is way too early for this bullshit.)"
     mc "Who?"
@@ -27,6 +27,8 @@ label day5:
     mc "Sure. Where are we going?"
     show tvhead normal
     mc "(He smiles and motions me to step outside.)"
+    t "Come with me, partner."
+    #t "I grant you the name of "
     show bg alley day
     with fade
     f "Like I said, there are two possible locations, but I doubt we have time to fully clear both. So we’ll just check one out, and if they aren’t there then we’ll rush over to the other one."
@@ -143,14 +145,14 @@ label aquarium:
     mc "(The children rush over to TV Head.)"
     "Kid" "Woah, that was so cool! How did you do that?"
     "Other Kid" "I wanna be like you when I grow up!"
-    show tvhead chuuni
+    show tvhead excited
     f "Hmpf. It is not easy going down this path, young one. You must be prepared for a journey filled with pain and despair."
     show tvhead excited
     f "But I could use a few more assistants. I shall take you all under my wing."
     "Children" "Yeah! Wooooooh!"
     f "Hahahahahahahah!"
     "Security Guard" "Sorry sir, but you’re causing a disturbance to the other guests. You’re gonna have to quiet down or leave the premises."
-    show tvhead chuuni
+    show tvhead excited
     f "Fool, you dare try to control the great Fe-"
     show tvhead normal
     t "Ah."
@@ -250,14 +252,14 @@ label museum:
     mc "(The children rush over to TV Head.)"
     "Kid" "Woah, that was so cool! How did you do that?"
     "Other Kid" "I wanna be like you when I grow up!"
-    show tvhead chuuni
+    show tvhead excited
     f "Hmpf. It is not easy going down this path, young one. You must be prepared for a journey filled with pain and despair."
     show tvhead excited
     f "But I could use a few more assistants. I shall take you all under my wing."
     "Children" "Yeah! Wooooooh!"
     f "Hahahahahahahah!"
     "Security Guard" "Sorry sir, but you’re causing a disturbance to the other guests. You’re gonna have to quiet down or leave the premises."
-    show tvhead chuuni
+    show tvhead excited
     f "Fool, you dare try to control the great Fe-"
     show tvhead normal
     t "Ah."

@@ -18,6 +18,10 @@ define c = Character("CEO")
 #Colors
 image white = "#ffff"
 
+#Transitions
+define fateslide = MultipleTransition([False, CropMove(0.5, "wipeleft"), "black", Pause(1.0), "black", CropMove(0.5, "wipeleft"), True])
+define fatecollapse = ComposeTransition(dissolve, before=moveoutbottom, after=None)
+
 #Character point variables
 default goopithaPoints = 0
 default sigmaPoints = 0
@@ -28,7 +32,6 @@ default tvheadPoints = 0
 
 default smallpizza = True # used for choosing small or large pizzas when getting pizza with joejoe
 
-image side sigma = "sigmaside.png"
 
 image sigma = At('sigma.png', sprite_highlight("sigma.png"))
 
@@ -46,12 +49,88 @@ transform jumper: #adjust the yoffset as necessary to your preference
     ease .01 yoffset 4 
     ease .01 yoffset -4 
     ease .01 yoffset 0
-# The game starts here.
+
 transform centerleft:
     xpos 0.33 xanchor 0.33 ypos 1.0 yanchor 1.0
 
 transform centerright:
     xpos 0.66 xanchor 0.66 ypos 1.0 yanchor 1.0
+
+transform big:
+    zoom 1.5
+
+transform superbig:
+    zoom 3.0
+
+#### Image definitions
+image splash = "splash.png"
+image main_menu = "gui/main_menu_bright.png"
+image main_menu_dark = "gui/main_menu.png"
+
+# CGs
+image CG_Cooler = "images/cg joe cooler.png"
+image CG_Wack = "images/cg pelota wack.png"
+image CG_Desk = "images/cg sigma desk.png"
+
+# BGs
+image BG_Alley_1 = "images/bg alley day.png"
+image BG_Alley_2 = "images/bg alley dusk.png"
+image BG_Alley_3 = "images/bg alley night.png"
+image BG_Amusement_Main = "images/bg amusement area.png"
+image BG_Amusement_Line = "images/bg amusement line.png"
+image BG_Amusement_Outside = "images/bg amusement outside.png"
+image BG_Apartment = "images/bg apartment outside.jpg"
+image BG_Aquarium = "images/bg aquarium.jpg"
+image BG_Beach_Main = "images/bg beach main.png"
+image BG_Beach_Coast = "images/bg beach coast.png"
+image BG_Bedroom = "images/bg bedroom.jpg"
+image BG_Boardwalk = "images/bg boardwalk.png"
+image BG_Burger = "images/bg burger.jpg"
+image BG_Bus_1 = "images/bg bus inside.jpg"
+image BG_Bus_2 = "images/bg bus other window.jpg"
+image BG_Bus_3 = "images/bg bus window.jpg"
+image BG_Beach_Changing = "images/bg changing room.png"
+image BG_Cooler = "images/bg cooler.png"
+image BG_Cubicle_1 = "images/bg cubicle day.png"
+image BG_Cubicle_2 = "images/bg cubicle dusk.png"
+image BG_Cubicle_3 = "images/bg cubicle early.png"
+image BG_Cubicle_4 = "images/bg cubicle night.png"
+image BG_Ferris = "images/bg ferris up.png"
+image BG_Festival = "images/bg festival.png"
+image BG_FrontDesk_1 = "images/bg frontdesk day.png"
+image BG_FrontDesk_2 = "images/bg frontdesk dusk.png"
+image BG_FrontDesk_3 = "images/bg frontdesk night.png"
+image BG_Hospital = "images/bg hospital.jpg"
+image BG_Konbini = "images/bg konbini.jpg"
+image BG_LivingRoom = "images/bg livingroom.jpg"
+image BG_Museum = "images/bg museum.jpg"
+image BG_Office = "images/bg office.png"
+image BG_OutsideOffice = "images/bg outside.jpg"
+image BG_Park = "images/bg park day.jpg"
+image BG_Pizza = "images/bg pizzeria.jpg"
+image BG_Table = "images/bg table.jpg"
+
+# Character sprites
+
+label splashscreen:
+    scene black
+    with Pause(1)
+
+    show splash with dissolve
+    with Pause(2)
+
+    scene black with dissolve
+    with Pause(1)
+
+    return 
+
+label before_main_menu:
+    scene black
+    scene main_menu with dissolve
+    with Pause(2)
+    scene main_menu_dark with dissolve
+    return
+
 label start:
 
     # Show a background. This uses a placeholder by default, but you can
@@ -65,9 +144,10 @@ label start:
         if not name:
             name = "Toni"
         if name == "Andrew Zhou":
-            renpy.call_in_new_context("easter1") 
+            # renpy.call_in_new_context("easter1") 
+            renpy.jump("easter1")
         else:
-            renpy.call_in_new_context("intro1")
+            renpy.jump("intro1")
 label easter1:
     "omg!!! its andrew zhou (real)!"
     jump intro1 

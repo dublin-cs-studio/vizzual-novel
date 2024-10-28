@@ -2,7 +2,6 @@ label day1work:
     scene bg outside
     with squares
     mc "(The building is in sight now. That only took around 20 minutes, I think.)"
-    "The MC is outside of the DEEZ Corp building."
     mc "(What a tall building. It's the tallest one on the block.)"
     mc "(No one's walking into the building. I'm getting a bit nervous.)"
     mc "(Am I in the right place? I check the map again, certain that I read it wrong, yet every street marker and building tells me that I'm at the correct location.)"
@@ -69,7 +68,7 @@ label day1work:
     hide sigma glasses 
     mc "(There's a small coffee machine on the desk and a water cooler right next to it.)"
     mc "(I reach for a paper cup, but I suddenly bump into another person doing the same thing.)"
-    show joejoe surprised at center
+    show joejoe surprised 1 at center
     with zoomin
     mc "Oh, sorry."
     "Other guy" "Sorry."
@@ -104,7 +103,7 @@ label day1work:
     j "Nice to meet you too. If you're confused about something, you can just ask me about it."
     menu: 
         "What do you do here?":
-            show joejoe surprised at center 
+            show joejoe surprised 1 at center 
             j "Oh, this will sound kinda bad, but..." 
             show joejoe embarrassed at center
             j "I'm not sure."
@@ -135,11 +134,13 @@ label day1work:
     j "Anyways, welcome to the company. I look forward to working with you. I’ll be your water cooler buddy too, I guess."
     menu:
         "Sure.":
+            $ joeMad = False
             show joejoe happy 1
             mc "(He nods and waves at me as he walks away.)"
             hide joejoe 
             with easeoutright
         "No thanks.":
+            $ joeMad = True
             show joejoe happy 2
             mc "(He gives me a thumbs up and walks away.)"
             hide joejoe 

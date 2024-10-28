@@ -10,11 +10,13 @@ label day3:
     mc "..."
     mc "(Smells good. I'll just eat this and go to sleep.)"
     scene bg bedroom
+    play music "audio/City_Streets.mp3"
     with fade
     mc "(Yet another day of life. I can't say I'm excited to go to work, but at least it gives me something to do.)"
     mc "(I get out of bed and get ready for the day. I probably shouldn't eat ramen for breakfast, but I'm an adult and I can make decisions for myself.)"
     scene bg frontdesk day
     with fade
+    play music city_streets
     mc "(I arrive at the office building, ready to fill out more paperwork.)"
     show sigma glasses
     with dissolve
@@ -39,20 +41,21 @@ label day3:
             mc "(The coffee smells amazing and I can feel the heat of it through the paper cup. It warms up my fingers, making me feel more energized before I even take a sip.)"
             mc "(The coffee is quite energizing. It doesn’t taste particularly good, but it does the job.)"
             mc "(I finish the cup, trying to get the last remaining drops of coffee before tossing it away. I feel more energetic now.)"
-    mc "(I try to head back to my cubicle when someone bumps into me, knocking me over.)" 
+    mc "(I try to head back to my cubicle when someone bumps into me, knocking me over.)"
+    stop music fadeout 1.0
     with vpunch
     "Random Woman" "Sorry!"
     mc "It’s fine."
     mc "(I look up at the woman who knocked me down.)"
-    scene cg goopitha meet
+    show goopitha confused
     with dissolve
     #This could also be a normal sprite
-    with dissolve
+    play music goopitha_theme
     mc "(She’s... a slime.)"
     mc "(Her body seems to be made of a gelatinous material. Some of it is stuck on my clothes where she bumped into me. She looks quite pretty though.)"
     mc "(She seems to have noticed that her slime got on me.)"
     scene bg cooler
-    show goopitha happy 1
+    show goopitha smile
     with dissolve
     "Slime Woman" "Oh, I’m so sorry about your clothes."
     mc "(She touches her main body to the parts on my clothing and pulls some of it off. My clothes are stained in the process.)"
@@ -62,7 +65,7 @@ label day3:
     "Slime Woman" "Wait, are you..."
     mc "Have I met you before?"
     mc "(She might be an old friend of mine from before I lost my memories. Not good.)"
-    show goopitha happy 2
+    show goopitha smile
     "Slime Woman" "Wow, it is you! I haven’t seen you in forever!"
     mc "Haha, yeah. It’s been so long."
     mc "(I have no idea what she’s talking about.)"
@@ -78,7 +81,7 @@ label day3:
     g "Wait, why are you even here? Do you even work here?"
     mc "(I was hoping she’d leave me alone...)"
     mc "No, I just got hired a few days ago. This is my third day here."
-    show goopitha happy 2
+    show goopitha smile
     g "I can show you around then! Or did Sigma already do that?"
     menu:
         "Sigma already gave me a tour":
@@ -93,13 +96,13 @@ label touralready:
     mc "Sigma already did that."
     show goopitha neutral
     mc "(Her smile flattens ever so slightly. I feel kinda bad for her now. But she quickly regains her energy.)"
-    show goopitha happy 1
+    show goopitha smile
     g "Oh, that’s fine. Hold on."
     mc "(She looks around to see if her coworker is still around. To her delight, he has already headed off to somewhere else.)"
     show goopitha smug
     g "I’ll just take those papers later. No one has to know…"
     mc "(Her bright smile turns into a cheeky grin as she winks at me. There goes my plans of not talking about my amnesia.)"
-    show goopitha happy 2
+    show goopitha smile
     g "So, how have you been lately? I haven’t seen you in ages!"
     mc "I’ve been good. Not really much happening in my life. What about you?"
     mc "(I hope that I can divert the attention onto her. She seems like the type of person who can’t stop talking once she starts.)"
@@ -115,18 +118,20 @@ label touralready:
     g "Did you not sleep well? That’s not good for you, y’know. A normal adult should sleep 7 hours a day."
     mc "No, it’s just..."
     mc "I think someone’s in my cubicle."
-    hide goopitha happy 2
+    stop music fadeout 1.0
+    hide goopitha smile
     show pelota neutral at right
     with dissolve
+    play music pelota_theme
     mc "(I point it over to the woman at my desk. Her legs are kicked up on the table and she leans back so far that I’m scared she’ll fall over.)"
     mc "(A black baseball bat is placed on her lap. It almost falls out of her lap as she yawns, but she miraculously grabs it with her free hand.)"
-    show goopitha happy 1 at left
+    show goopitha smile at left
     with dissolve
     g "Oh, that’s Pelota! You totally need to meet her!"
-    show goopitha happy 1 behind pelota at right 
+    show goopitha smile behind pelota at right 
     with move
     mc "(She grabs Pelota and hugs her from the back.)"
-    show goopitha happy 2
+    show goopitha happy
     g "Pelotaaaa!"
     show pelota death
     p "Gah!"
@@ -135,7 +140,7 @@ label touralready:
     p "What do you want?"
     mc "(She hasn’t noticed me at all. Her casual tone makes me think that this is a regular occurrence.)"
     g "Well..."
-    hide goopitha happy 2
+    hide goopitha smile
     with easeoutleft
     mc "(Goopitha reaches over to me and pushes me towards Pelota.)"
     show pelota neutral at center
@@ -182,7 +187,7 @@ label touralready:
     # minigame here, for now filler with manual win/lose selection 
 
     menu:
-        "Win":
+        "Fight her":
             $ pelotaPoints += 1
             mc "*cough* (My body hurts. She really didn't pull her punches.)"
             show pelota laugh
@@ -208,9 +213,11 @@ label touralready:
     mc "(Pelota is still sitting at my cubicle, but I can probably get her to move. She’s downing an entire bottle of water. I don't think she's taken a breath since she started.)"
     p "Hah."
     mc "(Pelota caps the bottle and tosses it into the waste bin. It almost lands perfectly until...)"
+    stop music fadeout 1.0
     show pelota smile at right
     show goopitha angry at left
     with dissolve
+    play music city_streets
     mc "(Goopitha grabs it out of the air and bonks Pelota over the head.)"
     show pelota happymad
     g "Don’t do that, Pelota. No one likes getting beat up on their first meeting. You’re gonna scare [name] off."
@@ -224,14 +231,14 @@ label touralready:
     p "My bad. Sorry about that. I like to test everyone that I meet."
     mc "It’s fine."
     mc "(Goopitha doesn't look satisfied but drops the bottle into the waste bin anyways.)"
-    show goopitha happy 1
+    show goopitha smile
     g "Right, as I was saying, this is-"
     "Coworker" "Yo Goopitha, have you delivered those papers yet?"
-    show goopitha happy 2
+    show goopitha happy 
     g "I’m on it!"
-    show goopitha happy 1
+    show goopitha smile
     g "Sorry guys, I’ll have to talk to you later. Be nice to each other!"
-    hide goopitha happy 1
+    hide goopitha smile
     with easeoutleft
     mc "(Goopitha heads back to her department, leaving Pelota and I with an awkward silence to fill.)"
     mc "So… how was your day?"
@@ -253,7 +260,7 @@ label touralready:
     mc "(What should I eat tonight?)"
     mc "(As I step outside, a voice comes from behind me.)"
     g "Hey [name]!"
-    show goopitha happy 1
+    show goopitha smile
     with dissolve
     mc "(I turn around to greet the cheery slime girl following me.)"
     mc "Hey Goopitha."
@@ -264,16 +271,16 @@ label touralready:
     
 label goopithatour:
     mc "You can show me around."
-    show goopitha happy 2
+    show goopitha happy
     g "Perfect! Just follow me."
     mc "(She grabs my hand and pulls me towards the main lobby.)"
     scene bg frontdesk day
     with fade
-    show goopitha happy 1 at left
+    show goopitha smile at left
     show sigma glasses at right
     with dissolve
     g "Okay, so here is the main lobby! I’m sure you’ve already seen this before."
-    show goopitha happy 2
+    show goopitha happy
     g "Hey Sigma!"
     mc "(She waves over at Sigma, who glances up from her computer. She looks at us questioningly, no doubt because we’re supposed to be working.)"
     mc "(I wave at Sigma too and smile as she silently stares at me.)"
@@ -281,7 +288,7 @@ label goopithatour:
     mc "(Goopitha pulls me with her. We reach the junction where I would normally turn left, but Goopitha drags me to the right. After a few more twists and turns, she finally stops at a department I don’t recognize.)"
     scene bg cubicle early
     with fade
-    show goopitha happy 1
+    show goopitha smile
     with dissolve
     g "This is where I work! Pretty neat, huh?"
     mc "(Her cubicle looks identical to mine, save for the lack of a chair. I guess she doesn’t need to sit down since she’s a slime.)"
@@ -290,14 +297,14 @@ label goopithatour:
     g "Here, lemme show you what I have to do."
     mc "No it’s fine, I know wha-"
     g "Here!"
-    hide goopitha happy 1
+    hide goopitha smile
     with dissolve
     mc "(Goopitha steals a chair from the cubicle next to hers and sits me down in it. She scrambles around her desk, looking for any paperwork that she can show me.)"
     g "Where is it, where is it?"
     mc "(I don’t think she’s noticed, but she’s slowly covering my body with her slime. It’s not the most comfortable feeling. My clothes are sticking to each other and my back is cold.)"
     g "Aha! Here, look at this."
     mc "(Her voice comes from above as she pulls out an empty form. I instinctively look upwards.)"
-    show cg goopitha slime
+    show goopitha smile at superbig
     with dissolve
     #Make this first person with like a slime filter or something it doesn't need to look good
     mc "(Woah, she’s close! Her entire body is looming over me as she explains how she does her job. I quickly look back down before she notices that I’m not paying attention.)"
@@ -308,14 +315,14 @@ label goopithatour:
     mc "(I can feel my face flush with red. I hope that guy can’t see the predicament I’m in. That would be beyond embarrassing. I’m afraid to look up, since Goopitha’s body is so close to mine.)" 
     mc "(She might notice that her breasts- or what I hope are her breasts- Actually, why am I hoping that it’s her breasts? Does she even know that they are pressing against me? Her unspecified body part, but preferably-)"
     g "I’m working on it, hold on."
-    show bg cubicle1
+    show bg cubicle early
     with dissolve
     mc "(Goopitha suddenly moves, scaring me out of my trance. I quickly look up.)"
     mc "(Unfortunately, or maybe fortunately, it’s just her slime on me. I guess it technically counts as breasts, since they’re in that general area, but that means that any part of her body would also count.)"
     mc "(I feel my face going even more red when I realize that I hoped that they were her breasts. I hope no one here is a mindreader, however unlikely that would be.)"
     "Random Guy" "Hurry up."
     g "*sigh* Sorry about that. I still need to do a bunch of stuff. But anyways, where were we?"
-    show cg goopitha chair
+    show goopitha happy at big
     with dissolve
     #This should be the third person one
     mc "(Goopitha’s body slowly creeps forward as she tries to find her place on the paper again. I try my hardest not to move even a millimeter.)"
@@ -329,7 +336,7 @@ label goopithatour:
     mc "(Goopitha looks down at me. I freeze in fear, hoping she wouldn’t find what happened weird. I mean, she did this herself, right? Surely I’m not at fault, right?)"
     g "Ah."
     scene bg cubicle early
-    show goopitha embarrassed
+    show goopitha confused
     with dissolve
     mc "(Her face instantly turns a bright red. She covers her face with her hands.)"
     mc "No, this is- or, I mean-"
@@ -340,7 +347,7 @@ label goopithatour:
     g "I, uh. I’m just gonna, I’m gonna go now."
     mc "Yeah."
     g "Uh, bye. I guess."
-    hide goopitha embarrassed
+    hide goopitha confused
     with easeoutleft
     mc "(Goopitha exits the awkward situation, leaving me alone, blushing like crazy.)"
     mc "(I continue to stay seated for a few minutes, contemplating what just happened.)"
@@ -419,7 +426,7 @@ label goopithatour:
     mc "(What should I eat tonight?)"
     mc "(As I step outside, a voice comes from behind me.)"
     g "Oh, hey [name]!"
-    show goopitha happy 1
+    show goopitha smile
     with dissolve
     mc "(I turn around to greet the cheery slime girl following me. She seems to have wiped today's event from her mind with how carefree acts.)"
     mc "Hey Goopitha."
@@ -432,14 +439,14 @@ label goopithatour:
 label day3part2:
     g "Anyways, do you have any plans for dinner today?"
     mc "Not particularly. I was just gonna finish some of the instant ramen I have."
-    show goopitha pout
+    show goopitha angry
     mc "(She looks quite unhappy.)"
     g "That’s not good for you! You need to eat proper meals, not just ramen. It’s fine to have these sorts of things every once in a while, but you shouldn’t eat them for a meal!"
     mc "I don’t really have anything else to eat though."
     g "Why not? Don’t you at least buy groceries?"
     mc "Yeah, about that…"
     mc "(I don’t want to tell her that I’m broke. I feel like I’d be forcing her to give me money.)"
-    show goopitha happy 2
+    show goopitha happy
     g "Oh! I have an idea! What if I cooked your meals for you? You wouldn’t need to worry about the ingredients, I have plenty!"
     mc "(Hm, that does sound very appealing.)"
     menu:
@@ -458,7 +465,7 @@ label goopithaCook:
     with easeoutleft
     mc "(Goopitha zooms ahead of me, clearly excited because she gets to cook. I wonder what she’ll make for me.)"
     show bg konbini
-    show goopitha happy 1
+    show goopitha smile
     with dissolve
     mc "(Once we get to the grocery store, she grabs some vegetables, rice, and a box of curry roux. It’s not very expensive, but Goopitha insists on paying for it.)"
     g "Cooking is my hobby. You shouldn’t have to pay for it if I’m the one who’s doing the cooking."
@@ -471,11 +478,11 @@ label goopithaCook:
     mc "(I reach the door and unlock it. The door opens, revealing my lightly furnished apartment. Goopitha immediately heads over to the kitchen area.)"
     g "Wow, so this is where you live. It’s quite cozy."
     mc "(That’s a nice way of describing it. It looks like she’s making a quick curry rice, which is fine by me. It’s better than anything I could do, and it’s probably better than the frozen food and ramen.)"
-    show goopitha happy 1
+    show goopitha smile
     g "Okay, I’ll be done in about half an hour. You can watch if you want."
     mc "(I want to watch. It’d probably be a good learning experience.)"
     mc "I’ll watch."
-    show goopitha happy 2
+    show goopitha happy
     g "Great! Here, I’ll teach you how it’s done."
     show goopitha cooking
     g "ALright, first you want to cut all of your vegetables." 
@@ -483,7 +490,7 @@ label goopithaCook:
     g "Saute the onions until golden."
     mc "(She slides the onions into a pot with a squirt of oil. It takes a while, but the onions eventually turn a nice yellow color.)"
     g "Mm. Beautiful."
-    show goopitha happy 1
+    show goopitha smile
     g "Oh yeah, we need the rice."
     mc "(She gestures at the small packet of rice, vacuum-sealed into a hard brick.)"
     show goopitha cooking
@@ -493,13 +500,13 @@ label goopithaCook:
     mc "(I pour the dry rice into a spare pot and run water over it. I swirl it around with my fingers, which turns the water opaque.)"
     mc "(I wash it a few more times until the water runs clear.)"
     mc "It’s washed."
-    show goopitha happy 2
+    show goopitha happy
     g "Perfect!"
     show goopitha cooking
     g "Fill the pot with some water and put it on the stove."
     mc "(I follow her instructions and after I set it down on the burner she turns the fire up.)"
     mc "(I peer into the pot with the onions. It looks like she’s added water and the rest of the vegetables.)"
-    show goopitha happy 1
+    show goopitha smile
     g "It needs to simmer for a while. Let’s do something else in the meantime."
     show bg livingroom
     with dissolve
@@ -536,7 +543,7 @@ label goopithaCook:
     mc "(I scoop up a small bit of the curry, making sure that some rice is underneath. I can feel the heat radiating from the curry before I even touch it. I sniff it again, taking in the wonderful scents of the spices before thrusting the spoon into my mouth.)"
     mc "(It tastes beyond incredible. The spices warm me up, like an invisible blanket.)"
     mc "(I dig into the curry, making sure to get every last grain of rice.)"
-    show goopitha happy 1
+    show goopitha smile
     g "Wow, you certainly seem to be enjoying it."
     mc "(I look up at Goopitha. She’s smiling as she watches me eat.)"
     mc "It tastes amazing. Thank you so much, Goopitha."
@@ -544,7 +551,7 @@ label goopithaCook:
     g "Hehe. No problem. It’s been so long since I’ve seen that smile. I’d cook as many curries as you want if it means you would keep on smiling."
     mc "(I can feel my body warming up even more. Her voice calms my body, yet her words get me fired up. It’s a hypnotizing combination, and I can feel my heart beating faster.)"
     mc "Uh, thanks."
-    show goopitha happy 1
+    show goopitha smile
     mc "(She continues to watch me as I finish the meal. It fills me up completely.)"
     mc "Damn, that was delicious."
     g "You can freeze the rest if you want. It’s quite a bit and it lasts long when frozen."
@@ -552,11 +559,11 @@ label goopithaCook:
     g "No problem. I’m always here for you. Just give me a call."
     mc "(She cleans up the kitchen and places the dishes and pots into the dishwasher.)"
     show bg livingroom
-    show goopitha happy 2
+    show goopitha happy
     with dissolve
     g "Alright then. See you tomorrow."
     mc "See you."
-    hide goopitha happy 2
+    hide goopitha happy
     with dissolve
     mc "(I close the door behind her and lock it.)"
     mc "(It’s already quite late in the evening, so I’ll just go to sleep now. I toss my clothes into the washer to get rid of the slime stains. Oh yeah, about the slime. I wonder if Goopitha noticed, or if it’s just something that happens normally.)"
@@ -570,10 +577,10 @@ label noCook:
     mc "(Goopitha looks bothered by my words.)"
     g "That’s not healthy for you. You can’t just eat whatever. You need nutrition to keep your body running, y’know?"
     mc "I’ll be fine. Don’t worry about me."
-    show goopitha sad
+    show goopitha neutral
     g "Are you sure? I don’t feel comfortable with you eating like this, but if you insist..."
     mc "(She looks saddened by my choices, but in the end she leaves me be.)"
-    show goopitha happy 1
+    show goopitha smile
     g "Alright then. See you!"
     mc "Bye."
     mc "(We wave goodbye to each other and part ways. I head back to my home.)"
