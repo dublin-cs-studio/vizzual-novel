@@ -9,7 +9,7 @@ label day6:
     show bg kitchen
     with dissolve
     mc "(Is that slime on the table?)"
-    show goopitha slime
+    show cube goopitha
     with dissolve
     mc "(It looks almost identical to Goopitha's slime.)"
     mc "(It might be an offshoot or something. It's moving slightly.)"
@@ -259,7 +259,7 @@ label day6:
     mc "(Though I might have awakened a whole new beast.)"
 
     scene bg livingroom
-    show goopitha slime
+    show cube goopitha
     with fade
     mc "(The slime is still here, huh. I don't think it moved at all.)"
     mc "(I gently prod the slime, thinking about what Lone Loan Dolphin said.)"
@@ -312,19 +312,19 @@ label day6:
     mc "I, uh, I. I don't really go outside that much."
     mc "(My reputation can tank this, I just can't let her find out.)"
     g "Hmmmm. If you say so."
-    show goopitha happy 2
+    show goopitha happy
     g "Oh well. It's quite nice here, isn't it."
     g "It's calm and quiet. And that means… there's no one around to interrupt us."
     g "Don't you think it's great?"
     mc "Yep, uh-huh."
     mc "(I think she bought it. That glint in her eyes is a little unsettling, though.)"
-    show goopitha happy 1
+    show goopitha smile
     g "At times like this, I'm glad I met you."
     g "Do you still remember? The first time we met?"
     g "It was a long, long time ago."
     g "Come walk with me."
     mc "(I don't think I'm out of the woods yet.)"
-    show goopitha yandere 1
+    show goopitha yandere 
     with fade
     g "Do you remember the swings?"
     g "You were on the blue one, the one with the rope."
@@ -355,7 +355,7 @@ label day6:
 label goopNormal:
     $ goopKnows = False
     mc "(She grabs onto me and squeezes around my chest.)"
-    show goopitha sad at center:
+    show goopitha neutral at center:
         ease 0.25 zoom 1.0 xoffset 0 yoffset 300
     g "I've missed you so much!!!"
     g "It's been so long since I've seen you!!"
@@ -379,7 +379,7 @@ label goopNormal:
     g "Uuuuuuuuuuuuuuuuuuuuuuuuuu."
     #It's fauning time
     g "{size=-10}I shouldn't have done that...{/size}"
-    show goopitha embarrassed at right
+    show goopitha confused at right
     with dissolve
     g "Please don't mention this to anyone."
     g "I'll... get going."
@@ -393,7 +393,7 @@ label goopNormal:
     mc "(But when she says that, all I can feel is guilt. The one she treasured is not the me right now, but the me of the past.)"
     mc "(The [name] that will never come back. The one that I have left behind, in exchange for the life I have right now.)"
     mc "(When I think about her face...)"
-    show goopitha sad
+    show goopitha neutral
     with dissolve
     pause(1.0)
     mc "(How would she feel if I told her? That the person she loves will never come back?)"
@@ -403,12 +403,12 @@ label goopNormal:
 label goopYandere:
     g "You seem different now, [name]."
     g "You got taller. You look different now. Your voice changed."
-    show goopitha yandere 1
+    show goopitha yandere 
     g "But I didn't think your scent would have changed too."
     g "I marked you back then, [name], so you wouldn't get away."
     g "You should smell the same now, [name]."
     g "It was a mark made with love. It shouldn't go away."
-    show goopitha yandere 3
+    show goopitha yandere
     g "So why do you smell different now, [name]?"
     g "Do you love someone else, [name]?"
     mc "..."
@@ -433,11 +433,11 @@ label goopKnows:
     mc "I'm sor-"
     g "So, do you remember me?"
     mc "...I don't."
-    show goopitha sad
+    show goopitha neutral
     g "..."
-    mc "(She looks like she's about to cry.)"
+    mc "(I can't tell what emotion she is feeling, but it doesn't look positive.)"
     g "I..."
-    hide goopitha sad
+    hide goopitha neutral
     with dissolve
     mc "(She leaves without another word.)"
     mc "(Mission successful, I guess?)"
@@ -455,23 +455,23 @@ label goopKnows:
 label goopNoKnow:
     show goopitha neutral
     g "I figured that was the case."
-    show goopitha yandere 3
+    show goopitha yandere
     with hpunch
     g "Why, why do you love someone else?!!?"
     g "I love you, I've always loved you, from the bottom of my heart!"
     g "Ever since that day our fates crossed, my eyes have always been set on you!"
     g "*hah*"
-    show goopitha yandere 4
+    show goopitha yandere 
     g "Every single day, I would go back to that park, hoping that I would see you again."
     g "Day, night, rain, hail. No matter what, I would go there, every day."
     g "I've worked so hard, just for you. I've done some much for you."
-    show goopitha yandere 3
+    show goopitha yandere 
     g "Why have you betrayed me?!?!"
     mc "..."
     mc "(Nothing comes out of my mouth.)"
-    show goopitha sad
+    show goopitha neutral
     mc "(She looks like she's about to cry.)"
-    hide goopitha sad
+    hide goopitha neutral
     with dissolve
     mc "(Goopitha leaves without another word.)"
     mc "(...)"
