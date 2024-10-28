@@ -166,6 +166,8 @@ label introno:
     mc "(I get out of bed and run my fingers through my hair, brushing it away from my eyes.)"
     mc "(I stretch out my limbs as far as they'll go.)"
     mc "(Finally, I exhale deeply and open up my closet to get dressed.)"
+    show bg kitchen
+    with fade
     mc "(I put on my business clothes and head to the kitchen for breakfast. There's a plate of scrambled eggs and a glass of milk on the counter. I guess the cool guy made it for me.)"
     mc "(It tastes pretty good. I'd be fine eating this every day, but it'd probably get boring soon enough. I finish the plate in just a few minutes. It's time to head to work now.)"
     show bg apartment outside

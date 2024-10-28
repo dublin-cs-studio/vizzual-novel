@@ -1,46 +1,30 @@
 label intro1:
     scene bg konbini
     with fade
- 
-    mc """
-    (Hm...)
-
-    (1 cup, 2.99. 1.5 cups, 4.50. That's... the same per cup, I think? Then I should get the one that tastes better. Ingredients...)
-
-    (Screw it, I'll just get the 2.99 one. They should taste the same, after all.)
-
-    (I put the other cup of ramen back on the shelf and check out my items.)
-    """
-
+    play music "audio/Rainy_sweet_home.mp3"
+    mc "(Hm...)"
+    mc "(1 cup, 2.99. 1.5 cups, 4.50. That's... the same per cup, I think? Then I should get the one that tastes better. Ingredients...)"
+    mc "(Screw it, I'll just get the 2.99 one. They should taste the same, after all.)"
+    mc "(I put the other cup of ramen back on the shelf and check out my items.)"
     scene bg alley night
     with fade
-
-    mc """
-    (As I step outside, a gentle breeze blows past me.)
-
-    (It's been getting colder lately. I'll need to start dressing for winter soon.)
-
-    (I start to head back home, needlessly swinging my groceries back and forth. Like the pendulum of a clock, it reminds me that I'll have another class tomorrow at 8 in the morning.)
-
-    (It's surprisingly tough getting up at 8 in the morning. I don't know how I managed to do it every day for all my life previously.)
-
-    (As I turn the corner a wave of light blasts my side. This is the only bar in this area, so all of the night time energy is concentrated here.)
-    """
+    mc "(As I step outside, a gentle breeze blows past me.)"
+    mc "(It's been getting colder lately. I'll need to start dressing for winter soon.)"
+    mc "(I start to head back home, needlessly swinging my groceries back and forth. Like the pendulum of a clock, it reminds me that I'll have another class tomorrow at 8 in the morning.)"
+    mc "(It's surprisingly tough getting up at 8 in the morning. I don't know how I managed to do it every day for all my life previously.)"
+    mc "(As I turn the corner a wave of light blasts my side. This is the only bar in this area, so all of the night time energy is concentrated here.)"
     "*creak*"
     "Drunk Guy" "Hah! I totally smashed you that round."
     "Other Drunk Guy" "No you didn\'t. I had 5, you got 3 that time. We aren\'t playing by house rules."
     "Drunk Girl" "Are you high? We didn\'t even play uno today!"
-
     mc "(One of them bumps into me, almost knocking me off balance.)"
     mc "(I turn at them annoyance, though they all look so drunk that they could collapse on the spot.)"
-
     "Other Drunk Guy" "Hey, watch where you\'re going."
     "Drunk Guy" "Yeah, you drunk or something?"
-
     mc "(They all laugh in unison, like a trio of pigeons. It pisses me off, but I honestly can\'t be bothered to do much more than get annoyed.)"
     mc "(I turn away and start walking again, trying to distance myself from the three. They start heading the same way I am, albeit quite a bit slower.)"
-
     "Drunk Girl" "Watch this."
+    stop music
     with vpunch
     with vpunch
     scene black
@@ -241,6 +225,7 @@ label intro1:
 
     mc "Come in."
     
+    play music "audio/City_Streets.mp3"
     with vpunch
 
     mc "(As soon as I utter that phrase, the door slams open in an instant.)"
