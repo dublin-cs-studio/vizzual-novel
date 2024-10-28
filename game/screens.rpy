@@ -290,24 +290,29 @@ screen navigation():
     vbox:
         style_prefix "navigation"
 
-        xpos gui.navigation_xpos
-        yalign 0.5
+        if renpy.get_screen("main_menu"):
+            xalign 0.5
+            yalign 0.9
+        else:
+            xoffset 60
+            yalign 0.5
+        
 
         spacing gui.navigation_spacing
 
         if main_menu:
 
-            textbutton _("Start") action Start()
+            textbutton _("START") action Start()
 
         else:
 
-            textbutton _("History") action ShowMenu("history")
+            textbutton _("HISTORY") action ShowMenu("history")
 
-            textbutton _("Save") action ShowMenu("save")
+            textbutton _("SAVE") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        textbutton _("LOAD") action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("OPTIONS") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -315,20 +320,23 @@ screen navigation():
 
         elif not main_menu:
 
-            textbutton _("Main Menu") action MainMenu()
+            textbutton _("MAIN MENU") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        if main_menu:
+            textbutton _("EXTRAS") action ShowMenu("extras")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+        # textbutton _("About") action ShowMenu("about")
 
-            ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+        # if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+
+        #     ## Help isn't necessary or relevant to mobile devices.
+        #     textbutton _("Help") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            textbutton _("QUIT") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -340,6 +348,8 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
+    outlines [(absolute(2), "#4B2840",absolute(0),absolute(0))]
+    xalign 0.5
 
 
 ## Main Menu screen ############################################################
@@ -349,12 +359,23 @@ style navigation_button_text:
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
 screen main_menu():
-
+    
     ## This ensures that any other menu screen is replaced.
     tag menu
 
     add gui.main_menu_background
 
+    
+    # vbox:
+    #     text "DEEZ Nights" xcenter 960 ycenter 230 size 150
+    #     hbox:
+    #         xcenter 960 ycenter 760 spacing 50
+    #         textbutton "New Game" action Start() style "main_menu_buttons"
+    #         textbutton "Load Game" action ShowMenu("load") style "main_menu_buttons"
+    #         textbutton "Options" action ShowMenu("preferences") style "main_menu_buttons"
+    #         textbutton "Extras" style "main_menu_buttons"
+    #         textbutton "Quit" action Quit() style "main_menu_buttons"
+        
     ## This empty frame darkens the main menu.
     frame:
         style "main_menu_frame"
@@ -366,13 +387,19 @@ screen main_menu():
     if gui.show_name:
 
         vbox:
-            style "main_menu_vbox"
+            xalign 0.5
+            yalign 0.3
+            # style "main_menu_vbox"
+            
 
             text "[config.name!t]":
                 style "main_menu_title"
+                size 100
+                color "#EEABC4"
+                outlines [(absolute(2), "#E15A97",absolute(0),absolute(0))]
 
-            text "[config.version]":
-                style "main_menu_version"
+            # text "[config.version]":
+            #     style "main_menu_version"
 
 
 style main_menu_frame is empty
@@ -381,11 +408,15 @@ style main_menu_text is gui_text
 style main_menu_title is main_menu_text
 style main_menu_version is main_menu_text
 
+# style main_menu_buttons:
+#     size 100
+#     color "32a852"
+
 style main_menu_frame:
     xsize 420
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    # background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0
@@ -569,6 +600,294 @@ style about_text is gui_text
 style about_label_text:
     size gui.label_text_size
 
+
+screen extras():
+
+    tag menu
+
+    ## This use statement includes the game_menu screen inside this one. The
+    ## vbox child is then included inside the viewport inside the game_menu
+    ## screen.
+
+    style_prefix "extras"
+    add gui.main_menu_background
+
+    key "K_ESCAPE" action ShowMenu("main_menu")
+    textbutton _("Return"):
+        xalign 0.1
+        yalign 0.9
+        yoffset 70
+        xoffset -50
+        action Return()
+
+    text "[config.name!t]":
+        xalign 0.5
+        yalign 0.3
+        style "main_menu_title"
+        size 100
+        color "#EEABC4"
+        outlines [(absolute(2), "#E15A97",absolute(0),absolute(0))]
+
+
+    hbox:
+        xalign 0.5
+        yalign 0.8
+        spacing 200
+        yoffset 36
+        xoffset 7
+        textbutton _("Music") action ShowMenu("music_player")
+
+        textbutton _("Gallery") action ShowMenu("gallery_cg")
+
+        textbutton _("Credits") action Jump("credits")
+
+        
+        # label "[config.name!t]"
+        # text _("Version [config.version!t]\n")
+
+        # ## gui.about is usually set in options.rpy.
+        # if gui.about:
+        #     text "[gui.about!t]\n"
+
+        # text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+
+
+style extras_label is gui_label
+style extras_label_text is gui_label_text
+style extras_text is gui_text
+style extras_button_text is navigation_button_text
+style extras_button:
+    xalign 0.5
+
+
+style extras_label_text:
+    size gui.label_text_size
+
+init python:
+    mr = MusicRoom(fadeout=1.0,fadein=1.0,single_track=True)
+    mr.add("audio/City_Streets.mp3", always_unlocked=True)
+    mr.add("audio/Goopitha_theme.mp3", always_unlocked=True)
+    mr.add("audio/Pelota_theme.mp3", always_unlocked=True)
+    mr.add("audio/Rainy_sweet_home.mp3", always_unlocked=True)
+    mr.add("audio/TV_head_chill.mp3", always_unlocked=True)
+    mr.add("bgm/Newer_Gamer_intro_music.mp3", always_unlocked=True)
+
+screen music_player():
+    tag menu
+    style_prefix "music"
+
+    # frame:
+    key "K_ESCAPE" action ShowMenu("extras")
+    textbutton _("Return"):
+        xalign 0.1
+        yalign 0.9
+        yoffset 70
+        xoffset -50
+        action ShowMenu("extras")
+    
+    hbox:
+        
+        spacing 150
+        xalign 0.5
+        yalign 0.05
+        frame:
+            xpadding 300
+            vbox:
+                xalign 0.5
+                
+                label "Music":
+                    xalign 0.5
+                vbox:
+                    xalign 0.5
+                    textbutton "Title Theme" action mr.Play("bgm/Newer_Gamer_intro_music.mp3")
+                    textbutton "Rainy Sweet Home" action mr.Play("audio/Rainy_sweet_home.mp3")
+                    textbutton "City Streets" action mr.Play("audio/City_Streets.mp3")
+                    textbutton "Goopitha's Theme" action mr.Play("audio/Goopitha_theme.mp3")
+                    textbutton "Pelota's Theme" action mr.Play("audio/Pelota_theme.mp3")
+                    textbutton "TV Head's Theme" action mr.Play("audio/TV_head_chill.mp3")
+
+                # label "Sound Effects":
+                #     xalign 0.66
+        
+        frame:
+            xpadding 100
+            vbox:
+                xalign 0.5
+                spacing 75
+                label "Now Playing":
+                    xalign 0.5
+                vbox:
+                    xalign 0.5
+                    label "Music Volume"
+                    hbox:
+                        xalign 0.5
+                        bar ysize 50 xsize 350 xalign 0.5 value Preference("music volume")
+                hbox:
+                    xalign 0.5
+                    yalign 0.1
+                    imagebutton idle im.Scale("images/play.png",75,75) hover im.Scale("images/play_h.png",75,75) selected_idle im.Scale("images/pause.png",75,75) selected_hover im.Scale("images/pause_h.png",75,75)  action mr.TogglePause()
+
+                    
+        # vbox:
+        #     spacing 50
+            # The buttons that play each track.
+            
+            # textbutton "Track 2" action mr.Play("track2.ogg")
+            # textbutton "Track 3" action mr.Play("track3.ogg")
+
+            # null height 20
+
+
+    # textbutton "Next" action mr.Next()
+    # textbutton "Previous" action mr.Previous()
+
+
+    # Start the music playing on entry to the music room.
+    on "replace" action mr.Play()
+
+    # Restore the main menu music upon leaving.
+    on "replaced" action Play("music", "bgm/Newer_Gamer_intro_music.mp3")
+
+style music_button_text is navigation_button_text
+style music_button is navigation_button
+style music_label_text is gui_label_text
+style music_label_text:
+    size 70
+style music_vbox is vbox
+style music_hbox is hbox
+
+
+init python:
+    gallery = Gallery()
+
+    gallery.button("Joe Joe Cooler")
+    gallery.image("CG_Cooler")
+    gallery.button("Pelota Wack")
+    gallery.image("CG_Wack")
+    gallery.button("Sigma Desk")
+    gallery.image("CG_Desk")
+
+    gallery.button("Alley")
+    gallery.image("BG_Alley_1")
+    gallery.image("BG_Alley_2")
+    gallery.image("BG_Alley_3")
+    gallery.button("Amusement")
+    gallery.image("BG_Amusement_Main")
+    gallery.image("BG_Amusement_Line")
+    gallery.image("BG_Amusement_Outside")
+    gallery.button("Apartment")
+    gallery.image("BG_Apartment")
+    gallery.image("BG_Bedroom")
+    gallery.image("BG_LivingRoom")
+    gallery.button("Beach")
+    gallery.image("BG_Beach_Main")
+    gallery.image("BG_Beach_Coast")
+    gallery.image("BG_Beach_Changing")
+    gallery.button("Festival")
+    gallery.image("BG_Festival")
+    gallery.image("BG_Boardwalk")
+    gallery.image("BG_Ferris")
+    gallery.button("Bus")
+    gallery.image("BG_Bus_1")
+    gallery.image("BG_Bus_2")
+    gallery.image("BG_Bus_3")
+    gallery.button("Office")
+    gallery.image("BG_Cubicle_1")
+    gallery.image("BG_Cubicle_2")
+    gallery.image("BG_Cubicle_3")
+    gallery.image("BG_Cubicle_4")
+    gallery.image("BG_Cooler")
+    gallery.image("BG_Office")
+    gallery.image("BG_OutsideOffice")
+    gallery.button("Front Desk")
+    gallery.image("BG_FrontDesk_1")
+    gallery.image("BG_FrontDesk_2")
+    gallery.image("BG_FrontDesk_3")
+    gallery.button("Others")
+    gallery.image("BG_Hospital")
+    gallery.image("BG_Konbini")
+    gallery.image("BG_Museum")
+    gallery.image("BG_Aquarium")
+    gallery.image("BG_Park")
+    gallery.image("BG_Pizza")
+    gallery.image("BG_Table")
+    gallery.image("BG_Burger")
+
+
+    gallery.transition = dissolve
+screen gallery_cg():
+    tag menu
+    style_prefix "gallery_cg"
+    vbox:
+        xalign 0.05
+        spacing 15
+        hbox:
+            xalign 0.05
+            yalign 0.5 
+            spacing 30
+            textbutton _("CGs") action ShowMenu("gallery_cg")
+            textbutton _("BGs") action ShowMenu("gallery_bg")
+            # textbutton _("Sprites")
+
+        hbox:
+            xalign 0.5
+            grid 3 2:  
+                xalign 0.5
+                spacing 10
+                add gallery.make_button(name="Joe Joe Cooler",unlocked=im.Scale("images/cg joe cooler.png",420,252),locked="images/locked.png", xalign=0.5,yalign=0.5)
+                add gallery.make_button(name="Pelota Wack",unlocked=im.Scale("images/cg pelota wack.png",420,252),locked="images/locked.png",xalign=0.5,yalign=0.5)
+                add gallery.make_button(name="Sigma Desk",unlocked=im.Scale("images/cg sigma desk.png",420,252),locked="images/locked.png",xalign=0.5,yalign=0.5)
+    
+    key "K_ESCAPE" action ShowMenu("extras")
+    textbutton _("Return"):    
+        xalign 0.1
+        yalign 0.9
+        yoffset 70
+        xoffset -50
+        action ShowMenu("extras")    
+
+style gallery_cg_button is extras_button_text
+style gallery_cg_button_text is navigation_button_text
+
+screen gallery_bg():
+    tag menu
+    style_prefix "gallery_bg"
+    vbox:
+        xalign 0.05
+        spacing 15
+        hbox:
+            xalign 0.05
+            yalign 0.5 
+            spacing 30
+            textbutton _("CGs") action ShowMenu("gallery_cg")
+            textbutton _("BGs") action ShowMenu("gallery_bg")
+            textbutton _("Sprites")
+
+        hbox:
+            xalign 0.5
+            grid 4 3:  
+                xalign 0.5
+                spacing 10
+                add gallery.make_button(name="Alley",unlocked=im.Scale("images/bg alley day.png",448,252),locked="images/locked.png",xalign=0.5,yalign=0.5)
+                add gallery.make_button(name="Amusement",unlocked=im.Scale("images/bg amusement area.png",448,252),locked="images/locked.png",xalign=0.5,yalign=0.5)
+                add gallery.make_button(name="Apartment",unlocked=im.Scale("images/bg apartment outside.jpg",448,252),locked="images/locked.png",xalign=0.5,yalign=0.5)
+                add gallery.make_button(name="Beach",unlocked=im.Scale("images/bg beach main.png",448,252),locked="images/locked.png",xalign=0.5,yalign=0.5)
+                add gallery.make_button(name="Festival",unlocked=im.Scale("images/bg festival.png",448,252),locked="images/locked.png",xalign=0.5,yalign=0.5)
+                add gallery.make_button(name="Bus",unlocked=im.Scale("images/bg bus inside.jpg",448,252),locked="images/locked.png",xalign=0.5,yalign=0.5)
+                add gallery.make_button(name="Office",unlocked=im.Scale("images/bg cubicle day.png",448,252),locked="images/locked.png",xalign=0.5,yalign=0.5)
+                add gallery.make_button(name="Front Desk",unlocked=im.Scale("images/bg frontdesk day.png",448,252),locked="images/locked.png",xalign=0.5,yalign=0.5)
+                add gallery.make_button(name="Others",unlocked=im.Scale("images/bg hospital.jpg",448,252),locked="images/locked.png",xalign=0.5,yalign=0.5)
+
+    key "K_ESCAPE" action ShowMenu("extras")
+    textbutton _("Return"):    
+        xalign 0.1
+        yalign 0.9
+        yoffset 70
+        xoffset -50
+        action ShowMenu("extras")    
+
+style gallery_bg_button is extras_button_text
+style gallery_bg_button_text is navigation_button_text
 
 ## Load and Save screens #######################################################
 ##
