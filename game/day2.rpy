@@ -57,7 +57,7 @@ label day2:
     show joejoe talking 1
     j "Hey, [name]. What's up?"
     mc "Wanna go get lunch together?"
-    show joejoe surprised
+    show joejoe surprised 1
     j "Oh, is it lunchtime already?"
     mc "(He glances at the clock. After confirming the time, he quickly drinks the rest of his coffee and wipes his mouth.)"
     show joejoe happy 2
@@ -162,11 +162,11 @@ label burger:
     mc "Joe Joe."
     mc "(He doesn't notice.)"
     mc "Joe Joe!"
-    show joejoe surprised
+    show joejoe surprised 1
     mc "(When he finally looks over at me, the other group of people have already reached the back of the line. He frantically walks over to the line, but it's too late. They're not letting him cut.)"
     s "Hey."
     mc "(While I'm distracted by Joe Joe, Sigma has already ordered our food. She taps on my shoulder.)"
-    hide joejoe surprised
+    hide joejoe
     show sigma glasses at center
     with dissolve
     s "I already got your food, by the way."
@@ -216,9 +216,10 @@ label burger:
     mc "(Just like yesterday, Sigma's still working on something. At least the stacks of paper on her desk seem to have lessened in number.)"
     mc "Hey, Sigma."
     s "Yeah."
-    mc "Can I get money right now?"
+    mc "Have you ever given someone money for no reason?"
     show sigma confused
-    s "Huh? No…? I don-"
+    s "Huh? No...? I don-"
+    mc "Lemme rephrase that."
     mc "Sorry, I meant, like. Can I get my paycheck right now? I need money to buy groceries."
     s "I don't think you can? The CEO signs all the checks at once, so I'll need to ask him. I'm not sure."
     show sigma glasses
@@ -228,6 +229,7 @@ label burger:
     mc "(She hands me a $50 bill, neatly folded directly in half.)"
     mc "Thank you."
     mc "(I take the bill and head out the door.)"
+    play music "audio/Rainy_sweet_home.mp3"
     hide sigma glasses
     show bg alley night
     with dissolve
@@ -319,6 +321,7 @@ label pizza:
     mc "(She wrapped the pizza in multiple layers of napkins, but even so there's still some oil on her fingers. She has to wipe it off on yet another napkin before touching anything.)"
     mc "(Once we finish our food, it's time to head back to work. On the way back, Joe Joe still is excited, but as the office building comes into sight his enthusiasm begins to die down.)"
     scene bg cubicle day
+    play music "audio/Rainy_sweet_night.mp3"
     with fade
     mc "(Everyone returns to their work mindset. Sigma returns to the front desk and Joe Joe heads off to who-knows-where to do some sort of work.)"
     mc "(I sit back down at my cubicle and begin filling out the records again.)"
